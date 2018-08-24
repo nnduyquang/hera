@@ -137,7 +137,7 @@
     <div class="container-fluid pt-5 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 wow zoomIn">
                     <div id="gioi_thieu">
                         <a href=""><h6>GIỚI THIỆU</h6></a>
                         <p class="pb-3">Tọa lạc tại khu đô thị Celadon City Tân Phú, Trung tâm hội nghị tiệc cưới
@@ -151,7 +151,7 @@
                         <p class="text-right"><a href="">Xem thêm...!</a></p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 wow zoomIn">
                     <div id="thuvien_hinhanh">
 
                         <a href="">

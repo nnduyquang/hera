@@ -75,7 +75,7 @@
                     <h5>TIN TỨC</h5>
                 </div>
 
-                <div class="col-md-4 tin-tuc">
+                <div class="col-md-4 tin-tuc wow fadeInLeft" data-wow-delay="300ms">
                     <div class="img-tin-tuc" style="background-image:url({{URL::asset('images/uploads/tt1.jpg')}});">
 
                     </div>
@@ -83,7 +83,7 @@
                     <p>Ưu đãi voucher giảm 40% – 50% combo trang điểm + làm tóc cô dâu từ thương </p>
                     <div class="btn-docthem"><a href="">ĐỌC THÊM</a></div>
                 </div>
-                <div class="col-md-4 tin-tuc">
+                <div class="col-md-4 tin-tuc wow fadeInLeft" data-wow-delay="500ms">
                     <div class="img-tin-tuc"  style="background-image:url({{URL::asset('images/uploads/tt2.jpg')}});">
 
                     </div>
@@ -91,8 +91,8 @@
                     <p>Ưu đãi voucher giảm 40% – 50% combo trang điểm + làm tóc cô dâu từ thương </p>
                     <div class="btn-docthem"><a href="">ĐỌC THÊM</a></div>
                 </div>
-                <div class="col-md-4 tin-tuc">
-                    <div class="img-tin-tuc" style="background-image:url({{URL::asset('images/uploads/tt3.jpg')}});">>
+                <div class="col-md-4 tin-tuc wow fadeInLeft" data-wow-delay="700ms">
+                    <div class="img-tin-tuc" style="background-image:url({{URL::asset('images/uploads/tt3.jpg')}});">
 
                     </div>
                     <a href=""><h3>[SPECIAL EDITION] CƯỚI XU HƯỚNG MỚI – TRỌN TIỆC 85 TRIỆU ĐỒNG !!</h3></a>
