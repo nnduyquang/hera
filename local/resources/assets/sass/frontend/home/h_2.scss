@@ -1,0 +1,70 @@
+#h_2
+{#bg_dichvu {
+  //{{--background-image: url({{URL::asset('images/bg/banner-dich-vu-food-decor.jpg')}});--}}
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  /*background-attachment: fixed;*/
+  p{
+    color: white;
+    font-size: 68px;
+    font-weight: 600;
+    padding: 38px 0;
+  }
+}
+
+  .dv-content{
+    min-height: 380px;
+    overflow: hidden;
+    position: relative;
+    #hoi_nghi{
+      //background-image: url(images/uploads/div1.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+
+    }
+
+    #tiec_cuoi{
+      //background-image: url(images/uploads/dv2.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+    }
+    #su_kien{
+      //background-image: url(images/uploads/dv3.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+    }
+    #tiec_ngoai_troi{
+      //background-image: url(images/uploads/dv4.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+    }
+    &:hover div{
+      transform: scale(1.2);
+    }
+    p{
+      width: 100%;
+      display: inline;
+      font-size: 22px;
+      color: white;
+      font-weight: 600;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+

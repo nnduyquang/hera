@@ -1,0 +1,72 @@
+#c_1 #bg_dichvu {
+  background-size: cover;
+  background-position: center center;
+  /*background-attachment: fixed;*/
+  padding-bottom: 30px;
+}
+
+#c_1 #bg_dichvu p {
+  color: white;
+  font-size: 58px;
+  font-weight: 600;
+  padding: 38px 0 16px 0;
+  text-shadow: 0px 2px 2px black;
+}
+
+#c_1 #bg_dichvu span {
+  color: white;
+  font-size: 13px;
+  text-shadow: 0px 2px 2px black;
+}
+
+#c_1 #bg_dichvu span a {
+  color: white;
+}
+
+#c_1 #noidung h5 {
+  color: white;
+  font-size: 26px;
+  padding-bottom: 18px;
+}
+
+#c_1 #noidung h6 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #f9bf80;
+}
+
+#c_1 #noidung p {
+  color: white;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+
+#c_1 #noidung span {
+  color: #f9bf80;
+}
+
+#c_1 #noidung a {
+  background-color: #f9bf80;
+  color: #2a2a2a;
+  font-weight: 600;
+  padding: 8px 20px 6px 20px;
+  border-radius: 8px;
+}
+
+#c_1 #noidung input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+#c_1 #noidung input:focus {
+  outline: none;
+}
+
+#c_1 #noidung textarea {
+  width: 100%;
+  border-radius: 5px;
+}

@@ -9,16 +9,18 @@
     <meta name="keywords" content="@yield('keyword')">
     <meta name="description" content="@yield('description')">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:title" content="@yield('title')"/>
     {{--<meta property="og:type" content="article" />--}}
-    <meta property="og:url" content="@yield('url-og')" />
-    <meta property="og:image" content="@yield('image-og')" />
-    <meta property="og:description" content="@yield('description')" />
+    <meta property="og:url" content="@yield('url-og')"/>
+    <meta property="og:image" content="@yield('image-og')"/>
+    <meta property="og:description" content="@yield('description')"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     {{--<meta property="og:site_name" content="Site Name, i.e. Moz" />--}}
     {{ Html::style('css/core.common.css') }}
     {{ Html::style('css/core.frontend.css') }}
     {{ Html::style('css/frontend.css') }}
+    {{ Html::style('css/frontend/common/menu/index.css') }}
     @yield('styles')
 </head>
 <body>
@@ -27,25 +29,39 @@
 </header>
 
 <div id="blurrMe">
-    @include('frontend.common.menu.m-menu')
+    {{--@include('frontend.common.menu.m-menu')--}}
+    @include('frontend.common.menu.hera-mobile-menu')
     @include('frontend.common.menu.menu')
     @yield('slider')
     @yield('container')
 </div>
-@include('frontend.common.menu.m-sidebar')
+{{--@include('frontend.common.menu.m-sidebar')--}}
 <div class="footer">
     @include('frontend.common.footer')
 </div>
 {{ Html::script('js/core.common.js') }}
 {{ Html::script('js/core.frontend.js') }}
+<script>
+    new WOW().init();
+
+    $('#mobile_menu_click').click(function () {
+        if($('#hera_mobile_menu_content').css('opacity')==0){
+        $('#hera_mobile_menu_content').css({'opacity':'1','top':'100%'})
+        }else{
+            $('#hera_mobile_menu_content').css({'opacity':'0','top':'80%'})
+        }
+    })
+
+</script>
 <script type="text/javascript">
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+
 </script>
-{{--@yield('scripts')--}}
+@yield('jv-scripts')
 {{ Html::script('js/scripts.js') }}
 <div class="callback d-lg-none d-md-none">
     <div class="phone_animation">
@@ -64,7 +80,8 @@
     </div>
 </div>
 <div class="mess_desk_bot d-none d-md-block" style="position: fixed;bottom:40px;right: 0px;">
-    <a href="tel:0962599482" style="display: block;width: 260px;height: 56px;background: url({{URL::to('images/nenhot.png')}}) no-repeat;text-align: center;padding-top: 10px;color:#fff;font-size: 20px;font-family: 'roboto-bold'">
+    <a href="tel:0962599482"
+       style="display: block;width: 260px;height: 56px;background: url({{URL::to('images/nenhot.png')}}) no-repeat;text-align: center;padding-top: 10px;color:#fff;font-size: 20px;font-family: 'roboto-bold'">
     </a>
 </div>
 

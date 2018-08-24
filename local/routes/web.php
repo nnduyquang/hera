@@ -4,6 +4,31 @@
 Route::get('/', function () {
     return view('frontend.home.index');
 });
+
+Route::get('/dich-vu/', function () {
+    return view('frontend.services.index');
+});
+
+Route::get('/uu-dai/', function () {
+    return view('frontend.uudai.index');
+});
+
+Route::get('/lien-he/', function () {
+    return view('frontend.contact.index');
+});
+
+Route::get('/uu-dai/chuong-trinh-uu-dai.html', function () {
+    return view('frontend.uudai-details.index');
+});
+
+Route::get('/hinh-anh/', function () {
+    return view('frontend.gallery.index');
+});
+
+Route::get('/dich-vu/dich-vu.html', function () {
+    return view('frontend.service-details.index');
+});
+
 Route::post('/tim-kiem','FrontendController@getSearch')->name('search');
 
 

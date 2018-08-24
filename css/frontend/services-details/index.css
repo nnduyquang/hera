@@ -1,0 +1,40 @@
+#sd_1 #bg_dichvu {
+  background-size: cover;
+  background-position: center center;
+  /*background-attachment: fixed;*/
+  padding-bottom: 30px;
+}
+
+#sd_1 #bg_dichvu p {
+  color: white;
+  font-size: 58px;
+  font-weight: 600;
+  padding: 38px 0 16px 0;
+}
+
+#sd_1 #bg_dichvu span {
+  color: white;
+  font-size: 13px;
+}
+
+#sd_1 #bg_dichvu span a {
+  color: white;
+}
+
+#sd_1 #noidung h5 {
+  font-size: 22px;
+  padding-bottom: 38px;
+}
+
+#sd_1 #noidung h6 {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 22px;
+  color: #f9bf80;
+}
+
+#sd_1 #noidung p {
+  color: white;
+  line-height: 24px;
+  padding-bottom: 20px;
+}

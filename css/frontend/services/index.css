@@ -1,0 +1,77 @@
+#s_1 #bg_dichvu {
+  background-size: cover;
+  background-position: center center;
+  /*background-attachment: fixed;*/
+}
+
+#s_1 #bg_dichvu p {
+  color: white;
+  font-size: 58px;
+  font-weight: 600;
+  padding: 38px 0 16px 0;
+}
+
+#s_1 #bg_dichvu span {
+  color: white;
+  font-size: 13px;
+}
+
+#s_1 #bg_dichvu span a {
+  color: white;
+}
+
+#s_1 .dv-content {
+  min-height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+#s_1 .dv-content:hover div {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#s_1 .dv-content #hoi_nghi {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#s_1 .dv-content #tiec_cuoi {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#s_1 .dv-content #su_kien {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#s_1 .dv-content #tiec_ngoai_troi {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#s_1 .dv-content p {
+  width: 100%;
+  display: inline;
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}

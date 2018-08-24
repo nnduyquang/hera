@@ -1,0 +1,83 @@
+#s_1 {
+  #bg_dichvu {
+    //background-image: url(images/bg/banner-dich-vu-food-decor.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    /*background-attachment: fixed;*/
+
+    p {
+      color: white;
+      font-size: 58px;
+      font-weight: 600;
+      padding: 38px 0 16px 0;
+    }
+
+    span {
+      color: white;
+      font-size: 13px;
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .dv-content {
+    min-height: 380px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover div {
+      transform: scale(1.2);
+    }
+
+    #hoi_nghi {
+      //background-image: url(images/uploads/div1.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+
+    }
+
+    #tiec_cuoi {
+      //background-image: url(images/uploads/dv2.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+    }
+
+    #su_kien {
+      //background-image: url(images/uploads/dv3.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+    }
+
+    #tiec_ngoai_troi {
+      //background-image: url(images/uploads/dv4.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+      transition: .3s;
+    }
+
+    p {
+      width: 100%;
+      display: inline;
+      font-size: 22px;
+      color: white;
+      font-weight: 600;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

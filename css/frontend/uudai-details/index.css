@@ -1,0 +1,73 @@
+#ud_1 #bg_dichvu {
+  background-size: cover;
+  background-position: center center;
+  /*background-attachment: fixed;*/
+  padding-bottom: 30px;
+}
+
+#ud_1 #bg_dichvu p {
+  color: white;
+  font-size: 58px;
+  font-weight: 600;
+  padding: 38px 0 16px 0;
+  text-shadow: 0px 2px 2px black;
+}
+
+#ud_1 #bg_dichvu span {
+  color: white;
+  font-size: 13px;
+  text-shadow: 0px 2px 2px black;
+}
+
+#ud_1 #bg_dichvu span a {
+  color: white;
+}
+
+#ud_1 #noidung h1 {
+  /*padding-top: 10px;*/
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #f9bf80;
+}
+
+#ud_1 #noidung h2 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: white;
+  line-height: 26px;
+}
+
+#ud_1 #noidung h5 {
+  font-size: 22px;
+  padding-bottom: 38px;
+}
+
+#ud_1 #noidung h6 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #f9bf80;
+}
+
+#ud_1 #noidung p {
+  color: white;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+
+#ud_1 #noidung ul {
+  list-style-type: circle;
+}
+
+#ud_1 #noidung span {
+  color: white;
+}
+
+#ud_1 #noidung a {
+  color: white;
+  /*text-decoration: #f9bf80;*/
+}

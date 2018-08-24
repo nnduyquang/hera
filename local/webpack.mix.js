@@ -49,8 +49,17 @@ mix
 
     ], '../css/core.backend.css')
 
+
     .sass('resources/assets/sass/frontend.scss', '../css/frontend.css').options({processCssUrls: false})
     .sass('resources/assets/sass/backend.scss', '../css/backend.css')
+    .sass('resources/assets/sass/frontend/home/index.scss', '../css/frontend/home/index.css')
+    .sass('resources/assets/sass/frontend/services/index.scss', '../css/frontend/services/index.css')
+    .sass('resources/assets/sass/frontend/services-details/index.scss', '../css/frontend/services-details/index.css')
+    .sass('resources/assets/sass/frontend/gallery/index.scss', '../css/frontend/gallery/index.css')
+    .sass('resources/assets/sass/frontend/uudai/index.scss', '../css/frontend/uudai/index.css')
+    .sass('resources/assets/sass/frontend/uudai-details/index.scss', '../css/frontend/uudai-details/index.css')
+    .sass('resources/assets/sass/frontend/contact/index.scss', '../css/frontend/contact/index.css')
+    .sass('resources/assets/sass/frontend/common/menu/menu.scss', '../css/frontend/common/menu/index.css')
     .styles('resources/assets/js/scripts.js', '../js/scripts.js')
     .styles([
         'resources/assets/sass/login1.scss',
@@ -62,6 +71,14 @@ mix
     .styles([
         'resources/assets/js/ulti.js',
     ], '../js/ulti.js')
+
+    .styles([
+        'resources/assets/js/fe.h.index.js',
+    ], '../js/fe_h_index.js')
+
+    .styles([
+        'resources/assets/js/fe.g.index.js',
+    ], '../js/fe_g_index.js')
 
     .styles([
         'resources/assets/js/be.common.js',

@@ -1,0 +1,341 @@
+#h_1 #gioi_thieu {
+  border: 3px solid white;
+  padding: 20px;
+  color: white;
+}
+
+#h_1 #gioi_thieu a {
+  color: #f9bf80;
+}
+
+#h_1 #gioi_thieu a h6 {
+  font-size: 28px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+#h_1 p {
+  line-height: 26px;
+}
+
+#h_1 p a {
+  color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_1 p a:hover {
+  color: #f9bf80;
+}
+
+#h_1 #thuvien_hinhanh {
+  width: 100%;
+  height: 296px;
+  overflow: hidden;
+  position: relative;
+}
+
+#h_1 #thuvien_hinhanh .img-daidien {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_1 #thuvien_hinhanh .img-daidien .img-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_1 #thuvien_hinhanh .img-daidien .img-overlay a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #2a2a2a;
+  font-size: 12px;
+  background-color: #fff;
+  /*border-radius: 12px;*/
+  padding: 9px 12px 8px 12px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  opacity: 1;
+  font-weight: bold;
+}
+
+#h_1 #thuvien_hinhanh .img-daidien .img-overlay a:hover {
+  background-color: #e8bc91;
+  color: white;
+}
+
+#h_1 #thuvien_hinhanh .img-daidien:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+#h_1 #thuvien_hinhanh .img-daidien:hover .img-overlay {
+  opacity: 1;
+}
+
+#h_1 #thuvien_hinhanh:before {
+  z-index: 2;
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_1 #thuvien_hinhanh:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 2;
+}
+
+#h_1 #thuvien_hinhanh:hover:after {
+  width: 68px;
+  height: 86px;
+  opacity: 1;
+}
+
+#h_1 #thuvien_hinhanh:hover:before {
+  width: 68px;
+  height: 86px;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  #h_1 #gioi_thieu {
+    margin-bottom: 20px;
+  }
+}
+
+#h_2 #bg_dichvu {
+  background-size: cover;
+  background-position: center center;
+  /*background-attachment: fixed;*/
+}
+
+#h_2 #bg_dichvu p {
+  color: white;
+  font-size: 68px;
+  font-weight: 600;
+  padding: 38px 0;
+}
+
+#h_2 .dv-content {
+  min-height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+#h_2 .dv-content #hoi_nghi {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_2 .dv-content #tiec_cuoi {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_2 .dv-content #su_kien {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_2 .dv-content #tiec_ngoai_troi {
+  background-size: cover;
+  background-position: center center;
+  min-height: 380px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_2 .dv-content:hover div {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#h_2 .dv-content p {
+  width: 100%;
+  display: inline;
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#h_3 h5 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f9bf80;
+}
+
+#h_3 .tin-tuc {
+  width: 90%;
+  margin: auto;
+}
+
+#h_3 .tin-tuc h3 {
+  color: #f9bf80;
+  font-size: 18px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#h_3 .tin-tuc p {
+  color: white;
+  font-size: 16px;
+  padding: 10px 0;
+  text-align: center;
+  line-height: 24px;
+}
+
+#h_3 .tin-tuc .btn-docthem {
+  padding: 8px 20px 6px 20px;
+  background-color: #f9bf80;
+  border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-size: 15px;
+  font-weight: 600;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_3 .tin-tuc .btn-docthem a {
+  color: #2a2a2a;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_3 .tin-tuc .btn-docthem a:hover {
+  background-color: #3475b0;
+}
+
+#h_3 .tin-tuc .btn-docthem a:hover a {
+  color: white;
+}
+
+#h_3 .tin-tuc .img-tin-tuc {
+  width: 100%;
+  min-height: 238px;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media only screen and (max-width: 800px) {
+  #h_3 .tin-tuc {
+    margin-bottom: 38px;
+  }
+}
+
+#h_4 h5 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f9bf80;
+}
+
+#h_4 #owl_ykkh .owl-items img {
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+#h_4 #owl_ykkh .owl-items h5 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 10px;
+  /*margin: auto;*/
+  margin-left: 20px;
+}
+
+#h_4 #owl_ykkh .owl-items p {
+  color: white;
+  line-height: 20px;
+  padding-bottom: 10px;
+  width: 90%;
+  margin: auto;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#h_4 #owl_ykkh .owl-items span {
+  color: white;
+  margin: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  #h_4 #owl_ykkh .owl-items p {
+    width: 100%;
+  }
+  #h_4 #owl_ykkh .owl-items h5 {
+    margin-top: 20px;
+    margin-left: 0;
+    margin: auto;
+  }
+}
+
+#h_5 h5 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f9bf80;
+}
+
+#h_5 #owl_doitac .owl-items {
+  margin-bottom: 20px;
+}
+
+#h_5 #owl_doitac .owl-items .owl-img {
+  width: 138px;
+  height: 138px;
+  /*border-radius: 50%;*/
+  margin: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
