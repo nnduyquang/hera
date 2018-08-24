@@ -5,7 +5,7 @@
 }
 
 #h_1 #gioi_thieu a {
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 #h_1 #gioi_thieu a h6 {
@@ -25,7 +25,7 @@
 }
 
 #h_1 p a:hover {
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 #h_1 #thuvien_hinhanh {
@@ -73,7 +73,7 @@
 }
 
 #h_1 #thuvien_hinhanh .img-daidien .img-overlay a:hover {
-  background-color: #e8bc91;
+  background-color: #dbbc85;
   color: white;
 }
 
@@ -206,7 +206,7 @@
 #h_3 h5 {
   font-size: 30px;
   font-weight: bold;
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 #h_3 .tin-tuc {
@@ -215,7 +215,7 @@
 }
 
 #h_3 .tin-tuc h3 {
-  color: #f9bf80;
+  color: #dbbc85;
   font-size: 18px;
   padding: 10px 0;
   text-align: center;
@@ -231,7 +231,7 @@
 
 #h_3 .tin-tuc .btn-docthem {
   padding: 8px 20px 6px 20px;
-  background-color: #f9bf80;
+  background-color: #dbbc85;
   border-radius: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -273,7 +273,7 @@
 #h_4 h5 {
   font-size: 30px;
   font-weight: bold;
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 #h_4 #owl_ykkh .owl-items img {
@@ -323,7 +323,7 @@
 #h_5 h5 {
   font-size: 30px;
   font-weight: bold;
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 #h_5 #owl_doitac .owl-items {

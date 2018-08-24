@@ -1,3 +1,4 @@
+$main-color:#dbbc85;
 #c_1 {
   #bg_dichvu {
     -webkit-background-size: cover;
@@ -33,7 +34,7 @@
       padding-bottom: 20px;
       font-size: 20px;
       font-weight: lighter;
-      color: #f9bf80;
+      color: $main-color;
 
     }
     p {
@@ -43,11 +44,11 @@
 
     }
     span {
-      color: #f9bf80;
+      color: $main-color;
       //font-weight: ;
     }
     a {
-      background-color: #f9bf80;
+      background-color: $main-color;
       color: #2a2a2a;
       font-weight: 600;
       padding: 8px 20px 6px 20px;

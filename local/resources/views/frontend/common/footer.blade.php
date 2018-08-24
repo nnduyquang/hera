@@ -16,7 +16,7 @@
 }
 
 #footer #footer_content h4{
-    color: #f9bf80;
+    color: #dbbc85;
     font-size: 22px;
     padding-bottom: 6px;
 }
@@ -24,7 +24,7 @@
 #footer #footer_content h3{
     font-size: 23px;
     font-weight: bold;
-    color: #f9bf80;
+    color: #dbbc85;
     padding-bottom: 20px;
 }
 

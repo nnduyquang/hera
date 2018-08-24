@@ -2,14 +2,14 @@
   h5 {
     font-size: 30px;
     font-weight: bold;
-    color: #f9bf80;
+    color: $main-color;
   }
 
   .tin-tuc{
     width: 90%;
     margin: auto;
     h3{
-      color: #f9bf80;
+      color: $main-color;
       font-size: 18px;
       padding: 10px 0 ;
       text-align: center;
@@ -23,7 +23,7 @@
     }
     .btn-docthem{
       padding: 8px 20px 6px 20px;
-      background-color: #f9bf80;
+      background-color: $main-color;
       border-radius: 8px;
       width: fit-content;
       margin: auto;

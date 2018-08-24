@@ -67,20 +67,20 @@
 }
 
 #menu #menu_content ul li a:hover {
-  color: #e8bc91;
+  color: #dbbc85;
   /*background-color: #0e5bc0;*/
   /*padding:20px;*/
 }
 
 #menu #menu_content ul li:nth-last-child(2) a {
   color: #fff;
-  background-color: #e8bc91;
+  background-color: #dbbc85;
   padding: 8px 12px 6px 12px;
   border-radius: 5px;
 }
 
 #menu #menu_content ul li a.active {
-  color: #e8bc91;
+  color: #dbbc85;
 }
 
 #menu #menu_content #dv_overlay {
@@ -117,7 +117,7 @@
 #menu #menu_content #dv_overlay #dv_content li {
   display: block;
   padding: 10px 20px;
-  border-bottom: 2px solid #e8bc91;
+  border-bottom: 2px solid #dbbc85;
 }
 
 #menu #menu_content #dv_overlay #dv_content li:last-child {
@@ -136,7 +136,7 @@
 }
 
 #menu #menu_content #dv_overlay #dv_content li:nth-last-child(2) a:hover {
-  color: #e8bc91;
+  color: #dbbc85;
 }
 
 #hera_mobile_menu #logo img {
@@ -192,7 +192,7 @@
 }
 
 #hera_mobile_menu_content ul li a.active {
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 #hera_mobile_menu_content ul li p {

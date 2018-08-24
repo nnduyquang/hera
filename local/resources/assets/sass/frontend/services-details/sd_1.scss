@@ -1,3 +1,4 @@
+$main-color:#dbbc85;
 #sd_1 {
   #bg_dichvu {
     -webkit-background-size: cover;
@@ -29,7 +30,7 @@
       padding-top: 50px;
       padding-bottom: 20px;
       font-size: 22px;
-      color: #f9bf80;
+      color: $main-color;
     }
     p {
       color: white;

@@ -39,7 +39,7 @@
   padding-bottom: 20px;
   font-size: 20px;
   font-weight: lighter;
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 #u_1 #noidung span {
@@ -47,15 +47,15 @@
 }
 
 #u_1 #noidung a {
-  color: #f9bf80;
-  -webkit-text-decoration: #f9bf80;
-          text-decoration: #f9bf80;
+  color: #dbbc85;
+  -webkit-text-decoration: #dbbc85;
+          text-decoration: #dbbc85;
 }
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border-bottom: 3px solid #f9bf80;
+  border-bottom: 3px solid #dbbc85;
   /*background-color: #f1f1f1;*/
   color: white;
   text-align: left;
@@ -75,12 +75,12 @@
 }
 
 .tab button:hover {
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 .tab button.active {
   /*background-color: #ccc;*/
-  color: #f9bf80;
+  color: #dbbc85;
 }
 
 /* Style the tab content */

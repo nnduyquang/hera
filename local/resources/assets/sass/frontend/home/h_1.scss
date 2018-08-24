@@ -1,7 +1,7 @@
 #h_1 {
   #gioi_thieu {
     a {
-      color: #f9bf80;
+      color: $main-color;
       h6 {
         font-size: 28px;
         padding-bottom: 20px;
@@ -20,7 +20,7 @@
       transition: .3s;
     }
     a:hover{
-      color: #f9bf80;
+      color: $main-color;
     }
   }
 
@@ -60,7 +60,7 @@
           opacity: 1;
           font-weight: bold;
           &:hover{
-            background-color: #e8bc91;
+            background-color: $main-color;
             color: white;
           }
         }
