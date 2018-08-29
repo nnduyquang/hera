@@ -72,7 +72,7 @@
             <div class="row pt-5 pb-5">
 
                 <div class="col-md-12 text-center pb-4">
-                    <h5>TIN TỨC</h5>
+                    <h5>ƯU ĐÃI</h5>
                 </div>
 
                 <div class="col-md-4 tin-tuc wow fadeInLeft" data-wow-delay="300ms">

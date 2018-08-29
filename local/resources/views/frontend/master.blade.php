@@ -15,7 +15,8 @@
     <meta property="og:image" content="@yield('image-og')"/>
     <meta property="og:description" content="@yield('description')"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    {{--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">--}}
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Varela+Round" rel="stylesheet">
     {{--<meta property="og:site_name" content="Site Name, i.e. Moz" />--}}
     {{ Html::style('css/core.common.css') }}
     {{ Html::style('css/core.frontend.css') }}

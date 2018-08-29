@@ -74,9 +74,15 @@
 
 #menu #menu_content ul li:nth-last-child(2) a {
   color: #fff;
-  background-color: #dbbc85;
+  background-color: #036ecf;
   padding: 8px 12px 6px 12px;
   border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#menu #menu_content ul li:nth-last-child(2) a:hover {
+  background-color: #dbbc85;
 }
 
 #menu #menu_content ul li a.active {
