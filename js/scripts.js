@@ -1,6 +1,7 @@
 var plugins = {
     menuSideBar: $('.sidebar'),
     slider: $('#slider'),
+    sd_1_sdBottom:$('#sd_1 #sd-bottom .sd-bottom-carousel .sd-b-owl')
 };
 $(document).ready(function () {
     function sidebar() {
@@ -27,7 +28,31 @@ $(document).ready(function () {
             controlNav: false,
         });
     }
+    function runSd_1_sdBottom(){
+        plugins.sd_1_sdBottom.owlCarousel({
+            dots: false,
+            autoplay: true,
+            navContainer: '.nav-arrow',
+            loop: true,
+            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    }
     if (plugins.slider.length) {
         runSlider();
+    }
+    if(plugins.sd_1_sdBottom.length){
+        runSd_1_sdBottom();
     }
 });

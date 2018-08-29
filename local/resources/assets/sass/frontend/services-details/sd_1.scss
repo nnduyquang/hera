@@ -1,4 +1,4 @@
-$main-color:#dbbc85;
+$main-color: #dbbc85;
 #sd_1 {
   #bg_dichvu {
     -webkit-background-size: cover;
@@ -37,6 +37,64 @@ $main-color:#dbbc85;
       line-height: 24px;
       padding-bottom: 20px;
 
+    }
+    #sd-bottom {
+      .sd-bottom-carousel {
+        position: relative;
+        margin-bottom: 20px;
+        &:hover {
+          .nav-arrow {
+            opacity: 1;
+            top: 50%;
+            //left: 50%;
+            transform: translate(0, -50%);
+          }
+        }
+        .nav-arrow {
+          transition: all 0.2s;
+          position: absolute;
+          z-index: 999;
+          top: 0;
+          opacity: 0;
+          width: 100%;
+          button.owl-prev, button.owl-next {
+            border: 1px solid #e4e4e4;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            background-color: white;
+            outline: none;
+            i {
+              color: #e4e4e4;
+              font-size: 30px;
+              display: flex;
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+
+            }
+          }
+          button.owl-prev {
+            float: left;
+            margin-left: -20px;
+          }
+          button.owl-next {
+            float: right;
+            margin-right: -20px;
+          }
+        }
+        .one-item {
+          a {
+            img.img-one-project {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
     }
   }
 }
