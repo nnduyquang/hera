@@ -47,9 +47,9 @@
 
     $('#mobile_menu_click').click(function () {
         if($('#hera_mobile_menu_content').css('opacity')==0){
-        $('#hera_mobile_menu_content').css({'opacity':'1','top':'100%'})
+        $('#hera_mobile_menu_content').css({'opacity':'1','top':'100%','z-index':'30'})
         }else{
-            $('#hera_mobile_menu_content').css({'opacity':'0','top':'80%'})
+            $('#hera_mobile_menu_content').css({'opacity':'0','top':'80%','z-index':'-30'})
         }
     })
 
@@ -61,6 +61,25 @@
         }
     });
 
+</script>
+<script>
+    $('.dv_click').click(function () {
+        if($('#demo a').css('display')=='none'){
+        $('#demo').css({'height':'auto'});
+        $('#demo a').css('display','block');}
+        else{
+            $('#demo').css({'height':'0'});
+            $('#demo a').css('display','none');}
+    })
+
+    $('.tv_click').click(function () {
+        if($('#demo2 a').css('display')=='none'){
+            $('#demo2').css({'height':'auto'});
+            $('#demo2 a').css('display','block');}
+        else{
+            $('#demo2').css({'height':'0'});
+            $('#demo2 a').css('display','none');}
+    })
 </script>
 @yield('jv-scripts')
 {{ Html::script('js/scripts.js') }}

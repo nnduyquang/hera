@@ -161,8 +161,20 @@
                                         <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC NGOÀI TRỜI</a></li>
                                 </ul>
                             </li>
-                            <li><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}" href="{{URL::asset('/hinh-anh/')}}">HÌNH ẢNH</a></li>
+                            <style>
+
+                            </style>
+                            <li id="tv_overlay"><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}" href="{{URL::asset('/hinh-anh/')}}">THƯ VIỆN</a>
+                                <div class="tv-content">
+                                    <a href="#">SẢNH</a>
+                                    <a href="#">TRANG TRÍ</a>
+                                    <a href="#">TIỆC CƯỚI</a>
+                                    <a href="#" style="border: none">VIDEO CLIP</a>
+                                </div>
+                            </li>
+                            <li><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}" href="{{URL::asset('/hinh-anh/')}}">THỰC ĐƠN</a></li>
                             <li><a class="{{ request()->is('uu-dai*') ? 'active' : '/' }}" href="{{URL::asset('/uu-dai/')}}">ƯU ĐÃI</a></li>
+                            <li><a class="{{ request()->is('tin-tuc*') ? 'active' : '/' }}" href="{{URL::asset('/hinh-anh/')}}">TIN TỨC</a></li>
                             <li><a class="{{ request()->is('lien-he*') ? 'active' : '/' }}"href="{{URL::asset('/lien-he/')}}">LIÊN HỆ</a></li>
                             {{--<li><a href="">ABOUT US</a></li>--}}
                             <li><a href="">ĐẶT TIỆC NGAY</a></li>

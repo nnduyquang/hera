@@ -120,10 +120,10 @@
 
 
                     <div class="tab">
-                        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">SẢNH 1</button>
-                        <button class="tablinks" onclick="openCity(event, 'Paris')">SẢNH 2</button>
-                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">SẢNH 3</button>
-                        <button class="tablinks" onclick="openCity(event, 'Outdoor')">NGOÀI TRỜI</button>
+                        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">SẢNH</button>
+                        <button class="tablinks" onclick="openCity(event, 'Paris')">TRANG TRÍ</button>
+                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">TIỆC CƯỚI</button>
+                        <button class="tablinks" onclick="openCity(event, 'Outdoor')">VIDEO CLIP</button>
                     </div>
 
                     <div id="London" class="tabcontent">
