@@ -153,7 +153,7 @@
                     <div id="menu_content">
                         <ul>
 
-                            <li><a class="{{ request()->is('/') ? 'active' : '/' }}" href="">TRANG
+                            <li><a class="{{ request()->is('/') ? 'active' : '/' }}" href="{{URL::asset('/')}}">TRANG
                                     CHỦ</a></li>
                             <li id="dv_overlay"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}" href="{{URL::asset('/dich-vu')}}">DỊCH VỤ</a>
                                 <ul id="dv_content">

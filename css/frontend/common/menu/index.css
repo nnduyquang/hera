@@ -9,7 +9,9 @@
 }
 
 #menu #logo img {
-  width: 120%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 108px;
   height: auto;
 }
 
