@@ -1,10 +1,11 @@
-$main-color:#dbbc85;
+$main-color: #dbbc85;
 #menu {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
   z-index: 10;
+  text-align: center;
   /*box-shadow: 0px 0px 2px 0px #6c757d;*/
   #logo img {
     width: 120%;
@@ -45,7 +46,7 @@ $main-color:#dbbc85;
       li {
         position: relative;
         display: inline-flex;
-        padding: 0px 6px;
+        padding: 0px 18px;
         z-index: 2;
         &:first-child {
           position: relative;
@@ -53,9 +54,10 @@ $main-color:#dbbc85;
         }
 
         a {
+          font-weight: 600;
+          font-size: 15px;
           color: #444647;
-          padding-top: 38px;
-          padding-bottom: 38px;
+          padding: 38px 0px;
           transition: .3s;
           &:hover {
             color: $main-color;
@@ -64,14 +66,19 @@ $main-color:#dbbc85;
           }
         }
 
-        &:nth-last-child(2) a {
-          color: #fff;
-          background-color: #036ecf;
-          padding: 8px 12px 6px 12px;
-          border-radius: 5px;
-          transition: .3s;
-          &:hover{
-            background-color: $main-color;
+        &:nth-last-child(2) {
+          padding: 0px 3px !important;
+
+          a {
+            font-weight: 500;
+            color: #fff;
+            background-color: #036ecf;
+            padding: 12px 12px 10px 12px;
+            border-radius: 5px;
+            transition: .3s;
+            &:hover {
+              background-color: $main-color;
+            }
           }
         }
         a.active {
@@ -89,7 +96,7 @@ $main-color:#dbbc85;
         top: 100%;
       }
 
-      #thuvien_overlay{
+      #thuvien_overlay {
         z-index: 2;
         &:hover #thuvien_content {
           /*display: block;*/
@@ -123,13 +130,17 @@ $main-color:#dbbc85;
           &:last-child {
             margin-bottom: 10px;
           }
-          a {
-            padding: 6px 10px;
+          a.sub-menu {
+            padding: 6px 10px !important;
             transition: .3s;
           }
-          &:nth-last-child(2) a {
-            background-color: transparent;
-            color: #2a2a2a;
+          &:nth-last-child(2) {
+            padding: 10px 10px!important;
+            a.sub-menu {
+              font-weight: 600 !important;
+              background-color: transparent;
+              color: #2a2a2a;
+            }
           }
           &:nth-last-child(2) a:hover {
             color: $main-color;
@@ -183,9 +194,9 @@ $main-color:#dbbc85;
 
 }
 
-#tv_overlay{
+#tv_overlay {
   position: relative;
-  .tv-content{
+  .tv-content {
     position: absolute;
     top: -200%;
     background-color: white;
@@ -196,28 +207,28 @@ $main-color:#dbbc85;
     height: 30px;
     opacity: 0;
     text-align: center;
-  }&:hover .tv-content{
-       opacity: 1;
-       height: auto;
-       top: 100%;
-       padding-top: 5px;
-       padding-bottom: 5px;
-     }
-  &:hover .tv-content a{
+  }
+  &:hover .tv-content {
+    opacity: 1;
+    height: auto;
+    top: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  &:hover .tv-content a {
     display: inline-block;
   }
-  .tv-content  a{
+  .tv-content a {
     position: relative;
     margin: 0;
-    padding: 12px 6px!important;
+    padding: 12px 6px !important;
     display: none;
-    width: fit-content!important;
+    width: fit-content !important;
     min-width: 118px;
     text-align: center;
     border-right: 2px solid #e8bc91;
   }
 }
-
 
 //mobile menu
 
@@ -245,17 +256,18 @@ $main-color:#dbbc85;
     li {
       width: 100%;
       padding: 10px 20px;
-      &:nth-last-child(3) a {
+      &:nth-last-child(3) {
+        a {
+          padding: 10px 20px;
+          background-color: #0f74a8;
+          color: white;
+          border-radius: 5px;
 
-        padding: 10px 20px;
-        background-color: #0f74a8;
-        color: white;
-        border-radius: 5px;
-
+        }
       }
       a {
         color: #2a2a2a;
-        font-size: 20px;
+        font-size: 18px;
         i {
           height: 38px;
           width: 38px;
@@ -289,7 +301,7 @@ $main-color:#dbbc85;
 
 }
 
-#demo,#demo2 {
+#demo, #demo2 {
   height: 0;
   padding-left: 38px;
   /*padding-top: 10px;*/
@@ -297,7 +309,7 @@ $main-color:#dbbc85;
   transition: 1s;
 }
 
-#demo a,#demo2 a {
+#demo a, #demo2 a {
   display: none;
   padding-top: 10px;
   padding-bottom: 10px;

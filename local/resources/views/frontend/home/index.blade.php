@@ -24,7 +24,7 @@
     @include('frontend.common.slider')
 @stop
 @section('container')
-    <div class="bg-container" style="background-image:url({{URL::asset('images/bg/bg-chuan.png')}});">
+    <div class="bg-container" style="background-image:url({{URL::asset('images/bg/Asset5.png')}});">
         @include('frontend.home.h_1')
         @include('frontend.home.h_2')
         @include('frontend.home.h_3')

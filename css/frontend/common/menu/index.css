@@ -4,6 +4,7 @@
   left: 0;
   background-color: #fff;
   z-index: 10;
+  text-align: center;
   /*box-shadow: 0px 0px 2px 0px #6c757d;*/
 }
 
@@ -49,7 +50,7 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 0px 6px;
+  padding: 0px 18px;
   z-index: 2;
 }
 
@@ -59,9 +60,10 @@
 }
 
 #menu #menu_content ul li a {
+  font-weight: 600;
+  font-size: 15px;
   color: #444647;
-  padding-top: 38px;
-  padding-bottom: 38px;
+  padding: 38px 0px;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -72,10 +74,15 @@
   /*padding:20px;*/
 }
 
+#menu #menu_content ul li:nth-last-child(2) {
+  padding: 0px 3px !important;
+}
+
 #menu #menu_content ul li:nth-last-child(2) a {
+  font-weight: 500;
   color: #fff;
   background-color: #036ecf;
-  padding: 8px 12px 6px 12px;
+  padding: 12px 12px 10px 12px;
   border-radius: 5px;
   -webkit-transition: .3s;
   transition: .3s;
@@ -141,13 +148,18 @@
   margin-bottom: 10px;
 }
 
-#menu #menu_content #dv_overlay #dv_content li a {
-  padding: 6px 10px;
+#menu #menu_content #dv_overlay #dv_content li a.sub-menu {
+  padding: 6px 10px !important;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-#menu #menu_content #dv_overlay #dv_content li:nth-last-child(2) a {
+#menu #menu_content #dv_overlay #dv_content li:nth-last-child(2) {
+  padding: 10px 10px !important;
+}
+
+#menu #menu_content #dv_overlay #dv_content li:nth-last-child(2) a.sub-menu {
+  font-weight: 600 !important;
   background-color: transparent;
   color: #2a2a2a;
 }
@@ -287,7 +299,7 @@
 
 #hera_mobile_menu_content ul li a {
   color: #2a2a2a;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #hera_mobile_menu_content ul li a i {
