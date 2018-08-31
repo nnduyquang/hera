@@ -87,9 +87,9 @@
                     <h4>LIÊN HỆ VỚI CHÚNG TÔI</h4>
                     <h3>TRUNG TÂM HỘI NGHỊ TIỆC CƯỚI HERA</h3>
 
-                    <p>ĐỊA CHỈ : 70 đường CN1, P.Sơn Kỳ, Q.Tân Phú, TP.HCM</p>
+                    <p>ĐỊA CHỈ : 70 đường N1, P.Sơn Kỳ, Q.Tân Phú, TP.HCM</p>
                     <p>ĐIỆN THOẠI : (028) 62784 7939 Email: info@heracenter.com</p>
-                    <p>HOTLINE : 0166 399 7777 (Tiệc cưới) - 0984 377 727 (Hội nghị)</p>
+                    <p>HOTLINE : 0166 399 7777</p>
 
 
                     <p>

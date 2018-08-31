@@ -34,7 +34,9 @@
     @include('frontend.common.menu.hera-mobile-menu')
     @include('frontend.common.menu.menu')
     @yield('slider')
+    <div class="bg-container" style="background-image:url({{URL::asset('images/bg/Asset5.png')}});">
     @yield('container')
+    </div>
 </div>
 {{--@include('frontend.common.menu.m-sidebar')--}}
 <div class="footer">

@@ -143,11 +143,12 @@
 #menu #menu_content #dv_overlay #dv_content li {
   display: block;
   padding: 10px 10px;
-  border-bottom: 2px solid #dbbc85;
+  border-bottom: 1px solid #dbbc85;
 }
 
 #menu #menu_content #dv_overlay #dv_content li:last-child {
-  margin-bottom: 10px;
+  border-bottom: none !important;
+  margin-bottom: 6px;
 }
 
 #menu #menu_content #dv_overlay #dv_content li a.sub-menu {
@@ -233,19 +234,6 @@
   transition: .3s;
   height: 30px;
   opacity: 0;
-  text-align: center;
-}
-
-#tv_overlay:hover .tv-content {
-  opacity: 1;
-  height: auto;
-  top: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-#tv_overlay:hover .tv-content a {
-  display: inline-block;
 }
 
 #tv_overlay .tv-content a {
@@ -258,7 +246,46 @@
   width: fit-content !important;
   min-width: 118px;
   text-align: center;
-  border-right: 2px solid #e8bc91;
+}
+
+#tv_overlay .tv-content ul {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#tv_overlay .tv-content ul li {
+  display: block;
+  padding: 6px 10px !important;
+  border-bottom: 1px solid #dbbc85;
+}
+
+#tv_overlay .tv-content ul li:last-child {
+  border-bottom: none !important;
+}
+
+#tv_overlay .tv-content ul li:nth-last-child(2) a.sub-menu {
+  padding-bottom: 6px !important;
+  background-color: transparent !important;
+  color: #1b1e21 !important;
+  font-weight: 600 !important;
+}
+
+#tv_overlay .tv-content ul li a.sub-menu {
+  padding: 6px 10px !important;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#tv_overlay:hover .tv-content {
+  opacity: 1;
+  height: auto;
+  top: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#tv_overlay:hover .tv-content a {
+  display: inline-block;
 }
 
 #hera_mobile_menu #logo img {

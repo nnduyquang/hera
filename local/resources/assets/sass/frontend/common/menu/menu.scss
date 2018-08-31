@@ -128,16 +128,17 @@ $main-color: #dbbc85;
         li {
           display: block;
           padding: 10px 10px;
-          border-bottom: 2px solid $main-color;
+          border-bottom: 1px solid $main-color;
           &:last-child {
-            margin-bottom: 10px;
+            border-bottom: none !important;
+            margin-bottom: 6px;
           }
           a.sub-menu {
             padding: 6px 10px !important;
             transition: .3s;
           }
           &:nth-last-child(2) {
-            padding: 10px 10px!important;
+            padding: 10px 10px !important;
             a.sub-menu {
               font-weight: 600 !important;
               background-color: transparent;
@@ -208,8 +209,46 @@ $main-color: #dbbc85;
     transition: .3s;
     height: 30px;
     opacity: 0;
-    text-align: center;
+    a {
+      position: relative;
+      margin: 0;
+      padding: 12px 6px !important;
+      display: none;
+      width: fit-content !important;
+      min-width: 118px;
+      text-align: center;
+      //border-right: 2px solid #e8bc91;
+    }
+    ul {
+      padding-left: 6px;
+      padding-right: 6px;
+      li {
+        //margin-left: 6px;
+        //margin-right: 6px;
+        display: block;
+        padding: 6px 10px!important;
+        border-bottom: 1px solid $main-color;
+        &:last-child {
+          border-bottom: none !important;
+          //margin-bottom: 6px !important;
+        }
+        &:nth-last-child(2) {
+          a.sub-menu {
+            padding-bottom: 6px!important;
+            background-color: transparent !important;
+            color: #1b1e21 !important;
+            font-weight: 600 !important;
+
+          }
+        }
+        a.sub-menu {
+          padding: 6px 10px !important;
+          transition: .3s;
+        }
+      }
+    }
   }
+
   &:hover .tv-content {
     opacity: 1;
     height: auto;
@@ -220,16 +259,7 @@ $main-color: #dbbc85;
   &:hover .tv-content a {
     display: inline-block;
   }
-  .tv-content a {
-    position: relative;
-    margin: 0;
-    padding: 12px 6px !important;
-    display: none;
-    width: fit-content !important;
-    min-width: 118px;
-    text-align: center;
-    border-right: 2px solid #e8bc91;
-  }
+
 }
 
 //mobile menu
