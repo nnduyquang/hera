@@ -152,6 +152,10 @@
                     </div>
                 </div>
 
+                <div class="col-md-12 mt-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0907160819697!2d106.6175390140478!3d10.804363861633602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bf00fec5333%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1sen!2s!4v1535711100697" width="100%  " height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
 
             </div>
         </div>

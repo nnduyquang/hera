@@ -23,7 +23,7 @@
 
 @stop
 @section('container')
-    <div class="bg-container  pt-lg-5 pt-md-5 pt-0 mt-lg-4 mt-md-4 mt-0" style="background-image:url({{URL::asset('images/bg/bg-chuan.png')}});">
+    <div class="bg-container  pt-lg-5 pt-md-5 pt-0 mt-lg-4 mt-md-4 mt-0" style="background-image:url({{URL::asset('images/bg/Asset1.png')}});">
         @include('frontend.service-details.sd_1')
     </div>
 @stop
