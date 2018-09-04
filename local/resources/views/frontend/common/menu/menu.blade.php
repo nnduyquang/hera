@@ -147,13 +147,13 @@
                 </div>
 
                 <div id="menu_content">
-                    <ul>
+                    <ul id="main">
 
                         <li><a class="{{ request()->is('/') ? 'active' : '/' }}" href="{{URL::asset('/')}}">TRANG
                                 CHỦ</a></li>
                         <li id="dv_overlay"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}"
                                                href="{{URL::asset('/dich-vu')}}">DỊCH VỤ</a>
-                            <ul id="dv_content">
+                            <ul class="dv-content">
                                 <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a>
                                 </li>
                                 <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">HỘI NGHỊ</a></li>
@@ -162,23 +162,17 @@
                                         TRỜI</a></li>
                             </ul>
                         </li>
-                        <style>
 
-                        </style>
                         <li id="tv_overlay"><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}"
                                                href="{{URL::asset('/hinh-anh/')}}">THƯ VIỆN</a>
-                            <style>
-                                .tv-content ul li:nth-last-child(2){
-
-                                }
-                            </style>
                             <div class="tv-content">
                                 <ul>
-                                    <li><a class="sub-menu" href="#">SẢNH</a><br></li>
-                                    <li><a class="sub-menu" href="#">TRANG TRÍ</a><br></li>
-                                    <li><a class="sub-menu" href="#">TIỆC CƯỚI</a><br></li>
-                                    <li><a class="sub-menu" href="#" style="border: none">VIDEO CLIP</a></li>
+                                    <li><a class="sub-menu" href="">SẢNH</a></li>
+                                    <li><a class="sub-menu" href="">TRANG TRÍ</a></li>
+                                    <li><a class="sub-menu" href="">TIỆC CƯỚI</a></li>
+                                    <li><a class="sub-menu" href="">VIDEO CLIP</a></li>
                                 </ul>
+
                             </div>
                         </li>
                         <li><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}"
@@ -206,3 +200,4 @@
 
     </div>
 </div>
+

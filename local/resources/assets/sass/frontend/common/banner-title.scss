@@ -1,0 +1,22 @@
+#bg_dichvu {
+  //background-image: url(images/bg/banner-dich-vu-food-decor.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  /*background-attachment: fixed;*/
+
+  p {
+    color: white;
+    font-size: 58px;
+    font-weight: 600;
+    padding: 38px 0 16px 0;
+  }
+
+  span {
+    color: white;
+    font-size: 13px;
+    a {
+      color: white;
+    }
+  }
+}

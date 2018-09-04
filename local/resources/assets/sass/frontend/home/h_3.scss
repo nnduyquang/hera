@@ -22,9 +22,10 @@
       line-height: 24px;
     }
     .btn-docthem{
-      padding: 8px 20px 6px 20px;
-      background-color: $main-color;
-      border-radius: 8px;
+
+      padding: 10px 18px 8px 18px;
+      background-color: #007bff;
+      border-radius: 5px;
       width: fit-content;
       margin: auto;
       font-size: 15px;
@@ -32,11 +33,11 @@
       transition: .3s;
     }
     .btn-docthem a{
-      color: #2a2a2a;
+      color: white;
       transition: .3s;
+      padding: 10px 16px;
       &:hover{
-        background-color: #3475b0;
-
+        background-color: transparent;
       }
       &:hover a{
         color: white;

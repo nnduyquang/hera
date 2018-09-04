@@ -5,7 +5,7 @@
 }
 
 #h_1 #gioi_thieu a {
-  color: #dbbc85;
+  color: #007bff;
 }
 
 #h_1 #gioi_thieu a h6 {
@@ -231,9 +231,9 @@
 }
 
 #h_3 .tin-tuc .btn-docthem {
-  padding: 8px 20px 6px 20px;
-  background-color: #dbbc85;
-  border-radius: 8px;
+  padding: 10px 18px 8px 18px;
+  background-color: #007bff;
+  border-radius: 5px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -245,13 +245,14 @@
 }
 
 #h_3 .tin-tuc .btn-docthem a {
-  color: #2a2a2a;
+  color: white;
   -webkit-transition: .3s;
   transition: .3s;
+  padding: 10px 16px;
 }
 
 #h_3 .tin-tuc .btn-docthem a:hover {
-  background-color: #3475b0;
+  background-color: transparent;
 }
 
 #h_3 .tin-tuc .btn-docthem a:hover a {

@@ -1,4 +1,5 @@
 $main-color: #dbbc85;
+$sub-color2: #007bff;
 #menu {
   position: fixed;
   top: 0;
@@ -16,14 +17,15 @@ $main-color: #dbbc85;
   #sc_network {
     a {
       i {
+        font-weight: normal;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background-color: #8d8e8f;
+        background-color: #b0b0b0;
         color: white;
         line-height: 30px;
         text-align: center;
-        font-size: 14px;
+        font-size: 12px;
         transition: .3s;
         margin-right: 10px;
       }
@@ -41,7 +43,7 @@ $main-color: #dbbc85;
   }
 
   #menu_content {
-    ul {
+     ul#main {
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -50,10 +52,6 @@ $main-color: #dbbc85;
         display: inline-flex;
         padding: 0px 18px;
         z-index: 2;
-        &:first-child {
-          position: relative;
-          z-index: 3;
-        }
 
         a {
           font-weight: 600;
@@ -62,7 +60,7 @@ $main-color: #dbbc85;
           padding: 38px 0px;
           transition: .3s;
           &:hover {
-            color: $main-color;
+            color: $sub-color2;
             /*background-color: #0e5bc0;*/
             /*padding:20px;*/
           }
@@ -79,36 +77,25 @@ $main-color: #dbbc85;
             border-radius: 5px;
             transition: .3s;
             &:hover {
-              background-color: $main-color;
+              background-color: $sub-color2;
             }
           }
         }
         a.active {
-          color: $main-color;
+          color: $sub-color2;
         }
       }
     }
 
     #dv_overlay {
       z-index: 2;
-      &:hover #dv_content {
-        /*display: block;*/
-        /*height: auto;*/
+      position: relative!important;
+      &:hover .dv-content {
         opacity: 1;
         top: 100%;
       }
 
-      #thuvien_overlay {
-        z-index: 2;
-        &:hover #thuvien_content {
-          /*display: block;*/
-          /*height: auto;*/
-          opacity: 1;
-          top: 100%;
-        }
-      }
-
-      #dv_content {
+      .dv-content {
         padding-left: 6px;
         padding-right: 6px;
         position: absolute;
@@ -146,13 +133,23 @@ $main-color: #dbbc85;
             }
           }
           &:nth-last-child(2) a:hover {
-            color: $main-color;
+            color: $sub-color2;
           }
         }
 
       }
 
-      #thuvien_content {
+    }
+
+    #tv_overlay {
+      z-index: 2;
+      position: relative!important;
+      &:hover .tv-content {
+        opacity: 1;
+        top: 100%;
+      }
+
+      .tv-content {
         padding-left: 6px;
         padding-right: 6px;
         position: absolute;
@@ -160,10 +157,7 @@ $main-color: #dbbc85;
         left: 50%;
         transition: .3s;
         background-color: #fff;
-        width: 200px;
-        /*padding-top: 38px;*/
-        /*display: none;*/
-        /*height: 0;*/
+        width: auto;
         opacity: 0;
         transform: translateX(-50%);
         transition: .3s;
@@ -172,20 +166,27 @@ $main-color: #dbbc85;
         li {
           display: block;
           padding: 10px 10px;
-          border-bottom: 2px solid $main-color;
+          border-bottom: 1px solid $main-color;
+          min-width: 138px;
           &:last-child {
-            margin-bottom: 10px;
+            border-bottom: none !important;
+            margin-bottom: 6px;
           }
-          a {
-            padding: 6px 10px;
+          a.sub-menu {
+            padding: 6px 10px !important;
             transition: .3s;
+
           }
-          &:nth-last-child(2) a {
-            background-color: transparent;
-            color: #2a2a2a;
+          &:nth-last-child(2) {
+            padding: 10px 10px !important;
+            a.sub-menu {
+              font-weight: 600 !important;
+              background-color: transparent;
+              color: #2a2a2a;
+            }
           }
           &:nth-last-child(2) a:hover {
-            color: $main-color;
+            color: $sub-color2;
           }
         }
 
@@ -193,71 +194,6 @@ $main-color: #dbbc85;
 
     }
 
-  }
-
-}
-
-#tv_overlay {
-  position: relative;
-  .tv-content {
-    position: absolute;
-    top: -200%;
-    background-color: white;
-    display: flex;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: .3s;
-    height: 30px;
-    opacity: 0;
-    a {
-      position: relative;
-      margin: 0;
-      padding: 12px 6px !important;
-      display: none;
-      width: fit-content !important;
-      min-width: 118px;
-      text-align: center;
-      //border-right: 2px solid #e8bc91;
-    }
-    ul {
-      padding-left: 6px;
-      padding-right: 6px;
-      li {
-        //margin-left: 6px;
-        //margin-right: 6px;
-        display: block;
-        padding: 6px 10px!important;
-        border-bottom: 1px solid $main-color;
-        &:last-child {
-          border-bottom: none !important;
-          //margin-bottom: 6px !important;
-        }
-        &:nth-last-child(2) {
-          a.sub-menu {
-            padding-bottom: 6px!important;
-            background-color: transparent !important;
-            color: #1b1e21 !important;
-            font-weight: 600 !important;
-
-          }
-        }
-        a.sub-menu {
-          padding: 6px 10px !important;
-          transition: .3s;
-        }
-      }
-    }
-  }
-
-  &:hover .tv-content {
-    opacity: 1;
-    height: auto;
-    top: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  &:hover .tv-content a {
-    display: inline-block;
   }
 
 }

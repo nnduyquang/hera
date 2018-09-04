@@ -105,10 +105,14 @@
 
                 <div class="col-md-6 text-center">
                     <img class="mb-4" src="{{URL::asset('images/logo/logo-hera-center.png')}}" alt=""
-                         style="width: 98px;height: auto;">
+                         style="width: 186px;height: auto;">
                     <br>
                     <span>ĐỊA CHỈ</span>
-                    <p class="pt-3">70 đường CN1, P.Sơn Kỳ, Q.Tân Phú, TP.HCM</p>
+                    <p class="pt-3">
+                        <a href="https://www.google.com/maps/place/Trung+T%C3%A2m+H%E1%BB%99i+Ngh%E1%BB%8B+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+Hera/@10.8017213,106.6161741,16.75z/data=!4m13!1m7!3m6!1s0x31752bfad2e24577:0x68be46a4292008c6!2zNzAgxJDGsOG7nW5nIE4xLCBTxqFuIEvDvSwgVMOibiBQaMO6LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!3b1!8m2!3d10.8043586!4d106.6197277!3m4!1s0x31752bf00fec5333:0x4966fc0d06bb3c3b!8m2!3d10.80335!4d106.6173396" style="background-color:transparent;color: white;font-weight: lighter">
+                            70 đường CN1, P.Sơn Kỳ, Q.Tân Phú, TP.HCM
+                        </a>
+                    </p>
                     <span>Hotline</span>
                     <p class="pt-3">
                         0166 399 7777 (Tiệc cưới) <br>
@@ -152,7 +156,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-12 mt-5">
+                <div class="col-md-12 mt-5 pb-5">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0907160819697!2d106.6175390140478!3d10.804363861633602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bf00fec5333%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1sen!2s!4v1535711100697" width="100%  " height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
 

@@ -81,7 +81,7 @@
                     </div>
                     <a href=""><h3>[SPECIAL EDITION] CƯỚI XU HƯỚNG MỚI – TRỌN TIỆC 85 TRIỆU ĐỒNG !!</h3></a>
                     <p>Ưu đãi voucher giảm 40% – 50% combo trang điểm + làm tóc cô dâu từ thương </p>
-                    <div class="btn-docthem"><a href="">ĐỌC THÊM</a></div>
+                    <div class="btn-docthem mt-4"><a href="">ĐỌC THÊM</a></div>
                 </div>
                 <div class="col-md-4 tin-tuc wow fadeInLeft" data-wow-delay="500ms">
                     <div class="img-tin-tuc"  style="background-image:url({{URL::asset('images/uploads/tt2.jpg')}});">
@@ -89,7 +89,7 @@
                     </div>
                     <a href=""><h3>[SPECIAL EDITION] CƯỚI XU HƯỚNG MỚI – TRỌN TIỆC 85 TRIỆU ĐỒNG !!</h3></a>
                     <p>Ưu đãi voucher giảm 40% – 50% combo trang điểm + làm tóc cô dâu từ thương </p>
-                    <div class="btn-docthem"><a href="">ĐỌC THÊM</a></div>
+                    <div class="btn-docthem mt-4"><a href="">ĐỌC THÊM</a></div>
                 </div>
                 <div class="col-md-4 tin-tuc wow fadeInLeft" data-wow-delay="700ms">
                     <div class="img-tin-tuc" style="background-image:url({{URL::asset('images/uploads/tt3.jpg')}});">
@@ -97,7 +97,7 @@
                     </div>
                     <a href=""><h3>[SPECIAL EDITION] CƯỚI XU HƯỚNG MỚI – TRỌN TIỆC 85 TRIỆU ĐỒNG !!</h3></a>
                     <p>Ưu đãi voucher giảm 40% – 50% combo trang điểm + làm tóc cô dâu từ thương </p>
-                    <div class="btn-docthem"><a href="">ĐỌC THÊM</a></div>
+                    <div class="btn-docthem mt-4"><a href="">ĐỌC THÊM</a></div>
                     
                 </div>
 
