@@ -114,7 +114,7 @@
                         </a>
                     </p>
                     <span>Hotline</span>
-                    <p class="pt-3">
+                    <p class="pt-3" style="background-color:transparent;color: #fff;">
                         0166 399 7777 (Tiệc cưới) <br>
                         0984 377 727 (Hội nghị)
                     </p>

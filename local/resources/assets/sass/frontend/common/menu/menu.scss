@@ -51,7 +51,7 @@ $sub-color2: #007bff;
         position: relative;
         display: inline-flex;
         padding: 0px 18px;
-        z-index: 2;
+        z-index: 12;
 
         a {
           font-weight: 600;
@@ -88,7 +88,7 @@ $sub-color2: #007bff;
     }
 
     #dv_overlay {
-      z-index: 2;
+      z-index: 10!important;
       position: relative!important;
       &:hover .dv-content {
         opacity: 1;
@@ -142,7 +142,7 @@ $sub-color2: #007bff;
     }
 
     #tv_overlay {
-      z-index: 2;
+      z-index: 10!important;
       position: relative!important;
       &:hover .tv-content {
         opacity: 1;

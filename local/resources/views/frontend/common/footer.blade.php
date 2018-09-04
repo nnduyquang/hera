@@ -49,10 +49,10 @@
     height: 36px;
     border-radius: 50%;
     background-color: white;
-    color: #8d8e8f;
+    color: #2a2a2a;
     line-height: 36px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     transition: .3s;
     margin-right: 10px;
 }

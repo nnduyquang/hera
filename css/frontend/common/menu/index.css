@@ -54,7 +54,7 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0px 18px;
-  z-index: 2;
+  z-index: 12;
 }
 
 #menu #menu_content ul#main li a {
@@ -95,7 +95,7 @@
 }
 
 #menu #menu_content #dv_overlay {
-  z-index: 2;
+  z-index: 10 !important;
   position: relative !important;
 }
 
@@ -156,7 +156,7 @@
 }
 
 #menu #menu_content #tv_overlay {
-  z-index: 2;
+  z-index: 10 !important;
   position: relative !important;
 }
 
