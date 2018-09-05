@@ -93,6 +93,7 @@ $sub-color2: #007bff;
       &:hover .dv-content {
         opacity: 1;
         top: 100%;
+        //height: 0px;
       }
 
       .dv-content {
@@ -147,6 +148,7 @@ $sub-color2: #007bff;
       &:hover .tv-content {
         opacity: 1;
         top: 100%;
+        //height: auto;
       }
 
       .tv-content {

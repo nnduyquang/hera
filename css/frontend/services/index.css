@@ -66,12 +66,12 @@
 #s_1 .dv-content p {
   width: 100%;
   display: inline;
-  font-size: 22px;
+  font-size: 26px;
   color: white;
   font-weight: 600;
   position: absolute;
-  bottom: 30px;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

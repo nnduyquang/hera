@@ -30,10 +30,10 @@
     <div class="container-fluid pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center pb-4">
-                    {{--<h5>--}}
-                        {{--<h5>ĐỐI TÁC</h5>--}}
-                    {{--</h5>--}}
+                <div class="col-md-12 text-center pb-5">
+                    <h5>
+                        <h5>ĐỐI TÁC</h5>
+                    </h5>
                 </div>
                 <div class="col-md-12 mb-5">
                     <div id="owl_doitac" class="owl-carousel owl-theme">

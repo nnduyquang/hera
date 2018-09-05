@@ -102,12 +102,12 @@
 </style>
 
 <div id="g_1">
-    <div class="container-fluid animated fadeIn slow" id="bg_dichvu" style="background-image: url({{URL::asset('https://cuoihoi365.com.vn/wp-content/uploads/2018/01/image014-2.jpg')}});">
+    <div class="container-fluid animated fadeIn slow pt-5 pb-5" id="bg_dichvu" style="background-image: url({{URL::asset('https://cuoihoi365.com.vn/wp-content/uploads/2018/01/image014-2.jpg')}});">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 pt-5 pb-5 text-center">
                     <p>HÌNH ẢNH</p>
-                    <span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > HÌNH ẢNH</span>
+                    {{--<span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > HÌNH ẢNH</span>--}}
                 </div>
             </div>
         </div>
