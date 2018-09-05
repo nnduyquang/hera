@@ -122,7 +122,7 @@
                     <span>ĐỊA CHỈ</span>
                     <p class="pt-3">
                         <a href="https://www.google.com/maps/place/Trung+T%C3%A2m+H%E1%BB%99i+Ngh%E1%BB%8B+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+Hera/@10.8017213,106.6161741,16.75z/data=!4m13!1m7!3m6!1s0x31752bfad2e24577:0x68be46a4292008c6!2zNzAgxJDGsOG7nW5nIE4xLCBTxqFuIEvDvSwgVMOibiBQaMO6LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!3b1!8m2!3d10.8043586!4d106.6197277!3m4!1s0x31752bf00fec5333:0x4966fc0d06bb3c3b!8m2!3d10.80335!4d106.6173396" style="background-color:transparent;color: white;font-weight: lighter">
-                            70 đường CN1, P.Sơn Kỳ, Q.Tân Phú, TP.HCM
+                            02 đường D2, Celadon City, Q.Tân Phú, TP.HCM
                         </a>
                     </p>
                     <span>Hotline</span>

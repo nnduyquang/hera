@@ -2,7 +2,7 @@
     <div class="container-fluid animated fadeIn slow pt-5 pb-5" id="bg_dichvu"
          style=" background-image: url({{URL::asset('images/bg/Banner-dich-vu-hoi-nghi-tiec-to-chuc-su-kien.jpg')}});">
         <div class="container">
-            <div class="row">
+            <div class="row pt-5">
                 <div class="col-md-12 pt-5 pb-5 text-center">
                     <p>DỊCH VỤ</p>
                     {{--<span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > <a--}}
