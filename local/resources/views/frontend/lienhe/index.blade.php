@@ -23,8 +23,8 @@
 
 @stop
 @section('container')
-
-        @include('frontend.lienhe.lh_1')
+    @include('frontend.lienhe.banner-title')
+    @include('frontend.lienhe.lh_1')
 
 @stop
 

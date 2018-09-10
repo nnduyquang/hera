@@ -23,6 +23,6 @@
 
 @stop
 @section('container')
-
-        @include('frontend.uudai.u_1')
+    @include('frontend.uudai.banner-title')
+    @include('frontend.uudai.u_1')
 @stop

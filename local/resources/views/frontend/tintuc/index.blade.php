@@ -23,6 +23,6 @@
 
 @stop
 @section('container')
-
+    @include('frontend.tintuc.banner-title')
         @include('frontend.tintuc.tt_1')
 @stop

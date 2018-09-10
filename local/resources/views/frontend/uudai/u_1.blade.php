@@ -134,8 +134,7 @@
                 {{--</div>--}}
             {{--</div>--}}
         {{--</div>--}}
-    {{--</div>--}}
-    @include('frontend.uudai.banner-title')
+    {{--</div>--}})
 
     <div class="container-fluid pb-5" id="noidung">
         <div class="container">

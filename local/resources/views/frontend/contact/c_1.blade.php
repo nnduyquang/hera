@@ -107,7 +107,7 @@
             {{--</div>--}}
         {{--</div>--}}
     {{--</div>--}}
-    @include('frontend.contact.banner-title')
+
 
     <div class="container-fluid pb-5" id="noidung">
         <div class="container">

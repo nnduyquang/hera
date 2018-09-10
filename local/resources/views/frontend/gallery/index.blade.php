@@ -24,7 +24,8 @@
 @stop
 @section('container')
 
-        @include('frontend.gallery.g_1')
+    @include('frontend.gallery.banner-title')
+    @include('frontend.gallery.g_1')
 
 @stop
 @section('jv-scripts')

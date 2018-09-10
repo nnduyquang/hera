@@ -115,13 +115,18 @@
 #menu #menu_content #dv_overlay:hover .dv-content {
   opacity: 1;
   top: 100%;
+  height: auto;
+}
+
+#menu #menu_content #dv_overlay:hover .dv-content li {
+  display: block;
 }
 
 #menu #menu_content #dv_overlay .dv-content {
   padding-left: 6px;
   padding-right: 6px;
   position: absolute;
-  top: -200%;
+  top: 120%;
   left: 50%;
   -webkit-transition: .3s;
   transition: .3s;
@@ -138,7 +143,7 @@
 }
 
 #menu #menu_content #dv_overlay .dv-content li {
-  display: block;
+  display: none;
   padding: 10px 10px;
   border-bottom: 1px solid #dbbc85;
 }
@@ -176,13 +181,18 @@
 #menu #menu_content #tv_overlay:hover .tv-content {
   opacity: 1;
   top: 100%;
+  height: auto;
+}
+
+#menu #menu_content #tv_overlay:hover .tv-content li {
+  display: block;
 }
 
 #menu #menu_content #tv_overlay .tv-content {
   padding-left: 6px;
   padding-right: 6px;
   position: absolute;
-  top: -200%;
+  top: 120%;
   left: 50%;
   -webkit-transition: .3s;
   transition: .3s;
@@ -196,7 +206,7 @@
 }
 
 #menu #menu_content #tv_overlay .tv-content li {
-  display: block;
+  display: none;
   padding: 10px 10px;
   border-bottom: 1px solid #dbbc85;
   min-width: 138px;
@@ -238,11 +248,15 @@
   height: auto;
 }
 
+#menu #menu_content #td_overlay:hover .td-content li {
+  display: block;
+}
+
 #menu #menu_content #td_overlay .td-content {
   padding-left: 6px;
   padding-right: 6px;
   position: absolute;
-  top: -200%;
+  top: 120%;
   left: 50%;
   height: 0px;
   -webkit-transition: .3s;
@@ -257,7 +271,7 @@
 }
 
 #menu #menu_content #td_overlay .td-content li {
-  display: block;
+  display: none;
   padding: 10px 10px;
   border-bottom: 1px solid #dbbc85;
   min-width: 218px;

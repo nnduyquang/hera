@@ -17,8 +17,8 @@
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
     {{--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">--}}
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Varela+Round" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{URL::asset('images/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{URL::asset('images/favicon.ico')}}" type="image/x-icon">
     {{--<meta property="og:site_name" content="Site Name, i.e. Moz" />--}}
     {{ Html::style('css/core.common.css') }}
     {{ Html::style('css/core.frontend.css') }}

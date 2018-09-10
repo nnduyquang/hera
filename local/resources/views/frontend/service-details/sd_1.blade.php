@@ -1,6 +1,6 @@
 <div id="sd_1">
 
-    @include('frontend.service-details.banner-title')
+
 
     <div class="container-fluid pb-5" id="noidung">
         <div class="container">

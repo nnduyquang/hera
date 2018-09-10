@@ -24,6 +24,7 @@
 @stop
 @section('container')
 
-        @include('frontend.uudai-details.ud_1')
+    @include('frontend.uudai-details.banner-title')
+    @include('frontend.uudai-details.ud_1')
 
 @stop

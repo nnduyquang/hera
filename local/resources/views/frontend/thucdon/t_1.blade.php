@@ -105,7 +105,6 @@
 </style>
 <div id="t_1">
 
-    @include('frontend.thucdon.banner-title')
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="row">
