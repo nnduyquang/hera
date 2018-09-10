@@ -29,7 +29,7 @@
 
 <div id="nav">
     <ul>
-        <li><a class="nav-r" id="h_top_nav" href=".slider"><i class="fab fa-gg-circle"></i></a></li>
+        <li><a class="nav-r active" id="h_top_nav" href=".slider"><i class="fab fa-gg-circle"></i></a></li>
         <li><a class="nav-r" id="h_1_nav" href="#h_1"><i class="fab fa-gg-circle"></i></a></li>
         <li><a class="nav-r" id="h_2_nav" href="#h_2"><i class="fab fa-gg-circle"></i></a></li>
         <li><a class="nav-r" id="h_3_nav" href="#h_3"><i class="fab fa-gg-circle"></i></a></li>
