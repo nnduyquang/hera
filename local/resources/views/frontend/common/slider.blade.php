@@ -12,8 +12,15 @@
         background-size: cover;
         background-position: center center;
     }
+
+    @media only screen and (max-width: 1300px) {
+        .slider{
+            height: 100vh;
+            width: 100%;
+        }
+    }
 </style>
-<div class="slider pt-lg-5 pt-md-5 pt-0 mt-lg-4 mt-md-4 mt-0">
+<div class="slider">
     <div class="slider-content slider1">
 
     </div>

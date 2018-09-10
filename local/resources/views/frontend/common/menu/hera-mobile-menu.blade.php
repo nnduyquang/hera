@@ -71,7 +71,7 @@
     /*}*/
 </style>
 
-<div class="container-fluid p-0 position-relative d-lg-none d-md-none d-sm-block d-block" id="hera_mobile_menu">
+<div class="container-fluid p-0 position-relative" id="hera_mobile_menu">
     <div class="container">
         <div class="row">
             <div class="col-md-12 d-flex justify-content-between align-items-center">
@@ -83,9 +83,9 @@
         </div>
     </div>
 
-    <div id="hera_mobile_menu_content">
+    <div id="hera_mobile_menu_content" class="">
         <ul>
-            <li><a class="{{ request()->is('/') ? 'active' : '/' }}" href="{{URL::asset('/')}}">TRANG CHỦ</a></li>
+            <li><a class="mt-3 {{ request()->is('/') ? 'active' : '/' }}" href="{{URL::asset('/')}}">TRANG CHỦ</a></li>
             <li class="dv_click"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}" href="javascript:void(0)">DỊCH
                     VỤ</a>
             </li>
@@ -104,26 +104,32 @@
                 <a href="{{URL::asset('/hinh-anh')}}">TIỆC CƯỚI</a>
                 <a href="{{URL::asset('/hinh-anh')}}">VIDEO CLIP</a>
             </div>
-            <li><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}" href="{{URL::asset('/thuc-don/')}}">THỰC
+            <li class="td_click"><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}" href="javascript:void(0)">THỰC
                     ĐƠN</a>
             </li>
+            <div id="demo3">
+                <a href="{{URL::asset('/hinh-anh')}}">SET MENU</a>
+                <a href="{{URL::asset('/hinh-anh')}}">THỰC ĐƠN CHỌN MÓN</a>
+            </div>
             <li><a class="{{ request()->is('uu-dai*') ? 'active' : '/' }}" href="{{URL::asset('/uu-dai/')}}">ƯU ĐÃI</a>
             </li>
             <li><a class="{{ request()->is('tin-tuc*') ? 'active' : '/' }}" href="{{URL::asset('/tin-tuc/')}}">TIN TỨC</a>
             </li>
             <li class="border-bottom"><a class="{{ request()->is('lien-he*') ? 'active' : '/' }}"
                                          href="{{URL::asset('/lien-he/')}}">LIÊN HỆ</a></li>
-            <li class="text-center pt-4"><a href="" class="">ĐẶT TIỆC NGAY</a></li>
+            <li class="text-center pt-4"><a
+                                            href="{{URL::asset('/dat-tiec/')}}" class="">ĐẶT TIỆC NGAY</a></li>
             <li class="text-center">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram" style="background-image:url({{URL::asset('images/bg/bg-insta.jpg')}});"></i></a>
                 <a href=""><i class="fab fa-youtube"></i></a>
             </li>
-            <li class="text-center"><p class="pb-2"><span><i class="fas fa-phone-volume"></i></span>
-                    0984 377 727 (Hội nghị)</p>
+            <li class="text-center">
+                {{--<p class="pb-2"><span><i class="fas fa-phone-volume"></i></span>--}}
+                    {{--0984 377 727 (Hội nghị)</p>--}}
 
                 <p class="pb-3"><span><i class="fas fa-phone-volume"></i></span>
-                    0166 399 7777 (Tiệc cưới)</p></li>
+                    0166 399 7777 (Hotline)</p></li>
 
         </ul>
     </div>

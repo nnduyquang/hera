@@ -97,16 +97,17 @@
 </style>
 
 <div id="c_1">
-    <div class="container-fluid animated fadeIn slow pt-5 pb-5" id="bg_dichvu" style=" background-image: url({{URL::asset('https://capellagallery.com/wp-content/uploads/2018/01/home-service.jpg')}});">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 pt-5 pb-5 text-center">
-                    <p>LIÊN HỆ</p>
+    {{--<div class="container-fluid animated fadeIn slow pt-5 pb-5" id="bg_dichvu" style=" background-image: url({{URL::asset('https://capellagallery.com/wp-content/uploads/2018/01/home-service.jpg')}});">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-md-12 mt-4 mb-4 pt-5 pb-5 text-center">--}}
+                    {{--<p>ĐẶT TIỆC NGAY</p>--}}
                     {{--<span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > LIÊN HỆ</span>--}}
-                </div>
-            </div>
-        </div>
-    </div>
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    @include('frontend.contact.banner-title')
 
     <div class="container-fluid pb-5" id="noidung">
         <div class="container">
@@ -114,14 +115,14 @@
 
 
                 <div class="col-md-6 text-center">
-                    <div class=" mb-3 d-flex align-items-center justify-content-center" style="width: 168px;height: 168px;border-radius: 50%;margin: auto;background-color:#fff;padding: 3px">
+                    <div class=" mb-3 d-flex align-items-center justify-content-center" style="width: 128px;height: 128px;border-radius: 50%;margin: auto;background-color:#fff;padding: 3px">
                     <img class="" src="{{URL::asset('images/logo/logo-hera-center.png')}}" alt=""
                          style="width: 86px;height: auto;">
                     <br>
                     </div>
                     <span>ĐỊA CHỈ</span>
                     <p class="pt-3">
-                        <a href="https://www.google.com/maps/place/Trung+T%C3%A2m+H%E1%BB%99i+Ngh%E1%BB%8B+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+Hera/@10.8017213,106.6161741,16.75z/data=!4m13!1m7!3m6!1s0x31752bfad2e24577:0x68be46a4292008c6!2zNzAgxJDGsOG7nW5nIE4xLCBTxqFuIEvDvSwgVMOibiBQaMO6LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!3b1!8m2!3d10.8043586!4d106.6197277!3m4!1s0x31752bf00fec5333:0x4966fc0d06bb3c3b!8m2!3d10.80335!4d106.6173396" style="background-color:transparent;color: white;font-weight: lighter">
+                        <a href="https://www.google.com/maps/place/Trung+T%C3%A2m+H%E1%BB%99i+Ngh%E1%BB%8B+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+Hera/@10.8050921,106.6184654,18.5z/data=!4m13!1m7!3m6!1s0x31752bfad2e24577:0x68be46a4292008c6!2zNzAgxJDGsOG7nW5nIE4xLCBTxqFuIEvDvSwgVMOibiBQaMO6LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!3b1!8m2!3d10.8043586!4d106.6197277!3m4!1s0x0:0x4966fc0d06bb3c3b!8m2!3d10.8053892!4d106.6189251" style="background-color:transparent;color: white;font-weight: lighter">
                             02 đường D2, Celadon City, Q.Tân Phú, TP.HCM
                         </a>
                     </p>
@@ -149,7 +150,7 @@
                             <input type="text" placeholder="SỐ ĐIỆN THOẠI">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" placeholder="LOẠI SỰ KIỆN">
+                            <input type="text" placeholder="LOẠI HÌNH TIỆC">
                         </div>
 
 
@@ -168,9 +169,9 @@
                     </div>
                 </div>
 
-                <div class="col-md-12 mt-5 pb-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0907160819697!2d106.6175390140478!3d10.804363861633602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bf00fec5333%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1sen!2s!4v1535711100697" width="100%  " height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+                {{--<div class="col-md-12 mt-5 pb-5">--}}
+                    {{--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.2125761296275!2d106.61804553882195!3d10.804693781140028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1svi!2s!4v1536139784124" width="100%  " height="450" frameborder="0" style="border:0" allowfullscreen></iframe>--}}
+                {{--</div>--}}
 
 
             </div>

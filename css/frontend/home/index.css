@@ -134,17 +134,17 @@
   }
 }
 
-#h_2 #bg_dichvu {
+#h_2 #bg_dichvu2 {
   background-size: cover;
   background-position: center center;
   /*background-attachment: fixed;*/
 }
 
-#h_2 #bg_dichvu p {
-  color: white;
-  font-size: 68px;
+#h_2 #bg_dichvu2 p {
+  color: white !important;
+  font-size: 68px !important;
   font-weight: 600;
-  padding: 38px 0;
+  padding: 118px 0;
 }
 
 #h_2 .dv-content {

@@ -1,15 +1,15 @@
 #h_2
-{#bg_dichvu {
+{#bg_dichvu2 {
   //{{--background-image: url({{URL::asset('images/bg/banner-dich-vu-food-decor.jpg')}});--}}
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
   /*background-attachment: fixed;*/
   p{
-    color: white;
-    font-size: 68px;
+    color: white!important;
+    font-size: 68px!important;
     font-weight: 600;
-    padding: 38px 0;
+    padding: 118px 0;
   }
 }
 

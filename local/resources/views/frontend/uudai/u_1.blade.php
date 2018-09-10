@@ -125,16 +125,17 @@
 </style>
 
 <div id="u_1">
-    <div class="container-fluid animated fadeIn slow pt-5 pb-5" id="bg_dichvu" style="background-image: url({{URL::asset('https://capellagallery.com/wp-content/themes/capella/assets/images/bg-title-uudai.jpg')}});">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 pt-5 pb-5 text-center">
-                    <p>ƯU ĐÃI</p>
+    {{--<div class="container-fluid animated fadeIn slow pt-5 pb-5" id="bg_dichvu" style="background-image: url({{URL::asset('https://capellagallery.com/wp-content/themes/capella/assets/images/bg-title-uudai.jpg')}});">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-md-12 mb-4 pt-5 pb-5 text-center">--}}
+                    {{--<p>ƯU ĐÃI</p>--}}
                     {{--<span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > ƯU ĐÃI</span>--}}
-                </div>
-            </div>
-        </div>
-    </div>
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    @include('frontend.uudai.banner-title')
 
     <div class="container-fluid pb-5" id="noidung">
         <div class="container">

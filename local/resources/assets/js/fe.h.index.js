@@ -48,3 +48,7 @@ $(document).ready(function(){
         }
     });
 });
+
+$('.btn-close').click(function () {
+    $('#popup-hera').css('display','none')
+})

@@ -136,7 +136,7 @@
 
 </style>
 
-<div id="menu" class="container-fluid justify-content-center p-0 d-none d-md-block">
+<div id="menu" class="container-fluid justify-content-center p-0">
     <div class="container-fluid justify-content-center">
 
         <div class="row">
@@ -172,24 +172,31 @@
                                     <li><a class="sub-menu" href="">TIỆC CƯỚI</a></li>
                                     <li><a class="sub-menu" href="">VIDEO CLIP</a></li>
                                 </ul>
-
                             </div>
                         </li>
-                        <li><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}"
-                               href="{{URL::asset('/hinh-anh/')}}">THỰC ĐƠN</a></li>
+                        <li id="td_overlay"><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}"
+                               href="{{URL::asset('/thuc-don/')}}">THỰC ĐƠN</a>
+                            <div class="td-content">
+                                <ul>
+                                    <li><a class="sub-menu" href="">SET MENU</a></li>
+                                    <li><a class="sub-menu" href="">THỰC ĐƠN CHỌN MÓN</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a class="{{ request()->is('uu-dai*') ? 'active' : '/' }}"
                                href="{{URL::asset('/uu-dai/')}}">ƯU ĐÃI</a></li>
                         <li><a class="{{ request()->is('tin-tuc*') ? 'active' : '/' }}"
-                               href="{{URL::asset('/hinh-anh/')}}">TIN TỨC</a></li>
+                               href="{{URL::asset('/tin-tuc/')}}">TIN TỨC</a></li>
                         <li><a class="{{ request()->is('lien-he*') ? 'active' : '/' }}"
                                href="{{URL::asset('/lien-he/')}}">LIÊN HỆ</a></li>
                         {{--<li><a href="">ABOUT US</a></li>--}}
-                        <li><a href="">ĐẶT TIỆC NGAY</a></li>
+                        <li><a
+                               href="{{URL::asset('/dat-tiec/')}}">ĐẶT TIỆC NGAY</a></li>
                         <li>
                             <div id="sc_network">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/TrungTamTiecCuoiHera"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/hera_center"><i class="fab fa-instagram" style="background-image:url({{URL::asset('images/bg/bg-insta.jpg')}});"></i></a>
+                                <a href="https://www.youtube.com/channel/UCMWdeTYUOrgjhPYJadEUwTA"><i class="fab fa-youtube"></i></a>
                             </div>
                         </li>
                     </ul>

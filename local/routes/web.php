@@ -13,8 +13,15 @@ Route::get('/uu-dai/', function () {
     return view('frontend.uudai.index');
 });
 
-Route::get('/lien-he/', function () {
+Route::get('/dat-tiec/', function () {
     return view('frontend.contact.index');
+});
+Route::get('/thuc-don/', function () {
+    return view('frontend.thucdon.index');
+});
+
+Route::get('/lien-he/', function () {
+    return view('frontend.lienhe.index');
 });
 
 Route::get('/uu-dai/chuong-trinh-uu-dai.html', function () {
@@ -23,6 +30,10 @@ Route::get('/uu-dai/chuong-trinh-uu-dai.html', function () {
 
 Route::get('/hinh-anh/', function () {
     return view('frontend.gallery.index');
+});
+
+Route::get('/tin-tuc/', function () {
+    return view('frontend.tintuc.index');
 });
 
 Route::get('/dich-vu/dich-vu.html', function () {

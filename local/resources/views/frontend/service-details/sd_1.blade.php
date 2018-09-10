@@ -1,16 +1,6 @@
 <div id="sd_1">
-    <div class="container-fluid animated fadeIn slow pt-5 pb-5" id="bg_dichvu"
-         style=" background-image: url({{URL::asset('images/bg/Banner-dich-vu-hoi-nghi-tiec-to-chuc-su-kien.jpg')}});">
-        <div class="container">
-            <div class="row pt-5">
-                <div class="col-md-12 pt-5 pb-5 text-center">
-                    <p>DỊCH VỤ</p>
-                    {{--<span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > <a--}}
-                                {{--href="{{URL::asset('/dich-vu/')}}">DỊCH VỤ</a> > DỊCH VỤ 1</span>--}}
-                </div>
-            </div>
-        </div>
-    </div>
+
+    @include('frontend.service-details.banner-title')
 
     <div class="container-fluid pb-5" id="noidung">
         <div class="container">

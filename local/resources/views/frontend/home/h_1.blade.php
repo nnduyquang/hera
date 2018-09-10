@@ -148,7 +148,7 @@
                             {{--<a href="" class="float-right pt-4 pb-4">Xem thêm</a>--}}
                         </p>
 
-                        <p class="text-right"><a href="">Xem thêm...!</a></p>
+                        <p class="text-right"><a href="">Xem thêm</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 wow zoomIn">

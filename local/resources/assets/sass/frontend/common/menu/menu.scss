@@ -2,6 +2,7 @@ $main-color: #dbbc85;
 $sub-color2: #007bff;
 #menu {
   position: fixed;
+  display: block;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -21,7 +22,7 @@ $sub-color2: #007bff;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background-color: #b0b0b0;
+        //background-color: #b0b0b0;
         color: white;
         line-height: 30px;
         text-align: center;
@@ -29,13 +30,25 @@ $sub-color2: #007bff;
         transition: .3s;
         margin-right: 10px;
       }
+      i.fa-facebook-f {
+        background-color: #0e5bc0;
+      }
       &:hover i.fa-facebook-f {
         background-color: #0e5bc0;
       }
       &:hover i.fa-instagram {
         background-color: #42aaf3;
       }
+      i.fa-instagram {
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        background-position: center center;
+      }
+
       &:hover i.fa-youtube {
+        background-color: #e71b06;
+      }
+      i.fa-youtube {
         background-color: #e71b06;
       }
 
@@ -43,7 +56,7 @@ $sub-color2: #007bff;
   }
 
   #menu_content {
-     ul#main {
+    ul#main {
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -88,8 +101,8 @@ $sub-color2: #007bff;
     }
 
     #dv_overlay {
-      z-index: 10!important;
-      position: relative!important;
+      z-index: 10 !important;
+      position: relative !important;
       &:hover .dv-content {
         opacity: 1;
         top: 100%;
@@ -112,7 +125,6 @@ $sub-color2: #007bff;
         transform: translateX(-50%);
         transition: .3s;
         z-index: -1;
-
         li {
           display: block;
           padding: 10px 10px;
@@ -143,8 +155,8 @@ $sub-color2: #007bff;
     }
 
     #tv_overlay {
-      z-index: 10!important;
-      position: relative!important;
+      z-index: 10 !important;
+      position: relative !important;
       &:hover .tv-content {
         opacity: 1;
         top: 100%;
@@ -164,7 +176,6 @@ $sub-color2: #007bff;
         transform: translateX(-50%);
         transition: .3s;
         z-index: -1;
-
         li {
           display: block;
           padding: 10px 10px;
@@ -196,16 +207,72 @@ $sub-color2: #007bff;
 
     }
 
+    #td_overlay {
+      z-index: 10 !important;
+      position: relative !important;
+      &:hover .td-content {
+        opacity: 1;
+        top: 100%;
+        //height: auto;
+      }
+
+      .td-content {
+        padding-left: 6px;
+        padding-right: 6px;
+        position: absolute;
+        top: -200%;
+        left: 50%;
+        transition: .3s;
+        background-color: #fff;
+        width: auto;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: .3s;
+        z-index: -1;
+
+        li {
+          display: block;
+          padding: 10px 10px;
+          border-bottom: 1px solid $main-color;
+          min-width: 218px;
+          &:last-child {
+            border-bottom: none !important;
+            margin-bottom: 6px;
+          }
+          a.sub-menu {
+            padding: 6px 10px !important;
+            transition: .3s;
+
+          }
+          &:nth-last-child(2) {
+            padding: 10px 10px !important;
+            a.sub-menu {
+              font-weight: 600 !important;
+              background-color: transparent;
+              color: #2a2a2a;
+            }
+          }
+          &:nth-last-child(2) a:hover {
+            color: $sub-color2;
+          }
+        }
+
+      }
+
+    }
+
   }
 
 }
 
 //mobile menu
+#hera_mobile_menu {
+  display: none;
+  #logo img {
+    width: 100px;
+    height: auto;
 
-#hera_mobile_menu #logo img {
-  width: 100px;
-  height: auto;
-
+  }
 }
 
 #hera_mobile_menu_content {
@@ -241,10 +308,23 @@ $sub-color2: #007bff;
         i {
           height: 38px;
           width: 38px;
-          background-color: #6c757d;
+          //background-color: #6c757d;
           color: white;
           border-radius: 50%;
           line-height: 38px;
+        }
+        i.fa-facebook-f {
+          background-color: #0e5bc0;
+        }
+        i.fa-instagram {
+
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          background-position: center center;
+          color: white;
+        }
+        i.fa-youtube {
+          background-color: #e71b06;
         }
       }
       a.active {
@@ -271,7 +351,7 @@ $sub-color2: #007bff;
 
 }
 
-#demo, #demo2 {
+#demo, #demo2, #demo3 {
   height: 0;
   padding-left: 38px;
   /*padding-top: 10px;*/
@@ -279,12 +359,22 @@ $sub-color2: #007bff;
   transition: 1s;
 }
 
-#demo a, #demo2 a {
+#demo a, #demo2 a, #demo3 a {
   display: none;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   color: #2a2a2a;
+}
+
+@media only screen and (max-width: 1300px) {
+  #hera_mobile_menu {
+    display: block;
+
+  }
+  #menu {
+    display: none;
+  }
 }
 
 

@@ -75,10 +75,10 @@
 </style>
 
 <div id="h_2">
-    <div class="container-fluid wow fadeIn slow" id="bg_dichvu" style="background-image:url({{URL::asset('images/bg/banner-dich-vu-food-decor.jpg')}});">
+    <div class="container-fluid wow fadeIn slow" id="bg_dichvu2" style="background-image:url({{URL::asset('images/bg/banner-dich-vu-food-decor.jpg')}});">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 pt-5 pb-5 text-center">
+                <div class="col-md-12 text-center">
                     <p>DỊCH VỤ</p>
                 </div>
             </div>
