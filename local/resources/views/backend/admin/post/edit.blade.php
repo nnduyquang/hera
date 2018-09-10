@@ -42,7 +42,7 @@
                         @php
                             $arrayCategoryItem=$post->categoryitems()->get();
                         @endphp
-                        @foreach($dd_categorie_posts as $key=>$item)
+                        @foreach($data['dd_categorie_posts'] as $key=>$item)
                             <label class="check-container">
                                 {{$item->name}}
                                 @if(in_array($item->id,explode(',',$arrayCategoryItem->implode('id',','))))

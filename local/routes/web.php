@@ -114,6 +114,7 @@ Route::group(['middleware' => ['auth']], function () {
     //------GENERAL
     Route::get('sml_admin/config/general', ['as' => 'config.general.index', 'uses' => 'ConfigGeneralController@getConfig']);
     Route::post('sml_admin/config/general', ['as' => 'config.general.store', 'uses' => 'ConfigGeneralController@saveConfig']);
+    Route::get('sml_admin/config-text/general', ['as' => 'config-text.general.index', 'uses' => 'ConfigGeneralController@getConfigText']);
     //-------EMAIL
 
     Route::get('sml_admin/config/email', ['as' => 'config.email.index', 'uses' => 'ConfigEmailController@getEmailConfig']);

@@ -37,12 +37,13 @@
                 </div>
                 {{--<div class="form-group">--}}
                 {{--<strong>Chuyên Mục</strong>--}}
-                {{--{!! Form::select('parent',$dd_categorie_posts, null,array('class' => 'form-control')) !!}--}}
+                {{--{!! Form::select('parent',$data['dd_categorie_posts'], null,array('class' => 'form-control')) !!}--}}
                 {{--</div>--}}
                 <div class="form-group">
                     <strong>Chuyên Mục</strong>
                     <div class="category-info">
-                        @foreach($dd_categorie_posts as $key=>$item)
+                        @foreach($data['dd_categorie_posts'] as $key=>$item)
+
                             <label class="check-container">
                                 {{$item->name}}
                                 {{ Form::checkbox('list_category[]', $item->id, false, array('class' => '')) }}

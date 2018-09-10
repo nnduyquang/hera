@@ -47,6 +47,12 @@
                         <p>Cấu Hình Email</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('config-text.general.index') }}" class="nav-link {{ set_active('sml_admin/config-text/general') }}">
+                        {{--<i class="fa fa-link"></i>--}}
+                        <p>Cấu Hình Text</p>
+                    </a>
+                </li>
             </ul>
         </li>
         <hr style="background-color: #4f5962">
