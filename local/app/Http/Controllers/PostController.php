@@ -18,10 +18,11 @@ class PostController extends Controller
     {
         $this->postRepository = $postRepository;
     }
-    public function index(Request $request)
+    public function index(Request $request,$type)
     {
-        $posts = $this->postRepository->getAllPostOrderById();
-        return view('backend.admin.post.index', compact('posts'))->with('i', ($request->input('page', 1) - 1) * 5);
+        $data = $this->postRepository->getAllPostByTypeOrderById($type);
+        $posts=$data['posts'];
+        return view($data['view'], compact('posts'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -29,10 +30,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($type)
     {
-        $data=$this->postRepository->showCreatePost();
-        return view('backend.admin.post.create', compact('roles', 'data'));
+        $data=$this->postRepository->showCreatePost($type);
+        return view($data['view'], compact('roles', 'data'));
     }
 
     /**
@@ -41,10 +42,10 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$type)
     {
-        $posts = $this->postRepository->createNewPostWithSeoId($request);
-        return redirect()->route('post.index')->with('success', 'Tạo Mới Thành Công Bài Viết');
+        $data = $this->postRepository->createNewPostWithSeoId($request,$type);
+        return view($data['view']);
     }
 
     /**
@@ -64,7 +65,7 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id,$type)
     {
 //        $post = $this->postRepository->getPostById($id);
         $data=$this->postRepository->showEditPost($id);
@@ -78,7 +79,7 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,$type)
     {
         $posts = $this->postRepository->updateNewPost($request,$id);
         return redirect()->route('post.index')->with('success', 'Cập Nhật Thành Công Bài Viết');
@@ -90,7 +91,7 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,$type)
     {
         $this->postRepository->deletePost($id);
         return redirect()->route('post.index')

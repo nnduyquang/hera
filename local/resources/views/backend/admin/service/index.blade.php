@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-4 text-right">
                 @permission(('post-create'))
-                <a class="btn btn-success" href="{{ route('post.create') }}"> Tạo Mới Bài Viết</a>
+                <a class="btn btn-success" href="{{ route('service.create') }}"> Tạo Mới Bài Viết</a>
                 @endpermission
             </div>
         </div>
@@ -24,7 +24,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    {!! Form::open(array('route' => 'post.search','method'=>'POST','id'=>'formSearchPost')) !!}
+    {!! Form::open(array('route' => 'service.search','method'=>'POST','id'=>'formSearchPost')) !!}
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
@@ -71,10 +71,10 @@
                 <td>{{$arrayCategoryItem->implode('name',',')}}</td>
                 <td>
                     @permission(('post-edit'))
-                    <a class="btn btn-primary" href="{{ route('post.edit',$data->id) }}">Cập Nhật</a>
+                    <a class="btn btn-primary" href="{{ route('service.edit',$data->id) }}">Cập Nhật</a>
                     @endpermission
                     @permission(('post-delete'))
-                    {!! Form::open(['method' => 'DELETE','route' => ['post.destroy', $data->id],'style'=>'display:inline']) !!}
+                    {!! Form::open(['method' => 'DELETE','route' => ['service.destroy', $data->id],'style'=>'display:inline']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                     @endpermission

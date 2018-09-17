@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 13, 2018 lúc 12:22 PM
+-- Thời gian đã tạo: Th9 17, 2018 lúc 12:26 PM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.0.29
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `startproject`
+-- Cơ sở dữ liệu: `hera`
 --
 
 -- --------------------------------------------------------
@@ -50,11 +50,8 @@ CREATE TABLE `category_items` (
 --
 
 INSERT INTO `category_items` (`id`, `name`, `path`, `description`, `image`, `image_mobile`, `level`, `parent_id`, `type`, `order`, `isActive`, `created_at`, `updated_at`, `seo_id`) VALUES
-(1, 'Test 1', 'test-1', '<p>\r\n	Test 1\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 1, 1, '2018-07-17 02:13:46', '2018-07-17 02:13:46', 1),
-(2, 'Test 2', 'test-2', '<p>\r\n	Test 2\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 2, 1, '2018-07-17 02:14:03', '2018-07-17 02:14:03', 2),
-(3, 'Test 3', 'test-3', '<p>\r\n	Test 3\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 3, 1, '2018-07-17 02:14:21', '2018-07-17 02:14:21', 3),
-(4, 'test1-1', 'test1-1', '<p>\r\n	test1-1\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 1, 0, 5, 1, '2018-07-17 02:24:13', '2018-07-17 02:24:13', 4),
-(5, 'test 5', 'test-5', '<p>\r\n	test 5\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 5, 1, '2018-07-17 02:32:23', '2018-07-17 02:32:23', 5);
+(6, 'Dịch Vụ', 'dich-vu', NULL, '0', NULL, 0, NULL, 0, 1, 1, '2018-09-17 08:05:17', '2018-09-17 08:05:17', 13),
+(7, 'Thư Viện', 'thu-vien', NULL, '0', NULL, 0, NULL, 0, 1, 1, '2018-09-17 08:08:34', '2018-09-17 08:08:34', 20);
 
 -- --------------------------------------------------------
 
@@ -74,9 +71,16 @@ CREATE TABLE `category_many` (
 --
 
 INSERT INTO `category_many` (`category_id`, `item_id`, `created_at`, `updated_at`) VALUES
-(1, 1, '2018-07-17 03:18:34', '2018-07-17 03:18:34'),
-(2, 1, '2018-07-17 04:25:46', '2018-07-17 04:25:46'),
-(5, 1, '2018-07-17 04:08:02', '2018-07-17 04:08:02');
+(1, 1, '2018-09-12 14:56:37', '2018-09-12 14:56:37'),
+(4, 1, '2018-09-13 02:48:34', '2018-09-13 02:48:34'),
+(5, 1, '2018-09-12 14:56:37', '2018-09-12 14:56:37'),
+(6, 2, '2018-09-17 08:06:29', '2018-09-17 08:06:29'),
+(6, 3, '2018-09-17 08:06:53', '2018-09-17 08:06:53'),
+(6, 4, '2018-09-17 08:07:16', '2018-09-17 08:07:16'),
+(6, 5, '2018-09-17 08:07:34', '2018-09-17 08:07:34'),
+(7, 6, '2018-09-17 08:08:56', '2018-09-17 08:08:56'),
+(7, 7, '2018-09-17 08:09:16', '2018-09-17 08:09:16'),
+(7, 8, '2018-09-17 08:09:59', '2018-09-17 08:09:59');
 
 -- --------------------------------------------------------
 
@@ -125,25 +129,7 @@ CREATE TABLE `configs` (
 --
 
 INSERT INTO `configs` (`id`, `name`, `content`, `description`, `order`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'config-contact', '<p style=\"text-align: center;\">\r\n	<span style=\"color:#ffffff;\"><strong><em>Hotline hỗ trợ tư vấn và phản hồi ý kiến</em></strong><em>:&nbsp;</em></span>\r\n</p>\r\n\r\n<p style=\"text-align: center;\">\r\n	&nbsp;\r\n</p>\r\n\r\n<p style=\"text-align: center;\">\r\n	<span style=\"color:#ffffff;\"><strong><em>Hân hạnh được phục vụ quý khách hàng.!</em></strong></span>\r\n</p>\r\n\r\n<p style=\"text-align: center;\">\r\n	<span style=\"color:#ffffff;\"><strong><em>157 Nguyễn Thượng Hiền, P.6 Quận Bình Thạnh, TPHCM</em></strong></span>\r\n</p>\r\n\r\n<p>\r\n	&nbsp;\r\n</p>', NULL, 3, 1, NULL, '2018-08-08 15:10:24'),
-(3, 'email-receive', 'trangnh.sml@gmail.com', 'Cấu Hình Email Nhận Báo Giá', 1, 1, '2017-08-26 06:53:20', '2018-08-08 07:40:29'),
-(4, 'email-sender-subject', 'Re: Thông Tin Ứng Tuyển', 'Cấu Hình Subject Gửi Khách Hàng', 2, 1, '2017-08-26 06:53:20', '2018-08-08 07:40:30'),
-(5, 'email-sender-from', 'Thông Tin Ứng Tuyển Tuấn 123', 'Cấu Hình From Gửi Khách Hàng', 3, 1, '2017-08-26 06:53:21', '2018-08-08 07:40:30'),
-(6, 'email-receive-subject', 'Thông Tin Ứng Tuyển Từ Ứng Viên', 'Cấu Hình Subject Nhận Báo Giá', 4, 1, '2017-08-26 06:53:21', '2018-08-08 07:40:30'),
-(7, 'email-receive-from', 'Thông Tin Ứng Tuyển Từ Ứng Viên', 'Cấu Hình From Nhận Báo Giá', 5, 1, '2017-08-26 06:53:21', '2018-08-08 07:40:30'),
-(8, 'email-signatures', '', 'Cấu Hình Chữ Ký', 7, 1, '2017-08-26 06:53:21', '2018-05-11 10:13:42'),
-(9, 'email-sender-content', '<h1 style=\"margin-left:0cm; margin-right:0cm\">\r\n	<span style=\"font-size:24pt\">Chúng tôi đã nhận được mail, mọi thông tin về ứng tuyển sẽ được phản hồi trong vòng 24h. Xin cảm ơn!</span>\r\n</h1>', 'Cấu Hình Nội Dung Gửi Khách Hàng', 6, 1, '2017-08-26 06:53:21', '2018-08-08 07:40:30'),
-(13, 'config-phone', '0984.929.097', NULL, 2, 1, NULL, '2018-08-08 15:10:24'),
-(14, 'config-email', 'congtycophantuan123@gmail.com', NULL, 8, 1, NULL, '2018-08-08 15:10:24'),
-(15, 'config-address', '202B Hoàng Văn Thụ Phường 9 Quận Phú Nhuận TP.HCM', NULL, 9, 1, NULL, '2018-08-08 15:10:24'),
-(16, 'config-name', 'Phạm Anh Tuân', NULL, 4, 1, NULL, '2018-08-08 15:10:24'),
-(18, 'config-introduce', '<p>\r\n	Công ty Bất động sản Tuấn 123 tiền thân là Công ty TNHH Tuấn 123 với 5 năm kinh nghiệm trong lĩnh vực Bất động sản Thổ cư tại Việt Nam. Khởi đầu từ một Công ty Môi giới Nhà đất, Tuấn 123 lần lượt phát triển về quy mô nhân sự cũng như các lĩnh vực hoạt động. Ở tất cả các lĩnh vực: Môi giới Bất động sản, Định giá Bất động sản, Đào tạo Môi giới &hellip; công ty đều chứng tỏ sự chuyên nghiệp và chất lượng dịch vụ của mình.\r\n</p>\r\n\r\n<p>\r\n	<em><strong>Công ty Bất động sản Tuấn 123</strong>&nbsp;</em>đã được biết đến là đơn vị Môi giới Bất động sản Thổ cư lớn nhất Hà Nội và từng bước tiến đến lớn nhất Việt Nam với dấu mốc thành lập Trụ sở Miền Nam từ đầu năm 2017.\r\n</p>\r\n\r\n<p>\r\n	Bất động sản Tuấn 123&nbsp;mong muốn cung cấp những sản phẩm và dịch vụ gắn liền với thương hiệu Tuấn 123, đảm bảo quy trình chuyên nghiệp, tư vấn nhiệt thành đáp ứng nhu cầu rất lớn của thị trường Bất động sản. Không ngừng đổi mới và phát triển để khẳng định tầm vóc của một doanh nghiệp Việt Nam năng động, sáng tạo, tiên phong trong cả lĩnh vực kinh doanh và các hoạt động cộng đồng.\r\n</p>', NULL, 5, 1, NULL, '2018-08-08 02:57:48'),
-(20, 'config-company-name', 'Công Ty BĐS Tuấn 123', NULL, 1, 1, NULL, '2018-08-08 09:28:25'),
-(21, 'config-seo-title', 'qwe', NULL, 10, 1, NULL, '2018-08-13 07:52:08'),
-(22, 'config-seo-description', 'asdas', NULL, 11, 1, NULL, '2018-08-13 07:52:08'),
-(23, 'config-seo-keywords', 'qwe,sadasd', NULL, 12, 1, NULL, '2018-08-13 07:52:08'),
-(24, 'config-seo-image', 'images/uploads/images/gt_1.jpg', NULL, 13, 1, NULL, '2018-08-13 07:52:08'),
-(25, 'config-favicon', NULL, NULL, 14, 1, NULL, NULL);
+(1, 'config-contact', '<p>\r\n	<strong><em><span style=\"background-color:#f1c40f;\">Hotline đặt hàng</span>:</em></strong><em>&nbsp;&nbsp;<strong>097.388.9336 - 0914.675.777</strong></em>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Hotline hỗ trợ tư vấn và phản hồi ý kiến</em></strong><em>:&nbsp;&nbsp;<strong>097.388.9336</strong></em>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Hân hạnh được phục vụ quý khách hàng.!</em></strong>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Thông tin liên hệ với chúng tôi:</em></strong>\r\n</p>\r\n\r\n<p>\r\n	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<strong>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ THÉP KHÁNH NAM</strong>\r\n</p>\r\n\r\n<p>\r\n	<strong>TRỤ SỞ CHÍNH:</strong>&nbsp;<em>201 Bình Thành, KP 4, P. Bình Hưng Hòa, Q. Bình Tân, thành phố Hồ Chí Minh</em>\r\n</p>\r\n\r\n<p>\r\n	<strong>Di động:</strong><em>&nbsp;097.388.9336 - 0914.675.777</em>\r\n</p>', NULL, NULL, 1, NULL, '2018-03-30 09:07:51');
 
 -- --------------------------------------------------------
 
@@ -153,17 +139,27 @@ INSERT INTO `configs` (`id`, `name`, `content`, `description`, `order`, `user_id
 
 CREATE TABLE `menus` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `level` tinyint(3) UNSIGNED NOT NULL,
-  `order` int(11) NOT NULL DEFAULT '1',
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `target` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '_self',
+  `icon_class` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `color` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
-  `content_id` int(11) DEFAULT NULL,
-  `type` tinyint(3) UNSIGNED DEFAULT NULL,
-  `isActive` tinyint(4) NOT NULL DEFAULT '1',
+  `order` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `route` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parameters` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `menus`
+--
+
+INSERT INTO `menus` (`id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
+(1, 'quang test 2 as', '', '_self', NULL, '#000000', NULL, 1, '2018-09-14 04:10:33', '2018-09-14 08:38:13', 'menu.index', NULL),
+(2, 'Thư Test', '', '_self', NULL, '#000000', 1, 1, '2018-09-14 04:48:02', '2018-09-17 03:14:14', 'menu.index', NULL),
+(3, 'Chip Test', '', '_self', NULL, '#000000', NULL, 2, '2018-09-14 04:49:28', '2018-09-17 03:59:48', 'menu.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -301,8 +297,9 @@ CREATE TABLE `posts` (
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` longtext COLLATE utf8mb4_unicode_ci,
-  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_image` longtext COLLATE utf8mb4_unicode_ci,
   `post_type` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `isActive` tinyint(1) NOT NULL DEFAULT '1',
   `category_item_id` int(11) DEFAULT NULL,
@@ -316,9 +313,14 @@ CREATE TABLE `posts` (
 -- Đang đổ dữ liệu cho bảng `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `path`, `description`, `content`, `image`, `post_type`, `isActive`, `category_item_id`, `user_id`, `created_at`, `updated_at`, `seo_id`) VALUES
-(1, 'test bài viết', 'test-bai-viet', '<p>\r\n	test bài viết\r\n</p>', '<p>\r\n	test bài viết\r\n</p>', 'images/uploads/images/gt_1.jpg', 1, 1, NULL, 1, '2018-07-17 03:18:34', '2018-07-17 03:18:34', 7),
-(2, 'Giới Thiệu', 'gioi-thieu', '<p>\r\n	Giới Thiệu\r\n</p>', '<p>\r\n	Giới Thiệu\r\n</p>', '0', 0, 1, NULL, 1, '2018-08-13 03:00:05', '2018-08-13 03:00:05', 8);
+INSERT INTO `posts` (`id`, `title`, `path`, `description`, `content`, `image`, `sub_image`, `post_type`, `isActive`, `category_item_id`, `user_id`, `created_at`, `updated_at`, `seo_id`) VALUES
+(2, 'Tiệc Cưới', 'tiec-cuoi', '<p>\r\n	Tiệc Cưới\r\n</p>', '<p>\r\n	Tiệc Cưới\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:06:29', '2018-09-17 08:06:29', 15),
+(3, 'Hội Nghị', 'hoi-nghi', '<p>\r\n	Hội Nghị\r\n</p>', '<p>\r\n	Hội Nghị\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:06:53', '2018-09-17 08:06:53', 16),
+(4, 'Sự Kiện', 'su-kien', '<p>\r\n	Sự Kiện\r\n</p>', '<p>\r\n	Sự Kiện\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:07:16', '2018-09-17 08:07:16', 18),
+(5, 'Tiệc Ngoài Trời', 'tiec-ngoai-troi', '<p>\r\n	Tiệc Ngoài Trời\r\n</p>', '<p>\r\n	Tiệc Ngoài Trời\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:07:34', '2018-09-17 08:07:34', 19),
+(6, 'Sảnh', 'sanh', '<p>\r\n	Sảnh\r\n</p>', '<p>\r\n	Sảnh\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:08:56', '2018-09-17 08:08:56', 21),
+(7, 'Trang Trí', 'trang-tri', '<p>\r\n	Trang Trí\r\n</p>', '<p>\r\n	Trang Trí\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:09:16', '2018-09-17 08:09:16', 22),
+(8, 'Sảnh Tiệc Cưới', 'sanh-tiec-cuoi', '<p>\r\n	Sảnh Tiệc Cưới\r\n</p>', '<p>\r\n	Sảnh Tiệc Cưới\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:09:59', '2018-09-17 08:09:59', 23);
 
 -- --------------------------------------------------------
 
@@ -396,8 +398,7 @@ CREATE TABLE `seos` (
   `id` int(10) UNSIGNED NOT NULL,
   `seo_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_keywords` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_keywords` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -406,15 +407,25 @@ CREATE TABLE `seos` (
 -- Đang đổ dữ liệu cho bảng `seos`
 --
 
-INSERT INTO `seos` (`id`, `seo_title`, `seo_description`, `seo_keywords`, `seo_image`, `created_at`, `updated_at`) VALUES
-(1, 'Test 1', 'Test 1', 'Test 1', '', '2018-07-17 02:13:46', '2018-07-17 02:13:46'),
-(2, 'Test 2', 'Test 2', 'Test 2', '', '2018-07-17 02:14:03', '2018-07-17 02:14:03'),
-(3, 'Test 3', 'Test 3', 'Test 3', '', '2018-07-17 02:14:21', '2018-07-17 02:14:21'),
-(4, 'test1-1', 'test1-1', 'test1,1', '', '2018-07-17 02:24:13', '2018-07-17 02:24:13'),
-(5, 'test 5', 'test 5', 'test 5', '', '2018-07-17 02:32:23', '2018-07-17 02:32:23'),
-(6, 'test bài viết', 'test bài viết', 'test bài viết', '', '2018-07-17 03:13:47', '2018-07-17 03:13:47'),
-(7, 'test bài viết', 'test bài viết', 'test bài viết', 'images/uploads/images/gt_1.jpg', '2018-07-17 03:18:34', '2018-08-13 08:08:38'),
-(8, NULL, NULL, NULL, '', '2018-08-13 03:00:05', '2018-08-13 03:00:05');
+INSERT INTO `seos` (`id`, `seo_title`, `seo_description`, `seo_keywords`, `created_at`, `updated_at`) VALUES
+(6, 'test bài viết', 'test bài viết', 'test bài viết', '2018-07-17 03:13:47', '2018-07-17 03:13:47'),
+(8, NULL, NULL, NULL, '2018-09-12 14:36:28', '2018-09-12 14:36:28'),
+(9, NULL, NULL, NULL, '2018-09-12 14:50:50', '2018-09-12 14:50:50'),
+(10, NULL, NULL, NULL, '2018-09-12 14:53:02', '2018-09-12 14:53:02'),
+(11, NULL, NULL, NULL, '2018-09-12 14:54:14', '2018-09-12 14:54:14'),
+(13, NULL, NULL, NULL, '2018-09-17 08:05:17', '2018-09-17 08:05:17'),
+(14, NULL, NULL, NULL, '2018-09-17 08:06:20', '2018-09-17 08:06:20'),
+(15, NULL, NULL, NULL, '2018-09-17 08:06:29', '2018-09-17 08:06:29'),
+(16, NULL, NULL, NULL, '2018-09-17 08:06:53', '2018-09-17 08:06:53'),
+(17, NULL, NULL, NULL, '2018-09-17 08:07:08', '2018-09-17 08:07:08'),
+(18, NULL, NULL, NULL, '2018-09-17 08:07:16', '2018-09-17 08:07:16'),
+(19, NULL, NULL, NULL, '2018-09-17 08:07:34', '2018-09-17 08:07:34'),
+(20, NULL, NULL, NULL, '2018-09-17 08:08:34', '2018-09-17 08:08:34'),
+(21, NULL, NULL, NULL, '2018-09-17 08:08:56', '2018-09-17 08:08:56'),
+(22, NULL, NULL, NULL, '2018-09-17 08:09:16', '2018-09-17 08:09:16'),
+(23, NULL, NULL, NULL, '2018-09-17 08:09:59', '2018-09-17 08:09:59'),
+(24, NULL, NULL, NULL, '2018-09-17 10:09:25', '2018-09-17 10:09:25'),
+(25, NULL, NULL, NULL, '2018-09-17 10:13:11', '2018-09-17 10:13:11');
 
 -- --------------------------------------------------------
 
@@ -437,7 +448,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'nnduyquang', 'nnduyquang@gmail.com', '$2y$10$mStg572JFNI89/0Cg7TOGOUkACFaBl/nsNeOvx8zglr1qyJPA0tj6', 'RQlsgmk0UzRUeXVHhJrU4TGWGTy5iR8VKE0aFheEnZWSHkCH4moWEjB6Ut2E', '2018-03-14 07:24:10', NULL);
+(1, 'nnduyquang', 'nnduyquang@gmail.com', '$2y$10$mStg572JFNI89/0Cg7TOGOUkACFaBl/nsNeOvx8zglr1qyJPA0tj6', NULL, '2018-03-14 07:24:10', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -555,7 +566,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `category_items`
 --
 ALTER TABLE `category_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `category_permissions`
@@ -567,13 +578,13 @@ ALTER TABLE `category_permissions`
 -- AUTO_INCREMENT cho bảng `configs`
 --
 ALTER TABLE `configs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
@@ -591,7 +602,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT cho bảng `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
@@ -609,7 +620,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT cho bảng `seos`
 --
 ALTER TABLE `seos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
