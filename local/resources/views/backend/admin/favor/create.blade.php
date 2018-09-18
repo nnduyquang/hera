@@ -1,6 +1,6 @@
 @extends('backend.admin.master')
 @section('title-page')
-    Tạo Mới Bài Viết
+    Tạo Mới Ưu Đãi
 @stop
 @section('styles')
 @stop
@@ -13,7 +13,7 @@
                 {{--<h2>Tạo Mới Bài Viết</h2>--}}
             </div>
             <div class="col-md-4 text-right">
-                <a class="btn btn-primary" href="{{ route('service.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('favor.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::open(array('route' => 'service.store','method'=>'POST')) !!}
+    {!! Form::open(array('route' => 'favor.store','method'=>'POST')) !!}
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
@@ -53,13 +53,13 @@
             </div>
         </div>
         <div class="col-md-12 p-0">
-            <strong>Nội Dung Bài Viết:</strong>
+            <strong>Nội Dung Thực Đơn:</strong>
             {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
 
         </div>
         <div class="col-md-12">
             <div class="form-group">
-                {!! Form::button('Thêm Hình Dịch Vụ', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                {!! Form::button('Thêm Hình Thực Đơn', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
             </div>
             <div class="form-group">
                 <div id="add-image" class="row">
@@ -113,7 +113,7 @@
             <input name="isActive" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
         </div>
         <div class="col-md-12" style="text-align:  center;">
-            <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Dịch Vụ</button>
+            <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Ưu Đãi</button>
         </div>
 
     </div>

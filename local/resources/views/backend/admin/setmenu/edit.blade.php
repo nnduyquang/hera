@@ -1,6 +1,6 @@
 @extends('backend.admin.master')
 @section('title-page')
-    Cập Nhật Bài Viết
+    Cập Nhật Thực Đơn
 @stop
 @section('styles')
 @stop
@@ -14,7 +14,7 @@
                 {{--<h2>Cập Nhật Bài Viết</h2>--}}
             </div>
             <div class="col-md-4 text-right">
-                <a class="btn btn-primary" href="{{ route('service.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('setmenu.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($data['post'],array('route' => ['service.update',$data['post']->id],'method'=>'PATCH')) !!}
+    {!! Form::model($data['post'],array('route' => ['setmenu.update',$data['post']->id],'method'=>'PATCH')) !!}
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
@@ -139,7 +139,7 @@
                        type="checkbox" data-toggle="toggle">
             </div>
             <div class="col-md-12" style="text-align:  center;">
-                <button id="btnDanhMuc" type="submit" class="btn btn-primary">Cập Nhật Dịch Vụ</button>
+                <button id="btnDanhMuc" type="submit" class="btn btn-primary">Cập Nhật Menu</button>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-4 text-right">
                 @permission(('post-create'))
-                <a class="btn btn-success" href="{{ route('service.create') }}"> Tạo Mới Bài Viết</a>
+                <a class="btn btn-success" href="{{ route('setmenu.create') }}"> Tạo Mới Bài Viết</a>
                 @endpermission
             </div>
         </div>
@@ -24,38 +24,38 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    {!! Form::open(array('route' => 'service.search','method'=>'POST','id'=>'formSearchPost')) !!}
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-6">
-                {!! Form::text('txtSearch',null, array('class' => 'form-control','id'=>'txtSearch')) !!}
-            </div>
-            <div class="col-md-6">
-                {!! Form::button('Tìm Kiếm', array('id' => 'btnSearchPost','class'=>'btn btn-primary')) !!}
-            </div>
-        </div>
-    </div>
+    {{--{!! Form::open(array('route' => 'setmenu.search','method'=>'POST','id'=>'formSearchPost')) !!}--}}
+    {{--<div class="col-md-12">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-md-6">--}}
+                {{--{!! Form::text('txtSearch',null, array('class' => 'form-control','id'=>'txtSearch')) !!}--}}
+            {{--</div>--}}
+            {{--<div class="col-md-6">--}}
+                {{--{!! Form::button('Tìm Kiếm', array('id' => 'btnSearchPost','class'=>'btn btn-primary')) !!}--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
-    {!! Form::close() !!}
-    @if(!empty($keywords))
-        <div id="showKeySearch" class="col-md-12">
-            <div class="row wrap-search">
-                <i class="fa fa-caret-right" aria-hidden="true"></i>{{$keywords}} <a
-                        href="{{ route('post.search') }}">X</a>
-            </div>
-        </div>
-        {{ Form::hidden('hdKeyword', $keywords) }}
-    @endif
+    {{--{!! Form::close() !!}--}}
+    {{--@if(!empty($keywords))--}}
+        {{--<div id="showKeySearch" class="col-md-12">--}}
+            {{--<div class="row wrap-search">--}}
+                {{--<i class="fa fa-caret-right" aria-hidden="true"></i>{{$keywords}} <a--}}
+                        {{--href="{{ route('post.search') }}">X</a>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--{{ Form::hidden('hdKeyword', $keywords) }}--}}
+    {{--@endif--}}
     <div class="col-md-12">
         <table class="table table-bordered">
             <tr>
                 <th>TT</th>
-                <th>Tên Dịch Vụ</th>
+                <th>Tên Menu</th>
                 <th>Trạng Thái</th>
                 <th>Người Đăng</th>
                 <th>Ngày Đăng</th>
                 <th>Ngày Cập Nhật</th>
-
+                <th>Chuyên Mục</th>
                 <th width="280px">Action</th>
             </tr>
             @foreach ($posts as $key => $data)
@@ -65,12 +65,16 @@
                 <td>{{ $data->users->name }}</td>
                 <td>{{ $data->created_at }}</td>
                 <td>{{ $data->updated_at }}</td>
+                @php
+                    $arrayCategoryItem=$data->categoryitems()->get();
+                @endphp
+                <td>{{$arrayCategoryItem->implode('name',',')}}</td>
                 <td>
                     @permission(('post-edit'))
-                    <a class="btn btn-primary" href="{{ route('service.edit',$data->id) }}">Cập Nhật</a>
+                    <a class="btn btn-primary" href="{{ route('setmenu.edit',$data->id) }}">Cập Nhật</a>
                     @endpermission
                     @permission(('post-delete'))
-                    {!! Form::open(['method' => 'DELETE','route' => ['service.destroy', $data->id],'style'=>'display:inline']) !!}
+                    {!! Form::open(['method' => 'DELETE','route' => ['setmenu.destroy', $data->id],'style'=>'display:inline']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                     @endpermission

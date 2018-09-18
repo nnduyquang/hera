@@ -25,6 +25,15 @@
         <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/thu-vien') }}" href="{{ route('library.index') }}"><i class="fa fa-link"></i>
                 <p>Thư Viện</p></a>
         </li>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/thuc-don') }}" href="{{ route('setmenu.index') }}"><i class="fa fa-link"></i>
+                <p>Thực Đơn</p></a>
+        </li>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/uu-dai') }}" href="{{ route('favor.index') }}"><i class="fa fa-link"></i>
+                <p>Ưu Đãi</p></a>
+        </li>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/tin-tuc') }}" href="{{ route('news.index') }}"><i class="fa fa-link"></i>
+                <p>Tin Tức</p></a>
+        </li>
         {{--<li class="nav-item"><a class="nav-link {{ set_active('sml_admin/danh-muc-san-pham') }}" href="{{ route('categoryproduct.index') }}"><i class="fa fa-link"></i>--}}
                 {{--<p>Chuyên Mục Sản Phẩm</p></a>--}}
         {{--</li>--}}
