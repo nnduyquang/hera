@@ -150,14 +150,10 @@ Route::group(['middleware' => ['auth']], function () {
 
     //CONFIG
     //------GENERAL
-    Route::get('sml_admin/config/general', ['as' => 'config.general.index', 'uses' => 'ConfigGeneralController@getConfig']);
-    Route::post('sml_admin/config/general', ['as' => 'config.general.store', 'uses' => 'ConfigGeneralController@saveConfig']);
-    Route::get('sml_admin/config-text/general', ['as' => 'config-text.general.index', 'uses' => 'ConfigGeneralController@getConfigText']);
-    Route::post('sml_admin/config/general', ['as' => 'config-text.general.store', 'uses' => 'ConfigGeneralController@saveConfigText']);
-    //-------EMAIL
 
-    Route::get('sml_admin/config/email', ['as' => 'config.email.index', 'uses' => 'ConfigEmailController@getEmailConfig']);
-    Route::post('sml_admin/config/email', ['as' => 'config.email.store', 'uses' => 'ConfigEmailController@saveEmailConfig']);
+    Route::get('sml_admin/config', ['as' => 'config.index', 'uses' => 'ConfigGeneralController@getConfig']);
+    Route::post('sml_admin/config', ['as' => 'config.store', 'uses' => 'ConfigGeneralController@saveConfig']);
+
 
     //MENU
     Route::get('sml_admin/menu', ['as' => 'menu.index', 'uses' => 'MenuController@index']);

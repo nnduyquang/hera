@@ -27,22 +27,22 @@
     <div id="config-text" class="d-flex flex-row mt-2">
         <ul class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="navigation">
             <li class="nav-item">
-                <a href="#lorem" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Thông Tin
+                <a href="#info-company" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Thông Tin
                     Công Ty</a>
             </li>
             <li class="nav-item">
-                <a href="#ipsum" class="nav-link" data-toggle="tab" role="tab" aria-controls="ipsum">Seo Trang Chủ</a>
+                <a href="#seo-homepage" class="nav-link" data-toggle="tab" role="tab" aria-controls="ipsum">Seo Trang Chủ</a>
             </li>
             <li class="nav-item">
-                <a href="#dolor" class="nav-link" data-toggle="tab" role="tab" aria-controls="dolor">Import Script</a>
+                <a href="#import-script" class="nav-link" data-toggle="tab" role="tab" aria-controls="dolor">Import Script</a>
             </li>
             <li class="nav-item">
-                <a href="#sit-amet" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Email</a>
+                <a href="#email-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Email</a>
             </li>
         </ul>
-        {!! Form::open(array('route' => 'config-text.general.store','method'=>'POST')) !!}
+        {!! Form::open(array('route' => 'config.store','method'=>'POST')) !!}
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="lorem" role="tabpanel">
+            <div class="tab-pane fade show active" id="info-company" role="tabpanel">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label style="font-weight: bold">Tên Công Ty:</label>
@@ -70,7 +70,7 @@
                 </div>
 
             </div>
-            <div class="tab-pane fade" id="ipsum" role="tabpanel">
+            <div class="tab-pane fade" id="seo-homepage" role="tabpanel">
                 <div id="seo-part" class="col-md-12 p-0">
                     <h3>SEO</h3>
                     <div class="content">
@@ -120,15 +120,21 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="dolor" role="tabpanel">
+            <div class="tab-pane fade" id="import-script" role="tabpanel">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Chèn Script Trước <span></body></span> :</strong>
+                        <strong>Chèn Script Trước @php  echo htmlentities("</body>"); @endphp :</strong>
+                        {!! Form::textarea('script-js-body',$cauhinhs['script-js-body'], array('placeholder' => 'Nội Dung','id'=>'description-script','class' => 'form-control','rows'=>'20','style'=>'resize:none')) !!}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Chèn Script Trước @php  echo htmlentities("</header>"); @endphp :</strong>
                         {!! Form::textarea('script-js-header',$cauhinhs['script-js-header'], array('placeholder' => 'Nội Dung','id'=>'description-script','class' => 'form-control','rows'=>'20','style'=>'resize:none')) !!}
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="sit-amet" role="tabpanel">
+            <div class="tab-pane fade" id="email-config" role="tabpanel">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
