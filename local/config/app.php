@@ -183,6 +183,7 @@ return [
         App\Providers\MenuServiceProvider::class,
         App\Providers\FrontendServiceProvider::class,
         App\Providers\PostServiceProvider::class,
+        App\Providers\ConfigServiceProvider::class,
 
     ],
 
