@@ -12,7 +12,7 @@ interface PostRepositoryInterface
 
     public function createNewPostWithSeoId($request, $type);
 
-    public function updateNewPost($request, $id, $type);
+    public function updatePost($request, $id, $type);
 
     public function deletePost($id,$type);
 }

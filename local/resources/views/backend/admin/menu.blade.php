@@ -19,7 +19,7 @@
         <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/page') }}" href="{{ route('page.index') }}"><i class="fa fa-link"></i>
                 <p>Trang</p></a>
         </li>
-        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/post') }}" href="{{ route('service.index') }}"><i class="fa fa-link"></i>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/dich-vu') }}" href="{{ route('service.index') }}"><i class="fa fa-link"></i>
                 <p>Dịch Vụ</p></a>
         </li>
         <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/thu-vien') }}" href="{{ route('library.index') }}"><i class="fa fa-link"></i>

@@ -81,7 +81,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id,$type)
     {
-        $data = $this->postRepository->updateNewPost($request,$id,$type);
+        $data = $this->postRepository->updatePost($request,$id,$type);
         return redirect()->route($data['view']);
     }
 

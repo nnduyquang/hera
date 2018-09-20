@@ -228,6 +228,9 @@ if ($('#btnBrowseImageMXH').length) {
         selectFileWithKCFinder('pathImageMXH','showHinhMXH');
     }
 };
+$('.remove-image').click(function () {
+    $(this).parent().remove();
+});
 $('#btnBrowseMore').click(function () {
     window.KCFinder = {
         callBackMultiple: function (files) {
