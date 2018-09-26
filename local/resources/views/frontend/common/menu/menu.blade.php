@@ -151,36 +151,42 @@
 
                         <li><a class="{{ request()->is('/') ? 'active' : '/' }}" href="{{URL::asset('/')}}">TRANG
                                 CHỦ</a></li>
-                        <li id="dv_overlay"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}"
-                                               href="{{URL::asset('/dich-vu')}}">DỊCH VỤ</a>
-                            <ul class="dv-content">
-                                <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a>
-                                </li>
-                                <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">HỘI NGHỊ</a></li>
-                                <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">SỰ KIỆN</a></li>
-                                <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC NGOÀI
-                                        TRỜI</a></li>
-                            </ul>
-                        </li>
-
-                        <li id="tv_overlay"><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}"
-                                               href="{{URL::asset('/hinh-anh/')}}">THƯ VIỆN</a>
-                            <div class="tv-content">
-                                <ul>
-                                    <li><a class="sub-menu" href="">SẢNH</a></li>
-                                    <li><a class="sub-menu" href="">TRANG TRÍ</a></li>
-                                    <li><a class="sub-menu" href="">TIỆC CƯỚI</a></li>
-                                    <li><a class="sub-menu" href="">VIDEO CLIP</a></li>
+                        <li>
+                            <div class="dv_overlay pb-4"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}"
+                                                       href="{{URL::asset('/dich-vu')}}">DỊCH VỤ</a>
+                                <ul class="dv-content">
+                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a>
+                                    </li>
+                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">HỘI NGHỊ</a>
+                                    </li>
+                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">SỰ KIỆN</a>
+                                    </li>
+                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC NGOÀI
+                                            TRỜI</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li id="td_overlay"><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}"
-                               href="{{URL::asset('/thuc-don/')}}">THỰC ĐƠN</a>
-                            <div class="td-content">
-                                <ul>
-                                    <li><a class="sub-menu" href="">SET MENU</a></li>
-                                    <li><a class="sub-menu" href="">THỰC ĐƠN CHỌN MÓN</a></li>
-                                </ul>
+
+                        <li>
+                            <div class="dv_overlay  pb-4"><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}"
+                                                       href="{{URL::asset('/hinh-anh/')}}">THƯ VIỆN</a>
+                                    <ul class="dv-content">
+                                        <li><a class="sub-menu" href="">SẢNH</a></li>
+                                        <li><a class="sub-menu" href="">TRANG TRÍ</a></li>
+                                        <li><a class="sub-menu" href="">TIỆC CƯỚI</a></li>
+                                        <li><a class="sub-menu" href="">VIDEO CLIP</a></li>
+                                    </ul>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dv_overlay pb-4">
+                                <a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}"
+                                   href="{{URL::asset('/thuc-don/')}}">THỰC ĐƠN</a>
+                                    <ul class="dv-content">
+                                        <li><a class="sub-menu" href="">SET MENU</a></li>
+                                        <li><a class="sub-menu" href="">THỰC ĐƠN CHỌN MÓN</a></li>
+                                    </ul>
                             </div>
                         </li>
                         <li><a class="{{ request()->is('uu-dai*') ? 'active' : '/' }}"
@@ -191,12 +197,15 @@
                                href="{{URL::asset('/lien-he/')}}">LIÊN HỆ</a></li>
                         {{--<li><a href="">ABOUT US</a></li>--}}
                         <li><a
-                               href="{{URL::asset('/dat-tiec/')}}">ĐẶT TIỆC NGAY</a></li>
+                                    href="{{URL::asset('/dat-tiec/')}}">ĐẶT TIỆC NGAY</a></li>
                         <li>
                             <div id="sc_network">
-                                <a href="https://www.facebook.com/TrungTamTiecCuoiHera"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.instagram.com/hera_center"><i class="fab fa-instagram" style="background-image:url({{URL::asset('images/bg/bg-insta.jpg')}});"></i></a>
-                                <a href="https://www.youtube.com/channel/UCMWdeTYUOrgjhPYJadEUwTA"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/TrungTamTiecCuoiHera"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/hera_center"><i class="fab fa-instagram"
+                                                                                   style="background-image:url({{URL::asset('images/bg/bg-insta.jpg')}});"></i></a>
+                                <a href="https://www.youtube.com/channel/UCMWdeTYUOrgjhPYJadEUwTA"><i
+                                            class="fab fa-youtube"></i></a>
                             </div>
                         </li>
                     </ul>

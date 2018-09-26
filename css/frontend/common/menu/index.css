@@ -1,5 +1,4 @@
 #menu {
-  position: fixed;
   display: block;
   top: 0;
   left: 0;
@@ -107,22 +106,24 @@
   color: #007bff;
 }
 
-#menu #menu_content #dv_overlay {
+#menu #menu_content ul#main li .dv_overlay {
   z-index: 10 !important;
   position: relative !important;
 }
 
-#menu #menu_content #dv_overlay:hover .dv-content {
+#menu #menu_content ul#main li .dv_overlay:hover ul.dv-content {
+  position: absolute;
   opacity: 1;
   top: 100%;
   height: auto;
+  z-index: -1;
 }
 
-#menu #menu_content #dv_overlay:hover .dv-content li {
+#menu #menu_content ul#main li .dv_overlay:hover ul.dv-content li {
   display: block;
 }
 
-#menu #menu_content #dv_overlay .dv-content {
+#menu #menu_content ul#main li .dv_overlay ul.dv-content {
   padding-left: 6px;
   padding-right: 6px;
   position: absolute;
@@ -132,9 +133,7 @@
   transition: .3s;
   background-color: #fff;
   width: 200px;
-  /*padding-top: 38px;*/
-  /*display: none;*/
-  /*height: 0;*/
+  height: 0;
   opacity: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -142,53 +141,55 @@
   z-index: -1;
 }
 
-#menu #menu_content #dv_overlay .dv-content li {
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li {
+  position: relative;
+  z-index: -1;
   display: none;
   padding: 10px 10px;
   border-bottom: 1px solid #dbbc85;
 }
 
-#menu #menu_content #dv_overlay .dv-content li:last-child {
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:last-child {
   border-bottom: none !important;
   margin-bottom: 6px;
 }
 
-#menu #menu_content #dv_overlay .dv-content li a.sub-menu {
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li a.sub-menu {
   padding: 6px 10px !important;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-#menu #menu_content #dv_overlay .dv-content li:nth-last-child(2) {
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:nth-last-child(2) {
   padding: 10px 10px !important;
 }
 
-#menu #menu_content #dv_overlay .dv-content li:nth-last-child(2) a.sub-menu {
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:nth-last-child(2) a.sub-menu {
   font-weight: 600 !important;
   background-color: transparent;
   color: #2a2a2a;
 }
 
-#menu #menu_content #dv_overlay .dv-content li:nth-last-child(2) a:hover {
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:nth-last-child(2) a:hover {
   color: #007bff;
 }
 
-#menu #menu_content #tv_overlay {
+#menu #menu_content .tv_overlay {
   z-index: 10 !important;
   position: relative !important;
 }
 
-#menu #menu_content #tv_overlay:hover .tv-content {
+#menu #menu_content .tv_overlay:hover .tv-content {
   opacity: 1;
   top: 100%;
   height: auto;
 }
 
-#menu #menu_content #tv_overlay:hover .tv-content li {
+#menu #menu_content .tv_overlay:hover .tv-content li {
   display: block;
 }
 
-#menu #menu_content #tv_overlay .tv-content {
+#menu #menu_content .tv_overlay .tv-content {
   padding-left: 6px;
   padding-right: 6px;
   position: absolute;
@@ -205,35 +206,35 @@
   z-index: -1;
 }
 
-#menu #menu_content #tv_overlay .tv-content li {
+#menu #menu_content .tv_overlay .tv-content li {
   display: none;
   padding: 10px 10px;
   border-bottom: 1px solid #dbbc85;
   min-width: 138px;
 }
 
-#menu #menu_content #tv_overlay .tv-content li:last-child {
+#menu #menu_content .tv_overlay .tv-content li:last-child {
   border-bottom: none !important;
   margin-bottom: 6px;
 }
 
-#menu #menu_content #tv_overlay .tv-content li a.sub-menu {
+#menu #menu_content .tv_overlay .tv-content li a.sub-menu {
   padding: 6px 10px !important;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-#menu #menu_content #tv_overlay .tv-content li:nth-last-child(2) {
+#menu #menu_content .tv_overlay .tv-content li:nth-last-child(2) {
   padding: 10px 10px !important;
 }
 
-#menu #menu_content #tv_overlay .tv-content li:nth-last-child(2) a.sub-menu {
+#menu #menu_content .tv_overlay .tv-content li:nth-last-child(2) a.sub-menu {
   font-weight: 600 !important;
   background-color: transparent;
   color: #2a2a2a;
 }
 
-#menu #menu_content #tv_overlay .tv-content li:nth-last-child(2) a:hover {
+#menu #menu_content .tv_overlay .tv-content li:nth-last-child(2) a:hover {
   color: #007bff;
 }
 
