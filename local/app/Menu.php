@@ -96,4 +96,7 @@ class Menu extends Model
     public function getAllOrderBy($order){
         return $this->orderBy($order)->get();
     }
+    public function getAllParentOrderBy($order){
+        return $this->whereNull('parent_id')->orderBy($order)->get();
+    }
 }
