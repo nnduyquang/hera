@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th9 19, 2018 lúc 12:42 PM
+-- Thời gian đã tạo: Th9 27, 2018 lúc 12:35 PM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.0.29
 
@@ -50,7 +50,7 @@ CREATE TABLE `category_items` (
 --
 
 INSERT INTO `category_items` (`id`, `name`, `path`, `description`, `image`, `image_mobile`, `level`, `parent_id`, `type`, `order`, `isActive`, `created_at`, `updated_at`, `seo_id`) VALUES
-(6, 'Dịch Vụ', 'dich-vu', NULL, '0', NULL, 0, NULL, 0, 1, 1, '2018-09-17 08:05:17', '2018-09-17 08:05:17', 13),
+(6, 'Dịch Vụ', 'dich-vu', '<p>\r\n	<span style=\"color:#ffffff;\">Tại Hera Center, sự kiện của bạn dẫn đầu xu hướng và lưu lại dấu ấn đỉnh cao cho từng thực khách trải nghiệm.</span>\r\n</p>', 'images/uploads/images/dichvu/banner-dich-vu-food-decor.jpg', NULL, 0, NULL, 0, 1, 1, '2018-09-17 08:05:17', '2018-09-27 01:13:41', 13),
 (7, 'Thư Viện', 'thu-vien', NULL, '0', NULL, 0, NULL, 0, 1, 1, '2018-09-17 08:08:34', '2018-09-17 08:08:34', 20),
 (8, 'Thực Đơn', 'thuc-don', NULL, 'http://localhost:8080/hera/', NULL, 0, NULL, 0, 1, 1, '2018-09-18 03:32:20', '2018-09-18 03:32:58', 50),
 (9, 'Ưu Đãi', 'uu-dai', NULL, '0', NULL, 0, NULL, 0, 1, 1, '2018-09-18 04:00:03', '2018-09-18 04:00:03', 51),
@@ -175,9 +175,23 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
-(1, 'quang test 2 as', '', '_self', NULL, '#000000', NULL, 1, '2018-09-14 04:10:33', '2018-09-14 08:38:13', 'menu.index', NULL),
-(2, 'Thư Test', '', '_self', NULL, '#000000', 1, 1, '2018-09-14 04:48:02', '2018-09-17 03:14:14', 'menu.index', NULL),
-(3, 'Chip Test', '', '_self', NULL, '#000000', 2, 1, '2018-09-14 04:49:28', '2018-09-18 04:15:56', 'menu.index', NULL);
+(1, 'Trang Chủ', '/', '_self', NULL, '#000000', NULL, 1, '2018-09-14 04:10:33', '2018-09-26 07:51:32', NULL, ''),
+(2, 'Dịch Vụ', 'dich-vu', '_self', NULL, '#000000', NULL, 2, '2018-09-14 04:48:02', '2018-09-26 02:56:29', NULL, ''),
+(3, 'Tiệc Cưới', 'dich-vu/dich-vu.html', '_self', NULL, '#000000', 2, 1, '2018-09-14 04:49:28', '2018-09-26 02:57:02', NULL, ''),
+(4, 'Hội Nghị', 'dich-vu/dich-vu.html', '_self', NULL, '#000000', 2, 2, '2018-09-26 02:44:10', '2018-09-26 02:57:14', NULL, ''),
+(5, 'Sự Kiện', 'dich-vu/dich-vu.html', '_self', NULL, '#000000', 2, 3, '2018-09-26 02:44:30', '2018-09-26 02:57:18', NULL, ''),
+(6, 'Tiệc Ngoài Trời', 'dich-vu/dich-vu.html', '_self', NULL, '#000000', 2, 4, '2018-09-26 02:44:46', '2018-09-26 02:57:23', NULL, ''),
+(7, 'Thư Viện', 'hinh-anh', '_self', NULL, '#000000', NULL, 3, '2018-09-26 02:44:57', '2018-09-26 02:57:33', NULL, ''),
+(8, 'Sảnh', 'hinh-anh', '_self', NULL, '#000000', 7, 1, '2018-09-26 02:45:20', '2018-09-26 02:57:43', NULL, ''),
+(9, 'Trang Trí', 'hinh-anh', '_self', NULL, '#000000', 7, 2, '2018-09-26 02:45:29', '2018-09-26 02:57:47', NULL, ''),
+(10, 'Tiệc Cưới', 'hinh-anh', '_self', NULL, '#000000', 7, 3, '2018-09-26 02:45:52', '2018-09-26 02:57:53', NULL, ''),
+(11, 'Video Clip', 'hinh-anh', '_self', NULL, '#000000', 7, 4, '2018-09-26 02:46:07', '2018-09-26 02:57:58', NULL, ''),
+(12, 'Thực Đơn', 'thuc-don', '_self', NULL, '#000000', NULL, 4, '2018-09-26 02:46:18', '2018-09-26 02:58:12', NULL, ''),
+(13, 'Set Menu', 'thuc-don', '_self', NULL, '#000000', 12, 1, '2018-09-26 02:46:34', '2018-09-26 02:58:24', NULL, ''),
+(14, 'Thực Đơn Chọn Món', 'thuc-don', '_self', NULL, '#000000', 12, 2, '2018-09-26 02:46:58', '2018-09-26 02:58:30', NULL, ''),
+(15, 'Ưu Đãi', 'uu-dai', '_self', NULL, '#000000', NULL, 5, '2018-09-26 02:47:10', '2018-09-26 02:58:38', NULL, ''),
+(16, 'Tin Tức', 'tin-tuc', '_self', NULL, '#000000', NULL, 6, '2018-09-26 02:47:19', '2018-09-26 02:58:48', NULL, ''),
+(17, 'Liên Hệ', 'lien-he', '_self', NULL, '#000000', NULL, 7, '2018-09-26 02:47:34', '2018-09-26 02:59:00', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -319,7 +333,7 @@ CREATE TABLE `posts` (
   `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `sub_image` longtext COLLATE utf8mb4_unicode_ci,
   `post_type` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
-  `isActive` tinyint(1) NOT NULL DEFAULT '1',
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `category_item_id` int(11) DEFAULT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -331,11 +345,11 @@ CREATE TABLE `posts` (
 -- Đang đổ dữ liệu cho bảng `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `path`, `description`, `content`, `image`, `sub_image`, `post_type`, `isActive`, `category_item_id`, `user_id`, `created_at`, `updated_at`, `seo_id`) VALUES
-(2, 'Tiệc Cưới', 'tiec-cuoi', '<p>\r\n	Tiệc Cưới\r\n</p>', '<p>\r\n	Tiệc Cưới\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:06:29', '2018-09-17 08:06:29', 15),
-(3, 'Hội Nghị', 'hoi-nghi', '<p>\r\n	Hội Nghị\r\n</p>', '<p>\r\n	Hội Nghị\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:06:53', '2018-09-17 08:06:53', 16),
-(4, 'Sự Kiện', 'su-kien', '<p>\r\n	Sự Kiện\r\n</p>', '<p>\r\n	Sự Kiện\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:07:16', '2018-09-17 08:07:16', 18),
-(5, 'Tiệc Ngoài Trời', 'tiec-ngoai-troi', '<p>\r\n	Tiệc Ngoài Trời\r\n</p>', '<p>\r\n	Tiệc Ngoài Trời\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:07:34', '2018-09-17 08:07:34', 19),
+INSERT INTO `posts` (`id`, `title`, `path`, `description`, `content`, `image`, `sub_image`, `post_type`, `is_active`, `category_item_id`, `user_id`, `created_at`, `updated_at`, `seo_id`) VALUES
+(2, 'Tiệc Cưới', 'tiec-cuoi', '<p>\r\n	Tiệc Cưới\r\n</p>', '<h5>\r\n	<span style=\"font-size:22px;\">CHÚNG TÔI ĐEM ĐẾN CHO BẠN</span>\r\n</h5>\r\n\r\n<h6>\r\n	<img alt=\"\" src=\"http://localhost:8080/hera/images/uploads/images/dichvu/hoinghi/Trung-tam-to-chuc-hoi-nghi.jpg\" style=\"width: 100%; height: 100%;\">\r\n</h6>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HÌNH ẢNH CHUYÊN NGHIỆP CHO THƯƠNG HIỆU CỦA DOANH NGHIỆP</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Địa điểm và cơ sở vật chất lý tưởng cho một sự kiện đẳng cấp của doanh nghiệp!&nbsp;<br>\r\n	Lựa chọn địa điểm đúng đắn là tiền đề quan trọng cho thành công của một hội nghị. Capella Gallery Hall chính là nơi hội tụ các giá trị vượt trội để đạt đến những kết quả mĩ mãn. Nội thất sang trọng, hệ thống màn hình LED, âm thanh ánh sáng tiên tiến và các sảnh cực kỳ ấn tượng, Capella Gallery Hall mở ra một đẳng cấp mới, xứng đáng được lựa chọn cho những hội nghị quan trọng của các doanh nghiệp trong nước và quốc tế.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HỖ TRỢ VÀ SỰ QUAN TÂM</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Capella Gallery Hall lắng nghe và quan tâm tới mong muốn và góp ý của khách hàng!&nbsp;<br>\r\n	Quan tâm và thấu hiểu, các chuyên gia tổ chức hội nghị sẽ hỗ trợ bạn hiện thực hóa một cách tối ưu những yêu cầu khắc khe nhất. Đối với Capella Gallery Hall, chăm chút trong từng chi tiết và hoàn thiện mỗi chuyển động trong từng hội nghị là một nấc thang bước đến đỉnh thành công.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">ẨM THỰC TINH TẾ &ndash; SỰ KẾT NỐI TIỀM NĂNG</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Mở ra các câu chuyện giao hữu trên bàn tiệc thượng đỉnh!&nbsp;<br>\r\n	Mỗi sự kiện dường như được cá nhân hóa hơn khi các thực khách trò chuyện và kết nối với nhau trong buổi tiệc trà (Tea-break) ấm cúng hay qua bàn dạ tiệc đẳng cấp tại Capella Gallery Hall. Chúng tôi tạo dựng sự tinh tế và phong phú trong ẩm thực như là cầu nối giữa các thực khách với nhau.\r\n</p>', 'images/uploads/images/dichvu/tieccuoi/dv2.jpg', 'images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn4-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/Moet-conference-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg', 1, 1, NULL, 1, '2018-09-17 08:06:29', '2018-09-26 08:30:21', 15),
+(3, 'Hội Nghị', 'hoi-nghi', '<p>\r\n	Hội Nghị\r\n</p>', '<h5>\r\n	<span style=\"font-size:22px;\">CHÚNG TÔI ĐEM ĐẾN CHO BẠN</span>\r\n</h5>\r\n\r\n<h6>\r\n	<img alt=\"\" src=\"http://localhost:8080/hera/images/uploads/images/dichvu/hoinghi/Trung-tam-to-chuc-hoi-nghi.jpg\" style=\"width: 100%; height: 100%;\">\r\n</h6>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HÌNH ẢNH CHUYÊN NGHIỆP CHO THƯƠNG HIỆU CỦA DOANH NGHIỆP</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Địa điểm và cơ sở vật chất lý tưởng cho một sự kiện đẳng cấp của doanh nghiệp!&nbsp;<br>\r\n	Lựa chọn địa điểm đúng đắn là tiền đề quan trọng cho thành công của một hội nghị. Capella Gallery Hall chính là nơi hội tụ các giá trị vượt trội để đạt đến những kết quả mĩ mãn. Nội thất sang trọng, hệ thống màn hình LED, âm thanh ánh sáng tiên tiến và các sảnh cực kỳ ấn tượng, Capella Gallery Hall mở ra một đẳng cấp mới, xứng đáng được lựa chọn cho những hội nghị quan trọng của các doanh nghiệp trong nước và quốc tế.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HỖ TRỢ VÀ SỰ QUAN TÂM</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Capella Gallery Hall lắng nghe và quan tâm tới mong muốn và góp ý của khách hàng!&nbsp;<br>\r\n	Quan tâm và thấu hiểu, các chuyên gia tổ chức hội nghị sẽ hỗ trợ bạn hiện thực hóa một cách tối ưu những yêu cầu khắc khe nhất. Đối với Capella Gallery Hall, chăm chút trong từng chi tiết và hoàn thiện mỗi chuyển động trong từng hội nghị là một nấc thang bước đến đỉnh thành công.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">ẨM THỰC TINH TẾ &ndash; SỰ KẾT NỐI TIỀM NĂNG</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Mở ra các câu chuyện giao hữu trên bàn tiệc thượng đỉnh!&nbsp;<br>\r\n	Mỗi sự kiện dường như được cá nhân hóa hơn khi các thực khách trò chuyện và kết nối với nhau trong buổi tiệc trà (Tea-break) ấm cúng hay qua bàn dạ tiệc đẳng cấp tại Capella Gallery Hall. Chúng tôi tạo dựng sự tinh tế và phong phú trong ẩm thực như là cầu nối giữa các thực khách với nhau.\r\n</p>', 'images/uploads/images/dichvu/hoinghi/div1.jpg', 'images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn4-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/Moet-conference-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg', 1, 1, NULL, 1, '2018-09-17 08:06:53', '2018-09-26 08:28:29', 16),
+(4, 'Sự Kiện', 'su-kien', '<p>\r\n	Sự Kiện\r\n</p>', '<h5>\r\n	<span style=\"font-size:22px;\">CHÚNG TÔI ĐEM ĐẾN CHO BẠN</span>\r\n</h5>\r\n\r\n<h6>\r\n	<img alt=\"\" src=\"http://localhost:8080/hera/images/uploads/images/dichvu/hoinghi/Trung-tam-to-chuc-hoi-nghi.jpg\" style=\"width: 100%; height: 100%;\">\r\n</h6>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HÌNH ẢNH CHUYÊN NGHIỆP CHO THƯƠNG HIỆU CỦA DOANH NGHIỆP</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Địa điểm và cơ sở vật chất lý tưởng cho một sự kiện đẳng cấp của doanh nghiệp!&nbsp;<br>\r\n	Lựa chọn địa điểm đúng đắn là tiền đề quan trọng cho thành công của một hội nghị. Capella Gallery Hall chính là nơi hội tụ các giá trị vượt trội để đạt đến những kết quả mĩ mãn. Nội thất sang trọng, hệ thống màn hình LED, âm thanh ánh sáng tiên tiến và các sảnh cực kỳ ấn tượng, Capella Gallery Hall mở ra một đẳng cấp mới, xứng đáng được lựa chọn cho những hội nghị quan trọng của các doanh nghiệp trong nước và quốc tế.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HỖ TRỢ VÀ SỰ QUAN TÂM</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Capella Gallery Hall lắng nghe và quan tâm tới mong muốn và góp ý của khách hàng!&nbsp;<br>\r\n	Quan tâm và thấu hiểu, các chuyên gia tổ chức hội nghị sẽ hỗ trợ bạn hiện thực hóa một cách tối ưu những yêu cầu khắc khe nhất. Đối với Capella Gallery Hall, chăm chút trong từng chi tiết và hoàn thiện mỗi chuyển động trong từng hội nghị là một nấc thang bước đến đỉnh thành công.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">ẨM THỰC TINH TẾ &ndash; SỰ KẾT NỐI TIỀM NĂNG</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Mở ra các câu chuyện giao hữu trên bàn tiệc thượng đỉnh!&nbsp;<br>\r\n	Mỗi sự kiện dường như được cá nhân hóa hơn khi các thực khách trò chuyện và kết nối với nhau trong buổi tiệc trà (Tea-break) ấm cúng hay qua bàn dạ tiệc đẳng cấp tại Capella Gallery Hall. Chúng tôi tạo dựng sự tinh tế và phong phú trong ẩm thực như là cầu nối giữa các thực khách với nhau.\r\n</p>', 'images/uploads/images/dichvu/sukien/dv3.jpg', 'images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn4-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/Moet-conference-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg', 1, 1, NULL, 1, '2018-09-17 08:07:16', '2018-09-26 08:31:05', 18),
+(5, 'Tiệc Ngoài Trời', 'tiec-ngoai-troi', '<p>\r\n	Tiệc Ngoài Trời\r\n</p>', '<h5>\r\n	<span style=\"font-size:22px;\">CHÚNG TÔI ĐEM ĐẾN CHO BẠN</span>\r\n</h5>\r\n\r\n<h6>\r\n	<img alt=\"\" src=\"http://localhost:8080/hera/images/uploads/images/dichvu/hoinghi/Trung-tam-to-chuc-hoi-nghi.jpg\" style=\"width: 100%; height: 100%;\">\r\n</h6>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HÌNH ẢNH CHUYÊN NGHIỆP CHO THƯƠNG HIỆU CỦA DOANH NGHIỆP</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Địa điểm và cơ sở vật chất lý tưởng cho một sự kiện đẳng cấp của doanh nghiệp!&nbsp;<br>\r\n	Lựa chọn địa điểm đúng đắn là tiền đề quan trọng cho thành công của một hội nghị. Capella Gallery Hall chính là nơi hội tụ các giá trị vượt trội để đạt đến những kết quả mĩ mãn. Nội thất sang trọng, hệ thống màn hình LED, âm thanh ánh sáng tiên tiến và các sảnh cực kỳ ấn tượng, Capella Gallery Hall mở ra một đẳng cấp mới, xứng đáng được lựa chọn cho những hội nghị quan trọng của các doanh nghiệp trong nước và quốc tế.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">HỖ TRỢ VÀ SỰ QUAN TÂM</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Capella Gallery Hall lắng nghe và quan tâm tới mong muốn và góp ý của khách hàng!&nbsp;<br>\r\n	Quan tâm và thấu hiểu, các chuyên gia tổ chức hội nghị sẽ hỗ trợ bạn hiện thực hóa một cách tối ưu những yêu cầu khắc khe nhất. Đối với Capella Gallery Hall, chăm chút trong từng chi tiết và hoàn thiện mỗi chuyển động trong từng hội nghị là một nấc thang bước đến đỉnh thành công.\r\n</p>\r\n\r\n<h6>\r\n	<span style=\"color:#dbbc85;\"><span style=\"font-size:22px;\">ẨM THỰC TINH TẾ &ndash; SỰ KẾT NỐI TIỀM NĂNG</span></span>\r\n</h6>\r\n\r\n<p>\r\n	Mở ra các câu chuyện giao hữu trên bàn tiệc thượng đỉnh!&nbsp;<br>\r\n	Mỗi sự kiện dường như được cá nhân hóa hơn khi các thực khách trò chuyện và kết nối với nhau trong buổi tiệc trà (Tea-break) ấm cúng hay qua bàn dạ tiệc đẳng cấp tại Capella Gallery Hall. Chúng tôi tạo dựng sự tinh tế và phong phú trong ẩm thực như là cầu nối giữa các thực khách với nhau.\r\n</p>', 'images/uploads/images/dichvu/tiecngoaitroi/dv4.jpg', 'images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn4-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg;images/uploads/images/dichvu/hoinghi/Moet-conference-300x225.jpg;images/uploads/images/dichvu/hoinghi/hn3-300x225.jpg', 1, 1, NULL, 1, '2018-09-17 08:07:34', '2018-09-26 08:31:40', 19),
 (6, 'Sảnh', 'sanh', '<p>\r\n	Sảnh\r\n</p>', '<p>\r\n	Sảnh\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:08:56', '2018-09-17 08:08:56', 21),
 (7, 'Trang Trí', 'trang-tri', '<p>\r\n	Trang Trí\r\n</p>', '<p>\r\n	Trang Trí\r\n</p>', NULL, NULL, 1, 1, NULL, 1, '2018-09-17 08:09:16', '2018-09-17 08:09:16', 22),
 (8, 'Sảnh Tiệc Cưới', 'sanh-tiec-cuoi', '<p>\r\n	Sảnh Tiệc Cưới\r\n</p>', '<p>\r\n	Sảnh Tiệc Cưới\r\n</p>', NULL, 'images/uploads/images/An%20Suong%20(3).jpg;images/uploads/images/gt_1.jpg', 1, 1, NULL, 1, '2018-09-17 08:09:59', '2018-09-18 03:21:07', 23),
@@ -470,7 +484,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'nnduyquang', 'nnduyquang@gmail.com', '$2y$10$mStg572JFNI89/0Cg7TOGOUkACFaBl/nsNeOvx8zglr1qyJPA0tj6', NULL, '2018-03-14 07:24:10', NULL);
+(1, 'nnduyquang', 'nnduyquang@gmail.com', '$2y$10$mStg572JFNI89/0Cg7TOGOUkACFaBl/nsNeOvx8zglr1qyJPA0tj6', 'UqW9eVB1Ogz2KQkPtONlMLRlKghDrbeYutuGZv6ggYjFH64Sg2Gvr7wXdV9T', '2018-03-14 07:24:10', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -606,7 +620,7 @@ ALTER TABLE `configs`
 -- AUTO_INCREMENT cho bảng `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
