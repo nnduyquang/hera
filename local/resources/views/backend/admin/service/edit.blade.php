@@ -154,7 +154,7 @@
                 <div class="wrap-create-edit">
                     <div class="form-group">
                         <strong>Kích Hoạt:</strong>
-                        <input {{$data['post']->isActive==1?'checked':''}}  name="isActive" data-on="Có"
+                        <input {{$data['post']->is_active==1?'checked':''}}  name="isActive" data-on="Có"
                                data-off="Không"
                                type="checkbox" data-toggle="toggle">
                     </div>

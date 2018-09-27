@@ -148,54 +148,17 @@
 
                 <div id="menu_content">
                     <ul id="main">
-
-                        <li><a class="{{ request()->is('/') ? 'active' : '/' }}" href="{{URL::asset('/')}}">TRANG
-                                CHỦ</a></li>
-                        <li>
-                            <div class="dv_overlay pb-4"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}"
-                                                       href="{{URL::asset('/dich-vu')}}">DỊCH VỤ</a>
-                                <ul class="dv-content">
-                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a>
-                                    </li>
-                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">HỘI NGHỊ</a>
-                                    </li>
-                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">SỰ KIỆN</a>
-                                    </li>
-                                    <li><a class="sub-menu" href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC NGOÀI
-                                            TRỜI</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="dv_overlay  pb-4"><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}"
-                                                       href="{{URL::asset('/hinh-anh/')}}">THƯ VIỆN</a>
-                                    <ul class="dv-content">
-                                        <li><a class="sub-menu" href="">SẢNH</a></li>
-                                        <li><a class="sub-menu" href="">TRANG TRÍ</a></li>
-                                        <li><a class="sub-menu" href="">TIỆC CƯỚI</a></li>
-                                        <li><a class="sub-menu" href="">VIDEO CLIP</a></li>
-                                    </ul>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dv_overlay pb-4">
-                                <a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}"
-                                   href="{{URL::asset('/thuc-don/')}}">THỰC ĐƠN</a>
-                                    <ul class="dv-content">
-                                        <li><a class="sub-menu" href="">SET MENU</a></li>
-                                        <li><a class="sub-menu" href="">THỰC ĐƠN CHỌN MÓN</a></li>
-                                    </ul>
-                            </div>
-                        </li>
-                        <li><a class="{{ request()->is('uu-dai*') ? 'active' : '/' }}"
-                               href="{{URL::asset('/uu-dai/')}}">ƯU ĐÃI</a></li>
-                        <li><a class="{{ request()->is('tin-tuc*') ? 'active' : '/' }}"
-                               href="{{URL::asset('/tin-tuc/')}}">TIN TỨC</a></li>
-                        <li><a class="{{ request()->is('lien-he*') ? 'active' : '/' }}"
-                               href="{{URL::asset('/lien-he/')}}">LIÊN HỆ</a></li>
-                        {{--<li><a href="">ABOUT US</a></li>--}}
+                        @foreach($listMenu as $key=>$item)
+                            <li>
+                                <div class="dv_overlay pb-4">
+                                    <a class="{{ request()->is($item->url) ? 'active' : '/' }}"
+                                       href="{{URL::to($item->url)}}">{{$item->title}}</a>
+                                    @if(!$item->children->isEmpty())
+                                        @include('frontend.common.menu.list-menu-item', ['subMenu' => $item->children])
+                                    @endif
+                                </div>
+                            </li>
+                        @endforeach
                         <li><a
                                     href="{{URL::asset('/dat-tiec/')}}">ĐẶT TIỆC NGAY</a></li>
                         <li>

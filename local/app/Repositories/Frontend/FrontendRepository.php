@@ -4,9 +4,8 @@ namespace App\Repositories\Frontend;
 
 
 use App\CategoryItem;
-use App\Config;
+use App\Menu;
 use App\Post;
-use App\Product;
 
 class FrontendRepository implements FrontendRepositoryInterface
 {
@@ -15,6 +14,16 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data = [];
         $menu = new Menu();
         $data = $menu->getAllParentOrderBy('order');
+        return $data;
+    }
+
+    public function getPageDichVu()
+    {
+        $data = [];
+        $categoryItem = new CategoryItem();
+        $service = $categoryItem->whereId(6)->first();
+        $data['service'] = $service;
+        $data['services'] = $service->posts()->get();
         return $data;
     }
 

@@ -5,9 +5,11 @@ Route::get('/', function () {
     return view('frontend.home.index');
 });
 
-Route::get('/dich-vu/', function () {
-    return view('frontend.services.index');
-});
+//Route::get('/dich-vu/', function () {
+//    return view('frontend.services.index');
+//});
+Route::get('/dich-vu/', 'FrontendController@getPageDichVu');
+
 
 Route::get('/uu-dai/', function () {
     return view('frontend.uudai.index');

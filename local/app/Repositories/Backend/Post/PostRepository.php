@@ -48,25 +48,6 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
         $data = [];
         $data['view'] = 'backend.admin.' . $type . '.create';
         return $data;
-//        switch ($type) {
-//            case'library':
-//                $data['view']='backend.admin.library.create';
-//                return $data;
-//                break;
-//            case'service':
-//                $data['view']='backend.admin.service.create';
-//                return $data;
-//                break;
-//        }
-//        $data = [];
-//        $category = new CategoryItem();
-//        $product = new Product();
-//        $dd_categorie_posts = $category->getArrayCategory('create');
-//        $data['dd_categorie_posts'] = $dd_categorie_posts;
-//        $products = $product->getAllProductActiveOrderById();
-//        $data['products'] = $products;
-
-        return $data;
     }
 
     public function showEditPost($id, $type)
@@ -74,24 +55,6 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
         $data = [];
         $data['post'] = $this->find($id);
         $data['view'] = 'backend.admin.' . $type . '.edit';
-//        switch ($type) {
-//            case'library':
-//                $data['post'] = $this->find($id);
-//                $data['view']='backend.admin.library.edit';
-//                break;
-//            case'service':
-//                $data['post'] = $this->find($id);
-//                $data['view']='backend.admin.service.edit';
-//                break;
-//        }
-//        $category = new CategoryItem();
-//        $product = new Product();
-//        $dd_categorie_posts = $category->getArrayCategory('edit');
-//        $data['dd_categorie_posts'] = $dd_categorie_posts;
-//        $products = $product->getAllProductActiveOrderById();
-//        $data['products'] = $products;
-//        $post = $this->find($id);
-//        $data['post'] = $post;
         return $data;
     }
 
@@ -137,7 +100,6 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
             $request->request->add(['isActive' => null]);
         $request->request->add(['path' => '']);
         $parameters = $this->_model->prepareParameters($request);
-//        dd($parameters->all());
         $result = $this->update($id, $parameters->all());
         $result->seos->update($parameters->all());
         switch ($type) {
@@ -157,9 +119,6 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
                 $result->categoryitems()->sync(10);
                 break;
         }
-//        $post = $this->update($id, $request->all());
-//        $post->categoryitems()->sync($request->input('list_category_id'));
-//        $post->seos->update($request->all());
         $data['view'] = $type . '.index';
         return $data;
     }

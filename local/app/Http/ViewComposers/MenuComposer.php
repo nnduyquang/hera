@@ -12,7 +12,7 @@ class MenuComposer
     /**
      * Create a movie composer.
      *
-     * @return void
+     * @param FrontendRepository $frontend
      */
     public function __construct(FrontendRepository $frontend)
     {

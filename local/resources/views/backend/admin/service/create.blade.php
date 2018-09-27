@@ -125,7 +125,7 @@
                 <div class="wrap-create-edit">
                     <div class="form-group">
                         <strong>Kích Hoạt</strong>
-                        <input name="isActive" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
+                        <input name="is_active" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
                     </div>
                 </div>
             </div>

@@ -8,10 +8,10 @@
 @stop
 @section('container')
 
-    <div class="col-lg-12">
+    <div class="col-lg-12 title-header">
         <div class="row">
             <div class="col-md-8">
-                {{--<h2>Cập Nhật Bài Viết</h2>--}}
+                <h2>Cập Nhật Ưu Đãi</h2>
             </div>
             <div class="col-md-4 text-right">
                 <a class="btn btn-primary" href="{{ route('favor.index') }}"> Back</a>
@@ -33,54 +33,66 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
-
-                <strong>Tên Bài Viết:</strong>
-                {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
-                <div class="form-group">
-                    <strong>Mô Tả Ngắn:</strong>
-                    {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Tên Ưu Đãi</strong>
+                    <div class="form-group">
+                        {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                    </div>
+                </div>
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Mô Tả Ngắn:</strong>
+                    <div class="form-group">
+                        {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group">
-                    <strong>Hình Đại Diện: </strong>
-                    @if($data['post']->image!='')
-                        {!! Form::text('image', url('/').'/'.$data['post']->image, array('class' => 'form-control','id'=>'pathImagePost')) !!}
-                    @else
-                        {!! Form::text('image', '', array('class' => 'form-control','id'=>'pathImagePost')) !!}
-                    @endif
-                    <br>
-                    {!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary')) !!}
-                </div>
-                <div class="form-group">
-                    @if($data['post']->image!='')
-                        {{ Html::image($data['post']->image,'',array('id'=>'showHinhPost','class'=>'show-image'))}}
-                    @else
-                        {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
-                    @endif
+                <div class="wrap-create-edit">
+                    <strong class="text-title-right">Hình Đại Diện</strong>
+                    <div class="form-group">
+                        @if($data['post']->image!='')
+                            {!! Form::text('image', url('/').'/'.$data['post']->image, array('class' => 'form-control','id'=>'pathImagePost')) !!}
+                        @else
+                            {!! Form::text('image', '', array('class' => 'form-control','id'=>'pathImagePost')) !!}
+                        @endif
+                        <br>
+                        {!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary')) !!}
+                    </div>
+                    <div class="form-group">
+                        @if($data['post']->image!='')
+                            {{ Html::image($data['post']->image,'',array('id'=>'showHinhPost','class'=>'show-image'))}}
+                        @else
+                            {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-md-12">
-            <div class="form-group">
-                <strong>Nội Dung Bài Viết:</strong>
-                {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+            <div class="wrap-create-edit">
+                <strong class="text-title-left">Nội Dung Ưu Đãi</strong>
+                <div class="form-group">
+                    {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                </div>
             </div>
-            <div class="form-group">
-                {!! Form::button('Thêm Hình Album', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
-            </div>
-            <div class="form-group">
-                <div id="add-image" class="row">
-                    @php
-                        $listImage=explode(';',$data['post']->sub_image);
-                    @endphp
-                    @foreach($listImage as $key=>$item)
-                        <div class="col-md-3 text-center one-image">
-                            {{ Html::image($item,'',array('id'=>'showHinh','class'=>'image-choose'))}}
-                            {{ Form::hidden('image-choose[]', $item) }}
-                            <span class='remove-image'>X</span>
-                        </div>
-                    @endforeach
+            <div class="wrap-create-edit">
+                <strong class="text-title-left">Thêm Hình Ưu Đãi</strong>
+                <div class="form-group">
+                    {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                </div>
+                <div class="form-group">
+                    <div id="add-image" class="row">
+                        @php
+                            $listImage=explode(';',$data['post']->sub_image);
+                        @endphp
+                        @foreach($listImage as $key=>$item)
+                            <div class="col-md-3 text-center one-image">
+                                {{ Html::image($item,'',array('id'=>'showHinh','class'=>'image-choose'))}}
+                                {{ Form::hidden('image-choose[]', $item) }}
+                                <span class='remove-image'>X</span>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
             <hr>
@@ -134,7 +146,7 @@
             </div>
             <div class="col-md-12 form-group">
                 <strong>Kích Hoạt:</strong>
-                <input {{$data['post']->isActive==1?'checked':''}}  name="isActive" data-on="Có"
+                <input {{$data['post']->isActive==1?'checked':''}}  name="is_active" data-on="Có"
                        data-off="Không"
                        type="checkbox" data-toggle="toggle">
             </div>

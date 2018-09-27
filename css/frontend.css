@@ -1168,6 +1168,7 @@ This class is added to the container
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  text-transform: uppercase;
 }
 
 #sd_1 #bg_dichvu {
