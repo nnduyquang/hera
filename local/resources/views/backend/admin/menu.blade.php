@@ -19,11 +19,20 @@
         <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/page') }}" href="{{ route('page.index') }}"><i class="fa fa-link"></i>
                 <p>Trang</p></a>
         </li>
-        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/post') }}" href="{{ route('service.index') }}"><i class="fa fa-link"></i>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/dich-vu') }}" href="{{ route('service.index') }}"><i class="fa fa-link"></i>
                 <p>Dịch Vụ</p></a>
         </li>
         <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/thu-vien') }}" href="{{ route('library.index') }}"><i class="fa fa-link"></i>
                 <p>Thư Viện</p></a>
+        </li>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/thuc-don') }}" href="{{ route('setmenu.index') }}"><i class="fa fa-link"></i>
+                <p>Thực Đơn</p></a>
+        </li>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/uu-dai') }}" href="{{ route('favor.index') }}"><i class="fa fa-link"></i>
+                <p>Ưu Đãi</p></a>
+        </li>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/tin-tuc') }}" href="{{ route('news.index') }}"><i class="fa fa-link"></i>
+                <p>Tin Tức</p></a>
         </li>
         {{--<li class="nav-item"><a class="nav-link {{ set_active('sml_admin/danh-muc-san-pham') }}" href="{{ route('categoryproduct.index') }}"><i class="fa fa-link"></i>--}}
                 {{--<p>Chuyên Mục Sản Phẩm</p></a>--}}
@@ -34,27 +43,10 @@
         <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/menu') }}" href="{{ route('menu.index') }}"><i class="fa fa-link"></i>
                 <p>Menu Builder</p></a>
         </li>
-        <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-                <i class="fa fa-link"></i>
-                <p>Cấu hình</p>
-                <i class="right fa fa-angle-left"></i>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="{{ route('config.general.index') }}" class="nav-link {{ set_active('sml_admin/config/general') }}">
-                        {{--<i class="fa fa-link"></i>--}}
-                        <p>Cấu Hình Chung</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('config.email.index') }}" class="nav-link {{ set_active('sml_admin/config/email') }}">
-                        {{--<i class="fa fa-link"></i>--}}
-                        <p>Cấu Hình Email</p>
-                    </a>
-                </li>
-            </ul>
+        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/config') }}" href="{{ route('config.index') }}"><i class="fa fa-link"></i>
+                <p>Cấu Hình Chung</p></a>
         </li>
+
         <hr style="background-color: #4f5962">
         <div class="sign-out" style="text-align: center">
             <a href="{{URL::to('admin/sml_logout')}}" class="btn btn-default nav-link" style="color: #5a3c3c"><p>Sign out</p></a>

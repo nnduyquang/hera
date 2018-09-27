@@ -7,13 +7,15 @@
 @section('scripts')
 @stop
 @section('container')
-    <div class="col-lg-12">
+    <div class="col-lg-12 title-header">
         <div class="row">
             <div class="col-md-8">
-                {{--<h2>Tạo Mới Bài Viết</h2>--}}
+                <h2>Tạo Mới Dịch Vụ</h2>
             </div>
             <div class="col-md-4 text-right">
-                <a class="btn btn-primary" href="{{ route('post.index') }}"> Back</a>
+                <a class="btn btn-primary"
+                   style="margin-bottom: 20px;background-color: #FA2A00;border: none;margin-top: 34px"
+                   href="{{ route('service.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -27,97 +29,112 @@
             </ul>
         </div>
     @endif
-    {!! Form::open(array('route' => 'post.store','method'=>'POST')) !!}
+    {!! Form::open(array('route' => 'service.store','method'=>'POST')) !!}
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group">
-                    <strong>Tên Bài Viết:</strong>
-                    {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
-                </div>
-                <div class="form-group">
-                    <strong>Chuyên Mục</strong>
-                    <div class="category-info">
-                        @foreach($data['dd_categorie_posts'] as $key=>$item)
-                            <label class="check-container">
-                                {{$item->name}}
-                                {{ Form::checkbox('list_category_id[]', $item->id, false, array('class' => '')) }}
-                                <span class="check-mark"></span>
-                            </label>
-                        @endforeach
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Tên Dịch Vụ</strong>
+                    <div class="form-group">
+                        {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
                     </div>
                 </div>
-                <div class="form-group">
-                    <strong>Mô Tả Ngắn:</strong>
-                    {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Mô Tả Ngắn</strong>
+                    <div class="form-group">
+                        {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group">
-                    <strong>Hình Đại Diện: </strong>
-                    {!! Form::text('image', null, array('class' => 'form-control','id'=>'pathImagePost')) !!}
-                    <br>
-                    {!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary')) !!}
-                </div>
-                <div class="form-group">
-                    {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
+                <div class="wrap-create-edit">
+                    <strong class="text-title-right">Hình Đại Diện</strong>
+                    <div class="form-group">
+                        {!! Form::text('image', null, array('class' => 'form-control','id'=>'pathImagePost')) !!}
+                        <br>
+                        {!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary float-right')) !!}
+                    </div>
+                    <div class="form-group">
+                        {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-md-12 p-0">
-            <strong>Nội Dung Bài Viết:</strong>
-            {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
-
-        </div>
-        <hr>
-        <div id="seo-part" class="col-md-12 p-0">
-            <h3>SEO</h3>
-            <div class="content">
-                <div class="show-pattern">
-                    <span class="title">Quick Brown Fox and The Lazy Dog - Demo Site</span>
-                    <span class="link">example.com/the-quick-brown-fox</span>
-                    <span class="description">The story of quick brown fox and the lazy dog. An all time classic children's fairy tale that is helping people with typography and web design.</span>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Từ khóa cần SEO</strong>
-                        {!! Form::text('seo_keywords',null, array('placeholder' => 'keywords cách nhau dấu phẩy','class' => 'form-control')) !!}
-                        <ul class="error-notice">
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12 form-group">
-                    <strong>Tiêu Đề (title):</strong>
-                    {!! Form::text('seo_title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
-                </div>
-                <div class="col-md-12 form-group">
-                    <strong>Mô Tả (description):</strong>
-                    {!! Form::textarea('seo_description',null,array('placeholder' => '','id'=>'seo-description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+            <div class="wrap-create-edit">
+                <strong class="text-title-left">Nội Dung</strong>
+                <div class="form-group">
+                    {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
                 </div>
             </div>
-            <h3>Mạng Xã Hội</h3>
-            <div class="content">
-                <div class="col-md-6">
+            <div class="col-md-12 p-0">
+                <div class="wrap-create-edit">
                     <div class="form-group">
-                        <strong>Chọn hình đại diện hiển thị MXH: </strong>
-                        {!! Form::text('seo-image', null, array('class' => 'form-control','id'=>'pathImageMXH')) !!}
-                        <br>
-                        {!! Form::button('Tìm', array('id' => 'btnBrowseImageMXH','class'=>'btn btn-primary')) !!}
+                        {!! Form::button('Thêm Hình Dịch Vụ', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
                     </div>
                     <div class="form-group">
-                        {{ Html::image('','',array('id'=>'showHinhMXH','class'=>'show-image'))}}
+                        <div id="add-image" class="row">
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-12 form-group">
-            <strong>Kích Hoạt:</strong>
-            <input name="isActive" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
-        </div>
-        <div class="col-md-12" style="text-align:  center;">
-            <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Bài Viết</button>
-        </div>
+            <hr>
+            <div id="seo-part" class="col-md-12 p-0">
+                <h3>SEO</h3>
+                <div class="content">
+                    <div class="show-pattern">
+                        <span class="title">Quick Brown Fox and The Lazy Dog - Demo Site</span>
+                        <span class="link">example.com/the-quick-brown-fox</span>
+                        <span class="description">The story of quick brown fox and the lazy dog. An all time classic children's fairy tale that is helping people with typography and web design.</span>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <strong>Từ khóa cần SEO</strong>
+                            {!! Form::text('seo_keywords',null, array('placeholder' => 'keywords cách nhau dấu phẩy','class' => 'form-control')) !!}
+                            <ul class="error-notice">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <strong>Tiêu Đề (title):</strong>
+                        {!! Form::text('seo_title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <strong>Mô Tả (description):</strong>
+                        {!! Form::textarea('seo_description',null,array('placeholder' => '','id'=>'seo-description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                    </div>
+                </div>
+                <h3>Mạng Xã Hội</h3>
+                <div class="content">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <strong>Chọn hình đại diện hiển thị MXH: </strong>
+                            {!! Form::text('seo_image', null, array('class' => 'form-control','id'=>'pathImageMXH')) !!}
+                            <br>
+                            {!! Form::button('Tìm', array('id' => 'btnBrowseImageMXH','class'=>'btn btn-primary')) !!}
+                        </div>
+                        <div class="form-group">
+                            {{ Html::image('','',array('id'=>'showHinhMXH','class'=>'show-image'))}}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-md-12 p-0">
+                <div class="wrap-create-edit">
+                    <div class="form-group">
+                        <strong>Kích Hoạt</strong>
+                        <input name="is_active" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="text-align:  center;">
+                <button id="btnDanhMuc" style="background-color: #22A7F0;border: none;margin-bottom: 20px" type="submit"
+                        class="btn btn-primary">Tạo Mới Dịch Vụ
+                </button>
+            </div>
+        </div>
     </div>
     {!! Form::close() !!}
 @stop

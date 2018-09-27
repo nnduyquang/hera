@@ -8,13 +8,15 @@
 @stop
 @section('container')
 
-    <div class="col-lg-12">
+    <div class="col-lg-12 title-header">
         <div class="row">
             <div class="col-md-8">
-                {{--<h2>Cập Nhật Bài Viết</h2>--}}
+                <h2>Cập Nhật Dịch Vụ</h2>
             </div>
             <div class="col-md-4 text-right">
-                <a class="btn btn-primary" href="{{ route('post.index') }}"> Back</a>
+                <a class="btn btn-primary"
+                   style="margin-bottom: 20px;background-color: #FA2A00;border: none;margin-top: 34px"
+                   href="{{ route('service.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -29,63 +31,75 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($data['post'],array('route' => ['post.update',$data['post']->id],'method'=>'PATCH')) !!}
+    {!! Form::model($data['post'],array('route' => ['service.update',$data['post']->id],'method'=>'PATCH')) !!}
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
-
-                <strong>Tên Bài Viết:</strong>
-                {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
-                <div class="form-group">
-                    <strong>Chuyên Mục</strong>
-                    <div class="category-info">
-                        @php
-                            $arrayCategoryItem=$data['post']->categoryitems()->get();
-                        @endphp
-                        @foreach($data['dd_categorie_posts'] as $key=>$item)
-                            <label class="check-container">
-                                {{$item['value']}}
-                                @if(in_array($item['index'],explode(',',$arrayCategoryItem->implode('id',','))))
-                                    {{ Form::checkbox('list_category_id[]', $item['index'], true, array('class' => '')) }}
-                                    <span class="check-mark"></span>
-                                @else
-                                    {{ Form::checkbox('list_category_id[]', $item['index'], false, array('class' => '')) }}
-                                    <span class="check-mark"></span>
-                                @endif
-                            </label>
-                        @endforeach
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Tên Dịch Vụ</strong>
+                    <div class="form-group">
+                        {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
                     </div>
                 </div>
-                <div class="form-group">
-                    <strong>Mô Tả Ngắn:</strong>
-                    {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Mô Tả Ngắn</strong>
+                    <div class="form-group">
+                        {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group">
-                    <strong>Hình Đại Diện: </strong>
-                    @if($data['post']->image!='')
-                        {!! Form::text('image', url('/').'/'.$data['post']->image, array('class' => 'form-control','id'=>'pathImagePost')) !!}
-                    @else
-                        {!! Form::text('image', '', array('class' => 'form-control','id'=>'pathImagePost')) !!}
-                    @endif
-                    <br>
-                    {!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary')) !!}
-                </div>
-                <div class="form-group">
-                    @if($data['post']->image!='')
-                        {{ Html::image($data['post']->image,'',array('id'=>'showHinhPost','class'=>'show-image'))}}
-                    @else
-                        {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
-                    @endif
+                <div class="wrap-create-edit">
+                    <strong class="text-title-right">Hình Đại Diện</strong>
+                    <div class="form-group">
+                        @if($data['post']->image!='')
+                            {!! Form::text('image', url('/').'/'.$data['post']->image, array('class' => 'form-control','id'=>'pathImagePost')) !!}
+                        @else
+                            {!! Form::text('image', '', array('class' => 'form-control','id'=>'pathImagePost')) !!}
+                        @endif
+                        <br>
+                        {!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary float-right')) !!}
+                    </div>
+                    <div class="form-group">
+                        @if($data['post']->image!='')
+                            {{ Html::image($data['post']->image,'',array('id'=>'showHinhPost','class'=>'show-image'))}}
+                        @else
+                            {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="form-group">
-                <strong>Nội Dung Bài Viết:</strong>
-                {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+        <div class="col-md-12 p-0">
+            <div class="wrap-create-edit">
+                <strong class="text-title-left">Nội Dung</strong>
+                <div class="form-group">
+                    {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="wrap-create-edit">
+                    <div class="form-group">
+                        {!! Form::button('Thêm Hình Dịch Vụ', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                    </div>
 
+                    <div class="form-group">
+                        <div id="add-image" class="row">
+                            @if(!is_null($data['post']->sub_image))
+                                @php
+                                    $listImage=explode(';',$data['post']->sub_image);
+                                @endphp
+                                @foreach($listImage as $key=>$item)
+                                    <div class="col-md-3 text-center one-image">
+                                        {{ Html::image($item,'',array('id'=>'showHinh','class'=>'image-choose'))}}
+                                        {{ Form::hidden('image-choose[]', $item) }}
+                                        <span class='remove-image'>X</span>
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr>
             <div id="seo-part" class="col-md-12 p-0">
@@ -119,9 +133,9 @@
                         <div class="form-group">
                             <strong>Chọn hình đại diện hiển thị MXH: </strong>
                             @if($data['post']->seos->seo_image!='')
-                                {!! Form::text('seo-image', url('/').'/'.$data['post']->seos->seo_image, array('class' => 'form-control','id'=>'pathImageMXH')) !!}
+                                {!! Form::text('seo_image', url('/').'/'.$data['post']->seos->seo_image, array('class' => 'form-control','id'=>'pathImageMXH')) !!}
                             @else
-                                {!! Form::text('seo-image', '', array('class' => 'form-control','id'=>'pathImageMXH')) !!}
+                                {!! Form::text('seo_image', '', array('class' => 'form-control','id'=>'pathImageMXH')) !!}
                             @endif
                             <br>
                             {!! Form::button('Tìm', array('id' => 'btnBrowseImageMXH','class'=>'btn btn-primary')) !!}
@@ -136,14 +150,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 form-group">
-                <strong>Kích Hoạt:</strong>
-                <input {{$data['post']->isActive==1?'checked':''}}  name="isActive" data-on="Có"
-                       data-off="Không"
-                       type="checkbox" data-toggle="toggle">
+            <div class="col-md-12 p-0">
+                <div class="wrap-create-edit">
+                    <div class="form-group">
+                        <strong>Kích Hoạt:</strong>
+                        <input {{$data['post']->is_active==1?'checked':''}}  name="isActive" data-on="Có"
+                               data-off="Không"
+                               type="checkbox" data-toggle="toggle">
+                    </div>
+                </div>
             </div>
-            <div class="col-md-12" style="text-align:  center;">
-                <button id="btnDanhMuc" type="submit" class="btn btn-primary">Cập Nhật Bài Viết</button>
+            <div class="col-md-12" style="text-align:  center">
+                <button id="btnDanhMuc" style="background-color: #22A7F0;border: none;margin-bottom: 20px" type="submit"
+                        class="btn btn-primary">Cập Nhật Dịch Vụ
+                </button>
             </div>
         </div>
     </div>

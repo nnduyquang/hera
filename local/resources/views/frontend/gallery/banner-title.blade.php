@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <p class="">HÌNH ẢNH</p>
+                <p class="">THƯ VIỆN</p>
                 {{--<span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > DỊCH VỤ</span>--}}
             </div>
         </div>

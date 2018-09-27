@@ -5,9 +5,11 @@ Route::get('/', function () {
     return view('frontend.home.index');
 });
 
-Route::get('/dich-vu/', function () {
-    return view('frontend.services.index');
-});
+//Route::get('/dich-vu/', function () {
+//    return view('frontend.services.index');
+//});
+Route::get('/dich-vu/', 'FrontendController@getPageDichVu');
+
 
 Route::get('/uu-dai/', function () {
     return view('frontend.uudai.index');
@@ -80,14 +82,41 @@ Route::group(['middleware' => ['auth']], function () {
     Route::patch('sml_admin/danh-muc-bai-viet/{id}', ['as' => 'categorypost.update', 'uses' => 'CategoryPostController@update', 'middleware' => ['permission:page-edit']]);
     Route::delete('sml_admin/danh-muc-bai-viet/{id}', ['as' => 'categorypost.destroy', 'uses' => 'CategoryPostController@destroy', 'middleware' => ['permission:page-delete']]);
 
-    //SERVIVE
+    //SERVICE
     Route::get('sml_admin/dich-vu', ['as' => 'service.index', 'uses' => 'PostController@index', 'middleware' => ['permission:post-list|post-create|post-edit|post-delete']])->defaults('type','service');
     Route::post('sml_admin/dich-vu/create', ['as' => 'service.store', 'uses' => 'PostController@store', 'middleware' => ['permission:post-create']])->defaults('type','service');
     Route::post('sml_admin/dich-vu', ['as' => 'service.search', 'uses' => 'PostController@search']);
-    Route::get('sml_admin/post/create', ['as' => 'service.create', 'uses' => 'PostController@create', 'middleware' => ['permission:post-create']])->defaults('type','service');
+    Route::get('sml_admin/dich-vu/create', ['as' => 'service.create', 'uses' => 'PostController@create', 'middleware' => ['permission:post-create']])->defaults('type','service');
     Route::get('sml_admin/dich-vu/{id}/edit', ['as' => 'service.edit', 'uses' => 'PostController@edit', 'middleware' => ['permission:post-edit']])->defaults('type','service');
     Route::patch('sml_admin/dich-vu/{id}', ['as' => 'service.update', 'uses' => 'PostController@update', 'middleware' => ['permission:post-edit']])->defaults('type','service');
     Route::delete('sml_admin/dich-vu/{id}', ['as' => 'service.destroy', 'uses' => 'PostController@destroy', 'middleware' => ['permission:post-delete']])->defaults('type','service');
+
+    //SET MENU
+    Route::get('sml_admin/thuc-don', ['as' => 'setmenu.index', 'uses' => 'PostController@index', 'middleware' => ['permission:post-list|post-create|post-edit|post-delete']])->defaults('type','setmenu');
+    Route::post('sml_admin/thuc-don/create', ['as' => 'setmenu.store', 'uses' => 'PostController@store', 'middleware' => ['permission:post-create']])->defaults('type','setmenu');
+    Route::post('sml_admin/thuc-don', ['as' => 'setmenu.search', 'uses' => 'PostController@search']);
+    Route::get('sml_admin/thuc-don/create', ['as' => 'setmenu.create', 'uses' => 'PostController@create', 'middleware' => ['permission:post-create']])->defaults('type','setmenu');
+    Route::get('sml_admin/thuc-don/{id}/edit', ['as' => 'setmenu.edit', 'uses' => 'PostController@edit', 'middleware' => ['permission:post-edit']])->defaults('type','setmenu');
+    Route::patch('sml_admin/thuc-don/{id}', ['as' => 'setmenu.update', 'uses' => 'PostController@update', 'middleware' => ['permission:post-edit']])->defaults('type','setmenu');
+    Route::delete('sml_admin/thuc-don/{id}', ['as' => 'setmenu.destroy', 'uses' => 'PostController@destroy', 'middleware' => ['permission:post-delete']])->defaults('type','setmenu');
+
+    //FAVOR
+    Route::get('sml_admin/uu-dai', ['as' => 'favor.index', 'uses' => 'PostController@index', 'middleware' => ['permission:post-list|post-create|post-edit|post-delete']])->defaults('type','favor');
+    Route::post('sml_admin/uu-dai/create', ['as' => 'favor.store', 'uses' => 'PostController@store', 'middleware' => ['permission:post-create']])->defaults('type','favor');
+    Route::post('sml_admin/uu-dai', ['as' => 'favor.search', 'uses' => 'PostController@search']);
+    Route::get('sml_admin/uu-dai/create', ['as' => 'favor.create', 'uses' => 'PostController@create', 'middleware' => ['permission:post-create']])->defaults('type','favor');
+    Route::get('sml_admin/uu-dai/{id}/edit', ['as' => 'favor.edit', 'uses' => 'PostController@edit', 'middleware' => ['permission:post-edit']])->defaults('type','favor');
+    Route::patch('sml_admin/uu-dai/{id}', ['as' => 'favor.update', 'uses' => 'PostController@update', 'middleware' => ['permission:post-edit']])->defaults('type','favor');
+    Route::delete('sml_admin/uu-dai/{id}', ['as' => 'favor.destroy', 'uses' => 'PostController@destroy', 'middleware' => ['permission:post-delete']])->defaults('type','favor');
+
+    //NEWS
+    Route::get('sml_admin/tin-tuc', ['as' => 'news.index', 'uses' => 'PostController@index', 'middleware' => ['permission:post-list|post-create|post-edit|post-delete']])->defaults('type','news');
+    Route::post('sml_admin/tin-tuc/create', ['as' => 'news.store', 'uses' => 'PostController@store', 'middleware' => ['permission:post-create']])->defaults('type','news');
+    Route::post('sml_admin/tin-tuc', ['as' => 'news.search', 'uses' => 'PostController@search']);
+    Route::get('sml_admin/tin-tuc/create', ['as' => 'news.create', 'uses' => 'PostController@create', 'middleware' => ['permission:post-create']])->defaults('type','news');
+    Route::get('sml_admin/tin-tuc/{id}/edit', ['as' => 'news.edit', 'uses' => 'PostController@edit', 'middleware' => ['permission:post-edit']])->defaults('type','news');
+    Route::patch('sml_admin/tin-tuc/{id}', ['as' => 'news.update', 'uses' => 'PostController@update', 'middleware' => ['permission:post-edit']])->defaults('type','news');
+    Route::delete('sml_admin/tin-tuc/{id}', ['as' => 'news.destroy', 'uses' => 'PostController@destroy', 'middleware' => ['permission:post-delete']])->defaults('type','news');
 
 
     //LIBRARY
@@ -123,13 +152,10 @@ Route::group(['middleware' => ['auth']], function () {
 
     //CONFIG
     //------GENERAL
-    Route::get('sml_admin/config/general', ['as' => 'config.general.index', 'uses' => 'ConfigGeneralController@getConfig']);
-    Route::post('sml_admin/config/general', ['as' => 'config.general.store', 'uses' => 'ConfigGeneralController@saveConfig']);
-    Route::get('sml_admin/config-text/general', ['as' => 'config-text.general.index', 'uses' => 'ConfigGeneralController@getConfigText']);
-    //-------EMAIL
 
-    Route::get('sml_admin/config/email', ['as' => 'config.email.index', 'uses' => 'ConfigEmailController@getEmailConfig']);
-    Route::post('sml_admin/config/email', ['as' => 'config.email.store', 'uses' => 'ConfigEmailController@saveEmailConfig']);
+    Route::get('sml_admin/config', ['as' => 'config.index', 'uses' => 'ConfigGeneralController@getConfig']);
+    Route::post('sml_admin/config', ['as' => 'config.store', 'uses' => 'ConfigGeneralController@saveConfig']);
+
 
     //MENU
     Route::get('sml_admin/menu', ['as' => 'menu.index', 'uses' => 'MenuController@index']);

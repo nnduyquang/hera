@@ -24,6 +24,6 @@
 @stop
 @section('container')
     @include('frontend.contact.banner-title')
-        @include('frontend.contact.c_1')
+    @include('frontend.contact.c_1')
 
 @stop

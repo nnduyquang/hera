@@ -45,7 +45,7 @@ class PostController extends Controller
     public function store(Request $request,$type)
     {
         $data = $this->postRepository->createNewPostWithSeoId($request,$type);
-        return view($data['view']);
+        return redirect()->route($data['view']);
     }
 
     /**
@@ -68,8 +68,8 @@ class PostController extends Controller
     public function edit($id,$type)
     {
 //        $post = $this->postRepository->getPostById($id);
-        $data=$this->postRepository->showEditPost($id);
-        return view('backend.admin.post.edit', compact('data'));
+        $data=$this->postRepository->showEditPost($id,$type);
+        return view($data['view'], compact('data'));
     }
 
     /**
@@ -81,8 +81,8 @@ class PostController extends Controller
      */
     public function update(Request $request, $id,$type)
     {
-        $posts = $this->postRepository->updateNewPost($request,$id);
-        return redirect()->route('post.index')->with('success', 'Cập Nhật Thành Công Bài Viết');
+        $data = $this->postRepository->updatePost($request,$id,$type);
+        return redirect()->route($data['view']);
     }
 
     /**
@@ -93,8 +93,7 @@ class PostController extends Controller
      */
     public function destroy($id,$type)
     {
-        $this->postRepository->deletePost($id);
-        return redirect()->route('post.index')
-            ->with('success', 'Đã Xóa Thành Công');
+        $data=$this->postRepository->deletePost($id,$type);
+        return redirect()->route($data['view']);
     }
 }

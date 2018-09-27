@@ -1,6 +1,6 @@
 @extends('backend.admin.master')
 @section('title-page')
-    Tạo Mới
+    Tạo Mới Thư Viện Ảnh
 @stop
 @section('styles')
 @stop
@@ -93,7 +93,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <strong>Chọn hình đại diện hiển thị MXH: </strong>
-                        {!! Form::text('seo-image', null, array('class' => 'form-control','id'=>'pathImageMXH')) !!}
+                        {!! Form::text('seo_image', null, array('class' => 'form-control','id'=>'pathImageMXH')) !!}
                         <br>
                         {!! Form::button('Tìm', array('id' => 'btnBrowseImageMXH','class'=>'btn btn-primary')) !!}
                     </div>
@@ -108,7 +108,7 @@
             <input name="isActive" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
         </div>
         <div class="col-md-12" style="text-align:  center;">
-            <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Bài Viết</button>
+            <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Thư Viện Ảnh</button>
         </div>
 
     </div>
