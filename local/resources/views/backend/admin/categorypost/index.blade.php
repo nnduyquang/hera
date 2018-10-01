@@ -33,7 +33,7 @@
             <th>Ngày Cập Nhật</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($categoryposts as $key => $data)
+        @foreach ($categoryItems as $key => $data)
             <td>{{ ++$i }}</td>
             <td>{{ $data->id }}</td>
             <td>{{ $data->name }}</td>

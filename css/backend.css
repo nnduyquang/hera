@@ -291,6 +291,10 @@ img {
   transform: rotate(45deg);
 }
 
+.table-thucdon td {
+  width: 80%;
+}
+
 /********** NESTABLE CSS **********/
 .dd {
   position: relative;

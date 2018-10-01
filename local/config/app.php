@@ -184,6 +184,7 @@ return [
         App\Providers\FrontendServiceProvider::class,
         App\Providers\PostServiceProvider::class,
         App\Providers\ConfigServiceProvider::class,
+        App\Providers\CategoryItemServiceProvider::class,
 
     ],
 

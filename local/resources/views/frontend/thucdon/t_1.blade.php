@@ -119,12 +119,13 @@
 
                     <div class="row">
                         <div class="col-md-12 p-4 pb-3 content_des">
-                            <h6 class="">ẨM THỰC ÂU - Á KẾT HỢP</h6>
-                            <p>Không dừng lại ở những món ăn thuần túy của dân tộc, Hera còn nghiên cứu về ẩm thực Châu
-                                Á
-                                lẫn Châu Âu để cho ra đời nhiều món ăn ngon – lạ – đẹp được kết hợp hết sức tinh tế giữa
-                                hai
-                                nền ẩm thực đặc sắc mà vẫn phù hợp với khẩu vị của người dân Việt Nam. </p>
+                            {{--<h6 class="">ẨM THỰC ÂU - Á KẾT HỢP</h6>--}}
+                            {{--<p>Không dừng lại ở những món ăn thuần túy của dân tộc, Hera còn nghiên cứu về ẩm thực Châu--}}
+                                {{--Á--}}
+                                {{--lẫn Châu Âu để cho ra đời nhiều món ăn ngon – lạ – đẹp được kết hợp hết sức tinh tế giữa--}}
+                                {{--hai--}}
+                                {{--nền ẩm thực đặc sắc mà vẫn phù hợp với khẩu vị của người dân Việt Nam. </p>--}}
+                            {!! $data->description !!}
 
                             <div class="d-flex justify-content-between pt-3" style="width: 100%">
                                 <a class="thuc-don" href="{{URL::asset('/file/SETMENU2018.pdf')}}">XEM THỰC ĐƠN</a>
@@ -263,52 +264,53 @@
                 </div>
 
                 <div class="col-md-12 mt-5">
-                    <h5>MENU THAM KHẢO TẠI ĐÂY</h5>
-                    <p class="pb-4">5 món mặn + 1 tráng miệng</p>
-                    <div class="row">
+                    {{--<h5>MENU THAM KHẢO TẠI ĐÂY</h5>--}}
+                    {{--<p class="pb-4">5 món mặn + 1 tráng miệng</p>--}}
+                    {{--<div class="row">--}}
 
-                        <div class="col-md-12 mb-4">
-                            <p>KHAI VỊ BA MÓN 700,000 VNĐ<br><br>
-                                1 Nghêu Quay Giòn – Gỏi Mực Rau Câu – Sushi Thăn Heo Chiên<br>
-                                2 Chả Giò Mayonnaise – Salad Nhật – Sushi Tôm<br>
-                                3. Bacon Cuộn Cá – Salad Gà Chiên Giòn – Tôm Xù Cốm<br>
-                            </p>
-                        </div>
+                        {{--<div class="col-md-12 mb-4">--}}
+                            {{--<p>KHAI VỊ BA MÓN 700,000 VNĐ<br><br>--}}
+                                {{--1 Nghêu Quay Giòn – Gỏi Mực Rau Câu – Sushi Thăn Heo Chiên<br>--}}
+                                {{--2 Chả Giò Mayonnaise – Salad Nhật – Sushi Tôm<br>--}}
+                                {{--3. Bacon Cuộn Cá – Salad Gà Chiên Giòn – Tôm Xù Cốm<br>--}}
+                            {{--</p>--}}
+                        {{--</div>--}}
 
-                        <div class="col-md-12 mb-4">
-                            <p>
-                                KHAI VỊ HAI MÓN<br><br>
-                                1. Khai Vị Gà 2 Món 450,000 VNĐ<br>
-                                Gà Sauce Chua Ngọt – Gà Teriyaki<br>
-                                2. Khai Vị Tôm 2 Món 500,000 VNĐ<br>
-                                Tôm Hạnh Nhân – Tôm Sauce Chanh<br>
-                                3. Khai Vị Cá 600,000 VNĐ<br>
-                                Cá Cuộn Nấm – Cá Hồi Chiên Giòn<br>
-                                4. Khai Vị Hải Sản 2 Món 650,000 VNĐ<br>
-                                Tôm Sauce Wasabi – Tôm Salad Trái Cây<br>
-                            </p>
-                        </div>
+                        {{--<div class="col-md-12 mb-4">--}}
+                            {{--<p>--}}
+                                {{--KHAI VỊ HAI MÓN<br><br>--}}
+                                {{--1. Khai Vị Gà 2 Món 450,000 VNĐ<br>--}}
+                                {{--Gà Sauce Chua Ngọt – Gà Teriyaki<br>--}}
+                                {{--2. Khai Vị Tôm 2 Món 500,000 VNĐ<br>--}}
+                                {{--Tôm Hạnh Nhân – Tôm Sauce Chanh<br>--}}
+                                {{--3. Khai Vị Cá 600,000 VNĐ<br>--}}
+                                {{--Cá Cuộn Nấm – Cá Hồi Chiên Giòn<br>--}}
+                                {{--4. Khai Vị Hải Sản 2 Món 650,000 VNĐ<br>--}}
+                                {{--Tôm Sauce Wasabi – Tôm Salad Trái Cây<br>--}}
+                            {{--</p>--}}
+                        {{--</div>--}}
 
-                        <div class="col-md-12 mb-4">
-                            SOUP<br><br>
-                            <p style="">
-                                * Soup Bông Cải 390,000 VNĐ<br>
-                                * Soup Gà Nấm Tuyết 400,000 VNĐ<br>
-                                * Soup Jambon Gà Xé 450,000 VNĐ<br>
-                                * Soup Bóng Cá Tóc Tiên 450,000 VNĐ<br>
-                                * Soup Hải Sản Tuyết Cua 500,000 VNĐ<br>
-                                * Soup Măng Tây Cua 500,000 VNĐ<br>
-                                * Soup Bò Thượng Hải 550,000 VNĐ<br>
-                                * Soup Cá Hồi Hải Sản 700,000 VNĐ<br>
-                                * Soup Nghêu Rong Biển Chua Cay 700,000 VNĐ<br>
-                                * Soup Hải Sản Tứ Xuyên 750,000 VNĐ<br>
-                                * Soup Cá Hồi HongKong 800,000 VNĐ<br>
-                                * Soup Đuôi Bò Artichoke 866,000 VNĐ<br>
-                                * Soup Bào Ngư,Vi Cá, Hải Sâm 950,000 VNĐ
-                            </p>
-                        </div>
+                        {{--<div class="col-md-12 mb-4">--}}
+                            {{--SOUP<br><br>--}}
+                            {{--<p style="">--}}
+                                {{--* Soup Bông Cải 390,000 VNĐ<br>--}}
+                                {{--* Soup Gà Nấm Tuyết 400,000 VNĐ<br>--}}
+                                {{--* Soup Jambon Gà Xé 450,000 VNĐ<br>--}}
+                                {{--* Soup Bóng Cá Tóc Tiên 450,000 VNĐ<br>--}}
+                                {{--* Soup Hải Sản Tuyết Cua 500,000 VNĐ<br>--}}
+                                {{--* Soup Măng Tây Cua 500,000 VNĐ<br>--}}
+                                {{--* Soup Bò Thượng Hải 550,000 VNĐ<br>--}}
+                                {{--* Soup Cá Hồi Hải Sản 700,000 VNĐ<br>--}}
+                                {{--* Soup Nghêu Rong Biển Chua Cay 700,000 VNĐ<br>--}}
+                                {{--* Soup Hải Sản Tứ Xuyên 750,000 VNĐ<br>--}}
+                                {{--* Soup Cá Hồi HongKong 800,000 VNĐ<br>--}}
+                                {{--* Soup Đuôi Bò Artichoke 866,000 VNĐ<br>--}}
+                                {{--* Soup Bào Ngư,Vi Cá, Hải Sâm 950,000 VNĐ--}}
+                            {{--</p>--}}
+                        {{--</div>--}}
 
-                    </div>
+                    {{--</div>--}}
+                    {!! $data->content !!}
 
                 </div>
 
