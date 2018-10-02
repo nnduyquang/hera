@@ -40,6 +40,12 @@
                     </div>
                 </div>
                 <div class="wrap-create-edit">
+                    <strong class="text-title-right">Loại Ưu Đãi</strong>
+                    <div class="category-info">
+                        @include('backend.admin.favor.list-select-option-edit')
+                    </div>
+                </div>
+                <div class="wrap-create-edit">
                     <strong class="text-title-left">Mô Tả Ngắn:</strong>
                     <div class="form-group">
                         {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
@@ -75,26 +81,26 @@
                     {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
                 </div>
             </div>
-            <div class="wrap-create-edit">
-                <strong class="text-title-left">Thêm Hình Ưu Đãi</strong>
-                <div class="form-group">
-                    {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
-                </div>
-                <div class="form-group">
-                    <div id="add-image" class="row">
-                        @php
-                            $listImage=explode(';',$data['post']->sub_image);
-                        @endphp
-                        @foreach($listImage as $key=>$item)
-                            <div class="col-md-3 text-center one-image">
-                                {{ Html::image($item,'',array('id'=>'showHinh','class'=>'image-choose'))}}
-                                {{ Form::hidden('image-choose[]', $item) }}
-                                <span class='remove-image'>X</span>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
+            {{--<div class="wrap-create-edit">--}}
+                {{--<strong class="text-title-left">Thêm Hình Ưu Đãi</strong>--}}
+                {{--<div class="form-group">--}}
+                    {{--{!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}--}}
+                {{--</div>--}}
+                {{--<div class="form-group">--}}
+                    {{--<div id="add-image" class="row">--}}
+                        {{--@php--}}
+                            {{--$listImage=explode(';',$data['post']->sub_image);--}}
+                        {{--@endphp--}}
+                        {{--@foreach($listImage as $key=>$item)--}}
+                            {{--<div class="col-md-3 text-center one-image">--}}
+                                {{--{{ Html::image($item,'',array('id'=>'showHinh','class'=>'image-choose'))}}--}}
+                                {{--{{ Form::hidden('image-choose[]', $item) }}--}}
+                                {{--<span class='remove-image'>X</span>--}}
+                            {{--</div>--}}
+                        {{--@endforeach--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <hr>
             <div id="seo-part" class="col-md-12 p-0">
                 <h3>SEO</h3>
@@ -146,7 +152,7 @@
             </div>
             <div class="col-md-12 form-group">
                 <strong>Kích Hoạt:</strong>
-                <input {{$data['post']->isActive==1?'checked':''}}  name="is_active" data-on="Có"
+                <input {{$data['post']->is_active==1?'checked':''}}  name="is_active" data-on="Có"
                        data-off="Không"
                        type="checkbox" data-toggle="toggle">
             </div>

@@ -47,6 +47,9 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
     {
         $data = [];
         $data['view'] = 'backend.admin.' . $type . '.create';
+        $categoryItem = new CategoryItem();
+        $categoryItems = $categoryItem->getAllParentById('order', $type, 9);
+        $data['categoryItems'] = $categoryItems;
         return $data;
     }
 
@@ -54,6 +57,9 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
     {
         $data = [];
         $data['post'] = $this->find($id);
+        $categoryItem = new CategoryItem();
+        $categoryItems = $categoryItem->getAllParentById('order', $type, 9);
+        $data['categoryItems'] = $categoryItems;
         $data['view'] = 'backend.admin.' . $type . '.edit';
         return $data;
     }
@@ -82,7 +88,7 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
                 $result->categoryitems()->attach(8);
                 break;
             case'favor':
-                $result->categoryitems()->attach(9);
+                $result->categoryitems()->attach($request->input('list_category_id'));
                 break;
             case'news':
                 $result->categoryitems()->attach(10);
@@ -113,7 +119,7 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
                 $result->categoryitems()->sync(8);
                 break;
             case'favor':
-                $result->categoryitems()->sync(9);
+                $result->categoryitems()->sync($request->input('list_category_id'));
                 break;
             case'news':
                 $result->categoryitems()->sync(10);
