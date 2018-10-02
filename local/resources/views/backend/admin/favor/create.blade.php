@@ -38,6 +38,12 @@
                     </div>
                 </div>
                 <div class="wrap-create-edit">
+                    <strong class="text-title-right">Loại Ưu Đãi</strong>
+                    <div class="category-info">
+                        @include('backend.admin.favor.list-select-option-create')
+                    </div>
+                </div>
+                <div class="wrap-create-edit">
                     <strong class="text-title-left">Mô Tả Ngắn:</strong>
                     <div class="form-group">
                         {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
@@ -65,19 +71,19 @@
 
             </div>
         </div>
-        <div class="wrap-create-edit">
-            <strong class="text-title-left">Thêm Hình Ưu Đãi</strong>
-            <div class="col-md-12">
-                <div class="form-group">
-                    {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
-                </div>
-                <div class="form-group">
-                    <div id="add-image" class="row">
+        {{--<div class="wrap-create-edit">--}}
+            {{--<strong class="text-title-left">Thêm Hình Ưu Đãi</strong>--}}
+            {{--<div class="col-md-12">--}}
+                {{--<div class="form-group">--}}
+                    {{--{!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}--}}
+                {{--</div>--}}
+                {{--<div class="form-group">--}}
+                    {{--<div id="add-image" class="row">--}}
 
-                    </div>
-                </div>
-            </div>
-        </div>
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <hr>
         <div id="seo-part" class="col-md-12 p-0">
             <h3>SEO</h3>

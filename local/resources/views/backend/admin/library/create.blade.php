@@ -7,10 +7,10 @@
 @section('scripts')
 @stop
 @section('container')
-    <div class="col-lg-12">
+    <div class="col-lg-12 title-header">
         <div class="row">
             <div class="col-md-8">
-                {{--<h2>Tạo Mới Bài Viết</h2>--}}
+                <h2>Tạo Mới Thư Viện</h2>
             </div>
             <div class="col-md-4 text-right">
                 <a class="btn btn-primary" href="{{ route('library.index') }}"> Back</a>
@@ -31,34 +31,39 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group">
-                    <strong>Tên Thư Viện Ảnh:</strong>
-                    {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Tên Thư Viện Ảnh</strong>
+                    <div class="form-group">
+                        {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                    </div>
                 </div>
-                <div class="form-group">
-                    <strong>Mô Tả Ngắn:</strong>
-                    {!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
-                </div>
+                {{--<div class="form-group">--}}
+                {{--<strong>Mô Tả Ngắn:</strong>--}}
+                {{--{!! Form::textarea('description',null,array('placeholder' => '','id'=>'description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}--}}
+                {{--</div>--}}
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <strong>Hình Đại Diện: </strong>
-                    {!! Form::text('image', null, array('class' => 'form-control','id'=>'pathImagePost')) !!}
-                    <br>
-                    {!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary')) !!}
-                </div>
-                <div class="form-group">
-                    {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
-                </div>
-            </div>
+            {{--<div class="col-md-6">--}}
+            {{--<div class="form-group">--}}
+            {{--<strong>Hình Đại Diện: </strong>--}}
+            {{--{!! Form::text('image', null, array('class' => 'form-control','id'=>'pathImagePost')) !!}--}}
+            {{--<br>--}}
+            {{--{!! Form::button('Tìm', array('id' => 'btnBrowseImagePost','class'=>'btn btn-primary')) !!}--}}
+            {{--</div>--}}
+            {{--<div class="form-group">--}}
+            {{--{{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}--}}
+            {{--</div>--}}
+            {{--</div>--}}
         </div>
-        <div class="col-md-12">
-            <div class="form-group">
-                {!! Form::button('Thêm Hình Thư Viện', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
-            </div>
-            <div class="form-group">
-                <div id="add-image" class="row">
+        <div class="col-md-12 p-0">
+            <div class="wrap-create-edit">
+                <strong class="text-title-left">Thêm Hình Thư Viện</strong>
+                <div class="form-group">
+                    {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                </div>
+                <div class="form-group">
+                    <div id="add-image" class="row">
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,7 +110,7 @@
         </div>
         <div class="col-md-12 form-group">
             <strong>Kích Hoạt:</strong>
-            <input name="isActive" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
+            <input name="is_active" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
         </div>
         <div class="col-md-12" style="text-align:  center;">
             <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Thư Viện Ảnh</button>

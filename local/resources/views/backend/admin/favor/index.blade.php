@@ -53,6 +53,7 @@
                     <th>TT</th>
                     <th>Tên Ưu Đãi</th>
                     <th>Trạng Thái</th>
+                    <th>Loại Ưu Đãi</th>
                     <th>Người Đăng</th>
                     <th>Ngày Đăng</th>
                     <th>Ngày Cập Nhật</th>
@@ -61,7 +62,11 @@
                 @foreach ($posts as $key => $data)
                     <td>{{ ++$i }}</td>
                     <td>{{ $data->title }}</td>
-                    <td>{{ $data->isActive }}</td>
+                    <td>{{ $data->is_active }}</td>
+                    @php
+                        $arrayCategoryItem=$data->categoryitems()->get();
+                    @endphp
+                    <td>{{$arrayCategoryItem->implode('name',',')}}</td>
                     <td>{{ $data->users->name }}</td>
                     <td>{{ $data->created_at }}</td>
                     <td>{{ $data->updated_at }}</td>

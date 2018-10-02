@@ -38,7 +38,41 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getThucDonDetail($path)
     {
         $categoryItem = new CategoryItem();
-        $post=$categoryItem->whereId(8)->first()->posts()->wherePath($path)->first();
+        $post = $categoryItem->whereId(8)->first()->posts()->wherePath($path)->first();
+        return $post;
+    }
+
+    public function getThuVien()
+    {
+        $categoryItem = new CategoryItem();
+        $post = $categoryItem->whereId(7)->first()->posts()->get();
+        return $post;
+    }
+
+    public function getTinTuc()
+    {
+        $categoryItem = new CategoryItem();
+        $post = $categoryItem->whereId(10)->first()->posts()->get();
+        return $post;
+    }
+
+    public function getTinTucDetail($path)
+    {
+        $categoryItem = new CategoryItem();
+        $data = [];
+        $post = $categoryItem->whereId(10)->first()->posts()->wherePath($path)->first();
+        $other = $categoryItem->whereId(10)->first()->posts()->where('id', '!=' , $post->id)->get();
+        $category = $categoryItem->where('id', 10)->first();
+        $data['post'] = $post;
+        $data['other'] = $other;
+        $data['category'] = $category;
+        return $data;
+    }
+
+    public function getUuDai()
+    {
+        $categoryItem = new CategoryItem();
+        $post = $categoryItem->whereId(9)->first()->posts()->get();
         return $post;
     }
 

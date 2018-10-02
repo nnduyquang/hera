@@ -17,10 +17,10 @@ class CategoryItemRepository extends EloquentRepository implements CategoryItemR
     {
         switch ($type) {
             case'categoryproduct':
-                return $this->_model->getAllCategoryByType(CATEGORY_PRODUCT);
+                return $this->_model->getAllParent('order',CATEGORY_PRODUCT);
                 break;
             case'categorypost':
-                return $this->_model->getAllCategoryByType(CATEGORY_POST);
+                return $this->_model->getAllParent('order',CATEGORY_POST);
                 break;
         }
     }

@@ -18,10 +18,11 @@ class PostController extends Controller
     {
         $this->postRepository = $postRepository;
     }
-    public function index(Request $request,$type)
+
+    public function index(Request $request, $type)
     {
         $data = $this->postRepository->getAllPostByTypeOrderById($type);
-        $posts=$data['posts'];
+        $posts = $data['posts'];
         return view($data['view'], compact('posts'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
@@ -32,8 +33,9 @@ class PostController extends Controller
      */
     public function create($type)
     {
-        $data=$this->postRepository->showCreatePost($type);
-        return view($data['view'], compact('roles', 'data'));
+        $data = $this->postRepository->showCreatePost($type);
+        $categoryItems = $data['categoryItems'];
+        return view($data['view'], compact('roles', 'data','categoryItems'));
     }
 
     /**
@@ -42,9 +44,9 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$type)
+    public function store(Request $request, $type)
     {
-        $data = $this->postRepository->createNewPostWithSeoId($request,$type);
+        $data = $this->postRepository->createNewPostWithSeoId($request, $type);
         return redirect()->route($data['view']);
     }
 
@@ -65,11 +67,13 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,$type)
+    public function edit($id, $type)
     {
 //        $post = $this->postRepository->getPostById($id);
-        $data=$this->postRepository->showEditPost($id,$type);
-        return view($data['view'], compact('data'));
+        $data = $this->postRepository->showEditPost($id, $type);
+        $categoryItems = $data['categoryItems'];
+
+        return view($data['view'], compact('data','categoryItems'));
     }
 
     /**
@@ -79,9 +83,9 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id,$type)
+    public function update(Request $request, $id, $type)
     {
-        $data = $this->postRepository->updatePost($request,$id,$type);
+        $data = $this->postRepository->updatePost($request, $id, $type);
         return redirect()->route($data['view']);
     }
 
@@ -91,9 +95,9 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id,$type)
+    public function destroy($id, $type)
     {
-        $data=$this->postRepository->deletePost($id,$type);
+        $data = $this->postRepository->deletePost($id, $type);
         return redirect()->route($data['view']);
     }
 }

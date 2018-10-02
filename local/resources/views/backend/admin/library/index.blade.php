@@ -24,39 +24,41 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <div class="col-md-12">
-        <table class="table table-bordered">
-            <tr>
-                <th>TT</th>
-                <th>Tên Thư Viện Ảnh</th>
-                <th>Path</th>
-                <th>Người Đăng</th>
-                <th>Ngày Đăng</th>
-                <th>Ngày Cập Nhật</th>
-                <th>Tình Trạng</th>
-                <th width="280px">Action</th>
-            </tr>
-            @foreach ($posts as $key => $data)
-                <td>{{ ++$i }}</td>
-                <td>{{ $data->title }}</td>
-                <td>{{ $data->path }}</td>
-                <td>{{ $data->users->name }}</td>
-                <td>{{ $data->created_at }}</td>
-                <td>{{ $data->updated_at }}</td>
-                <td>{{$data->isActive}}</td>
-                <td>
-                    @permission(('page-edit'))
-                    <a class="btn btn-primary" href="{{ route('library.edit',$data->id) }}">Cập Nhật</a>
-                    @endpermission
-                    @permission(('page-delete'))
-                    {!! Form::open(['method' => 'DELETE','route' => ['library.destroy', $data->id],'style'=>'display:inline']) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                    {!! Form::close() !!}
-                    @endpermission
-                </td>
+    <div class="wrap-index">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th>TT</th>
+                    <th>Tên Thư Viện Ảnh</th>
+                    <th>Path</th>
+                    <th>Người Đăng</th>
+                    <th>Ngày Đăng</th>
+                    <th>Ngày Cập Nhật</th>
+                    <th>Tình Trạng</th>
+                    <th width="280px">Action</th>
                 </tr>
-            @endforeach
-        </table>
+                @foreach ($posts as $key => $data)
+                    <td>{{ ++$i }}</td>
+                    <td>{{ $data->title }}</td>
+                    <td>{{ $data->path }}</td>
+                    <td>{{ $data->users->name }}</td>
+                    <td>{{ $data->created_at }}</td>
+                    <td>{{ $data->updated_at }}</td>
+                    <td>{{$data->is_active}}</td>
+                    <td>
+                        @permission(('page-edit'))
+                        <a class="btn btn-primary" href="{{ route('library.edit',$data->id) }}">Cập Nhật</a>
+                        @endpermission
+                        @permission(('page-delete'))
+                        {!! Form::open(['method' => 'DELETE','route' => ['library.destroy', $data->id],'style'=>'display:inline']) !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                        {!! Form::close() !!}
+                        @endpermission
+                    </td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
     </div>
     {{--{!! $pages->links() !!}--}}
 @stop

@@ -12,4 +12,12 @@ interface FrontendRepositoryInterface
 
     public function getThucDonDetail($path);
 
+    public function getThuVien();
+
+    public function getTinTuc();
+
+    public function getTinTucDetail($path);
+
+    public function getUuDai();
+
 }

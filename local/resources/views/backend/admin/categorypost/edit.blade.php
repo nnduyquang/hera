@@ -37,12 +37,15 @@
                         {!! Form::text('name',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
                     </div>
                 </div>
-                {{--<div class="wrap-create-edit">--}}
-                    {{--<strong class="text-title-left">Menu Cấp</strong>--}}
-                    {{--<div class="form-group">--}}
-
-                    {{--</div>--}}
-                {{--</div>--}}
+                <div class="wrap-create-edit">
+                    <strong class="text-title-left">Menu Cấp</strong>
+                    <div class="form-group">
+                        <select class="form-control" name="parent_id">
+                            <option value="-1">Gốc</option>
+                            @include('backend.admin.categorypost.list-select-option-edit')
+                        </select>
+                    </div>
+                </div>
                 <div class="wrap-create-edit">
                     <strong class="text-title-left">Mô Tả Ngắn:</strong>
                     <div class="form-group">
@@ -104,7 +107,7 @@
             </div>
             <div class="col-md-12 form-group">
                 <strong>Kích Hoạt:</strong>
-                <input {{$categoryItem->isActive==1?'checked':''}} name="page_is_active" data-on="Có" data-off="Không"
+                <input {{$categoryItem->isActive==1?'checked':''}} name="isActive" data-on="Có" data-off="Không"
                        type="checkbox" data-toggle="toggle">
             </div>
             <div class="col-md-12" style="text-align:  center;">

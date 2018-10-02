@@ -37,10 +37,15 @@
                         {!! Form::text('name',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
                     </div>
                 </div>
-                {{--<div class="form-group">--}}
-                    {{--<strong>Menu Cấp</strong>--}}
-                    {{--{!! Form::select('parent',$dd_categorie_posts, null,array('class' => 'form-control')) !!}--}}
-                {{--</div>--}}
+                <div class="form-group">
+                    <strong>Menu Cấp</strong>
+                    <div class="form-group">
+                        <select class="form-control" name="parent_id">
+                            <option value="-1">Gốc</option>
+                            @include('backend.admin.categorypost.list-select-option-create')
+                        </select>
+                    </div>
+                </div>
                 <div class="wrap-create-edit">
                     <strong class="text-title-left">Mô Tả Ngắn:</strong>
                     <div class="form-group">
@@ -104,7 +109,7 @@
     </div>
     <div class="col-md-12 form-group">
         <strong>Kích Hoạt:</strong>
-        <input name="page_is_active" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
+        <input name="isActive" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
     </div>
     <div class="col-md-12" style="text-align:  center;">
         <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Chuyên Mục Bài Viết</button>

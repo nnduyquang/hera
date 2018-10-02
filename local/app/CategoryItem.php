@@ -7,17 +7,27 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryItem extends Model
 {
     protected $fillable = [
-        'name','path','description','content','image','image_mobile','level','parent_id','type','seo_id','order','isActive'
+        'name', 'path', 'description', 'content', 'image', 'image_mobile', 'level', 'parent_id', 'type', 'seo_id', 'order', 'isActive'
     ];
     protected $table = 'category_items';
     protected $hidden = ['id'];
-    public function seos(){
-        return $this->belongsTo('App\Seo','seo_id');
+
+    public function seos()
+    {
+        return $this->belongsTo('App\Seo', 'seo_id');
     }
 
-    public function posts(){
-        return $this->belongsToMany('App\Post','category_many','category_id','item_id')->withTimestamps();
+    public function posts()
+    {
+        return $this->belongsToMany('App\Post', 'category_many', 'category_id', 'item_id')->withTimestamps();
     }
+
+    public function children()
+    {
+        return $this->hasMany('App\CategoryItem', 'parent_id')
+            ->with('children');
+    }
+
     public function setImageAttribute($value)
     {
         if ($value) {
@@ -59,13 +69,14 @@ class CategoryItem extends Model
             }, array_keys($list_arr), $list_arr);
         }
     }
-    public function prepareParameters($parameters,$type)
+
+    public function prepareParameters($parameters, $type)
     {
         if (!$parameters->has('isActive'))
-            $parameters->request->add(['is_active' => null]);
+            $parameters->request->add(['isActive' => null]);
         $parameters->request->add(['path' => '']);
         $parameters->request->add(['level' => 0]);
-        $parameters->request->add(['parent_id' => null]);
+//        $parameters->request->add(['parent_id' => null]);
         switch ($type) {
             case'categoryproduct':
                 $parameters->request->add(['type' => CATEGORY_PRODUCT]);
@@ -74,32 +85,39 @@ class CategoryItem extends Model
                 $parameters->request->add(['level' => CATEGORY_POST]);
                 break;
         }
-//        $parent_id = $parameters->input('parent_id');
-//        if ($parent_id == '-1') {
-//            $parameters['parent_id'] = null;
-//            $parameters['level'] = 0;
-//        }else{
-//            $parameters['level']=self::findLevelById($parent_id)+1;
-//        }
+        $parent_id = $parameters->input('parent_id');
+        if ($parent_id == '-1') {
+            $parameters['parent_id'] = null;
+            $parameters['level'] = 0;
+        } else {
+            $parameters['level'] = self::findLevelById($parent_id) + 1;
+        }
         return $parameters;
     }
-    public function findLevelById($id){
-        return $this->where('id',$id)->first()->level;
+
+    public function findLevelById($id)
+    {
+        return $this->where('id', $id)->first()->level;
     }
 
     public function getAllCategoryByType($type)
     {
         return $this->where('type', $type)->orderBy('order')->get();
     }
-    public function getAllOrderBy($order,$type)
+
+    public function getAllOrderBy($order, $type)
     {
         return $this->where('type', $type)->orderBy($order)->get();
+    }
+    public function getAllByIdOrderBy($order, $type,$id)
+    {
+        return $this->where('type', $type)->where('id',$id)->orderBy($order)->get();
     }
 
     public function getAllParent($order, $type)
     {
         $newArray = array();
-        $categoryItems = self::getAllOrderBy($order,$type);
+        $categoryItems = self::getAllOrderBy($order, $type);
         foreach ($categoryItems as $key => $item) {
             if (!isset($item->parent_id)) {
                 array_push($newArray, $item);
@@ -107,12 +125,23 @@ class CategoryItem extends Model
         }
         return $newArray;
     }
+    public function getAllParentById($order, $type,$id){
+        $newArray = array();
+        $categoryItems = self::getAllByIdOrderBy($order, $type,$id);
+        foreach ($categoryItems as $key => $item) {
+            if (!isset($item->parent_id)) {
+                array_push($newArray, $item);
+            }
+        }
+        return $newArray;
+    }
+
     public function setIsActiveAttribute($value)
     {
         if (!IsNullOrEmptyString($value)) {
-            $this->attributes['is_active'] = 1;
+            $this->attributes['isActive'] = 1;
         } else {
-            $this->attributes['is_active'] = 0;
+            $this->attributes['isActive'] = 0;
         }
     }
 
@@ -127,6 +156,7 @@ class CategoryItem extends Model
         if (IsNullOrEmptyString($value))
             $this->attributes['order'] = 1;
     }
+
     protected static function boot()
     {
         parent::boot();
