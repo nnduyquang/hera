@@ -8,6 +8,8 @@ interface FrontendRepositoryInterface
 
     public function getPageDichVu();
 
+    public function getDichVuDetail($path);
+
     public function getThucDon();
 
     public function getThucDonDetail($path);
@@ -19,5 +21,7 @@ interface FrontendRepositoryInterface
     public function getTinTucDetail($path);
 
     public function getUuDai();
+
+    public function getUuDaiDetail($path);
 
 }

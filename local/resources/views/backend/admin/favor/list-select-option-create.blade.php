@@ -5,6 +5,6 @@
         <span class="check-mark"></span>
     </label>
     @if(!$item->children->isEmpty())
-        @include('backend.admin.product.list-select-option-create', ['categoryItems' => $item->children])
+        @include('backend.admin.favor.list-select-option-create', ['categoryItems' => $item->children])
     @endif
 @endforeach

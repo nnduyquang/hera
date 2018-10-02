@@ -21,6 +21,13 @@ class FrontendController extends Controller
         $service = $data['service'];
         return view('frontend.services.index', compact('services', 'service'));
     }
+    public function getDichVuDetail($path){
+        $data = $this->frontendRepository->getDichVuDetail($path);
+        $post = $data['post'];
+        $other = $data['other'];
+        $category = $data['category'];
+        return view('frontend.service-details.index', compact('post', 'other', 'category'));
+    }
 
     public function getThucDon()
     {
@@ -57,6 +64,14 @@ class FrontendController extends Controller
     public function getUuDai(){
         $data = $this->frontendRepository->getUuDai();
         return view('frontend.uudai.index', compact('data'));
+    }
+    public function getUuDaiDetail($path)
+    {
+        $data = $this->frontendRepository->getUuDaiDetail($path);
+        $post = $data['post'];
+        $other = $data['other'];
+        $category = $data['category'];
+        return view('frontend.uudai-details.index', compact('post', 'other', 'category'));
     }
 
 }

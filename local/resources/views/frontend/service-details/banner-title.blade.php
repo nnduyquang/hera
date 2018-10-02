@@ -1,4 +1,4 @@
-<div class="container-fluid wow fadeIn slow" id="bg_dichvu" style="background-image: url({{URL::asset('images/bg/Banner-dich-vu-hoi-nghi-tiec-to-chuc-su-kien.jpg')}}">
+<div class="container-fluid wow fadeIn slow" id="bg_dichvu" style="background-image: url({{URL::asset($category->image)}}">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">

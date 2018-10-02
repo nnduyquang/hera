@@ -89,6 +89,8 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
                 break;
             case'favor':
                 $result->categoryitems()->attach($request->input('list_category_id'));
+                $result->categoryitems()->detach(9);
+                $result->categoryitems()->attach(9);
                 break;
             case'news':
                 $result->categoryitems()->attach(10);
@@ -120,6 +122,8 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
                 break;
             case'favor':
                 $result->categoryitems()->sync($request->input('list_category_id'));
+                $result->categoryitems()->detach(9);
+                $result->categoryitems()->attach(9);
                 break;
             case'news':
                 $result->categoryitems()->sync(10);

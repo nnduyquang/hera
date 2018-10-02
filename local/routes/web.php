@@ -8,10 +8,8 @@ Route::get('/', function () {
 Route::get('/dich-vu/', 'FrontendController@getPageDichVu');
 
 
-//Route::get('/uu-dai/', function () {
-//    return view('frontend.uudai.index');
-//});
 Route::get('/uu-dai/', 'FrontendController@getUuDai');
+Route::get('/uu-dai/{path}', 'FrontendController@getUuDaiDetail');
 
 Route::get('/dat-tiec/', function () {
     return view('frontend.contact.index');
@@ -23,9 +21,6 @@ Route::get('/lien-he/', function () {
     return view('frontend.lienhe.index');
 });
 
-//Route::get('/uu-dai/chuong-trinh-uu-dai.html', function () {
-//    return view('frontend.uudai-details.index');
-//});
 
 Route::get('/thu-vien/', 'FrontendController@getThuVien');
 
@@ -33,9 +28,10 @@ Route::get('/thu-vien/', 'FrontendController@getThuVien');
 Route::get('/tin-tuc/', 'FrontendController@getTinTuc');
 Route::get('/tin-tuc/{path}', 'FrontendController@getTinTucDetail');
 
-Route::get('/dich-vu/dich-vu.html', function () {
-    return view('frontend.service-details.index');
-});
+//Route::get('/dich-vu/dich-vu.html', function () {
+//    return view('frontend.service-details.index');
+//});
+Route::get('/dich-vu/{path}', 'FrontendController@getDichVuDetail')->name('dichvu.detail');
 
 Route::post('/tim-kiem', 'FrontendController@getSearch')->name('search');
 

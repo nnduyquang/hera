@@ -27,6 +27,20 @@ class FrontendRepository implements FrontendRepositoryInterface
         return $data;
     }
 
+    public function getDichVuDetail($path)
+    {
+        $categoryItem = new CategoryItem();
+        $data = [];
+        $post = $categoryItem->whereId(6)->first()->posts()->wherePath($path)->first();
+        $other = $categoryItem->whereId(6)->first()->posts()->where('id', '!=' , $post->id)->get();
+        $category = $categoryItem->where('id', 6)->first();
+        $data['post'] = $post;
+        $data['other'] = $other;
+        $data['category'] = $category;
+        return $data;
+    }
+
+
     public function getThucDon()
     {
         $data = [];
@@ -72,8 +86,24 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getUuDai()
     {
         $categoryItem = new CategoryItem();
-        $post = $categoryItem->whereId(9)->first()->posts()->get();
-        return $post;
+        $categoryChildren=$categoryItem->whereId(9)->first()->children()->get();
+        foreach ($categoryChildren as $key=>$item){
+            $item['posts']=$item->posts()->get();
+        }
+//        dd($categoryChildren);
+//        $post = $categoryItem->whereId(9)->first()->posts()->get();
+        return $categoryChildren;
+    }
+    public function getUuDaiDetail($path){
+        $categoryItem = new CategoryItem();
+        $data = [];
+        $post = $categoryItem->whereId(9)->first()->posts()->wherePath($path)->first();
+        $other = $categoryItem->whereId(9)->first()->posts()->where('id', '!=' , $post->id)->get();
+        $category = $categoryItem->where('id', 9)->first();
+        $data['post'] = $post;
+        $data['other'] = $other;
+        $data['category'] = $category;
+        return $data;
     }
 
 
