@@ -86,31 +86,51 @@
     <div id="hera_mobile_menu_content" class="">
         <ul>
             <li><a class="mt-3 {{ request()->is('/') ? 'active' : '/' }}" href="{{URL::asset('/')}}">TRANG CHỦ</a></li>
-            <li class="dv_click"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}" href="javascript:void(0)">DỊCH
+            <li class="li-overlay"><a class="{{ request()->is('dich-vu*') ? 'active' : '/' }}"  href="javascript:void(0)"
+                >DỊCH
                     VỤ</a>
+                <div class="li-content">
+                    <ul>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                    </ul>
+                </div>
             </li>
-            <div id="demo">
-                <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a>
-                <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">HỘI NGHỊ</a>
-                <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">SỰ KIỆN</a>
-                <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC NGOÀI TRỜI</a>
-            </div>
 
-            <li class="tv_click"><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}" href="javascript:void(0)">THƯ
-                    VIỆN</a></li>
-            <div id="demo2">
-                <a href="{{URL::asset('/hinh-anh')}}">SẢNH</a>
-                <a href="{{URL::asset('/hinh-anh')}}">TRANG TRÍ</a>
-                <a href="{{URL::asset('/hinh-anh')}}">TIỆC CƯỚI</a>
-                <a href="{{URL::asset('/hinh-anh')}}">VIDEO CLIP</a>
-            </div>
-            <li class="td_click"><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}" href="javascript:void(0)">THỰC
-                    ĐƠN</a>
+            {{--<div id="demo">--}}
+                {{--<a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a>--}}
+                {{--<a href="{{URL::asset('/dich-vu/dich-vu.html')}}">HỘI NGHỊ</a>--}}
+                {{--<a href="{{URL::asset('/dich-vu/dich-vu.html')}}">SỰ KIỆN</a>--}}
+                {{--<a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC NGOÀI TRỜI</a>--}}
+            {{--</div>--}}
+
+            <li class="li-overlay"><a class="{{ request()->is('hinh-anh*') ? 'active' : '/' }}" href="javascript:void(0)">THƯ
+                    VIỆN</a>
+                <div class="li-content">
+                    <ul>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                    </ul>
+                </div>
             </li>
-            <div id="demo3">
-                <a href="{{URL::asset('/hinh-anh')}}">SET MENU</a>
-                <a href="{{URL::asset('/hinh-anh')}}">THỰC ĐƠN CHỌN MÓN</a>
-            </div>
+
+            <li class="li-overlay"><div class=""><a class="{{ request()->is('thuc-don*') ? 'active' : '/' }}"  href="javascript:void(0)">THỰC
+                    ĐƠN</a>
+                    {{--<i class="far fa-plus-square"></i>--}}
+                </div>
+                <div class="li-content">
+                    <ul>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                        <li> <a href="{{URL::asset('/dich-vu/dich-vu.html')}}">TIỆC CƯỚI</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a class="{{ request()->is('uu-dai*') ? 'active' : '/' }}" href="{{URL::asset('/uu-dai/')}}">ƯU ĐÃI</a>
             </li>
             <li><a class="{{ request()->is('tin-tuc*') ? 'active' : '/' }}" href="{{URL::asset('/tin-tuc/')}}">TIN TỨC</a>

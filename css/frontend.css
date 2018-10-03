@@ -1733,6 +1733,32 @@ This class is added to the container
   height: auto;
 }
 
+a {
+  padding: 8px 5px;
+}
+
+.li-overlay {
+  cursor: pointer;
+}
+
+.li-overlay:hover .li-content {
+  display: block;
+}
+
+.li-overlay .li-content {
+  display: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: none;
+  padding: 10px 0px 0px 13px;
+}
+
+.li-overlay .li-content ul li a {
+  background-color: transparent !important;
+  color: #2a2a2a !important;
+  padding-left: 0px !important;
+}
+
 #hera_mobile_menu_content {
   width: 100%;
   height: auto;
