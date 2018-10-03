@@ -73,6 +73,13 @@ class FrontendController extends Controller
         $category = $data['category'];
         return view('frontend.uudai-details.index', compact('post', 'other', 'category'));
     }
+    public function getFrontend(){
+        $data = $this->frontendRepository->getPageDichVu();
+        $services = $data['services'];
+        $service = $data['service'];
+        $uudai= $this->frontendRepository->getAllUuDai();
+        return view('frontend.home.index', compact('services', 'service','uudai'));
+    }
 
 }
 

@@ -31,27 +31,6 @@
                 </a>
             </div>
             @endforeach
-            {{--<div class="col-md-3 p-0  dv-content" >--}}
-                {{--<a href="{{URL::asset('/dich-vu/dich-vu.html')}}">--}}
-                    {{--<div  id="tiec_cuoi"  style="background-image: url({{URL::asset('images/uploads/dv2.jpg')}})">--}}
-                    {{--</div>--}}
-                    {{--<p>TIỆC CƯỚI</p>--}}
-                {{--</a>--}}
-            {{--</div>--}}
-            {{--<div class="col-md-3 p-0  dv-content">--}}
-                {{--<a href="{{URL::asset('/dich-vu/dich-vu.html')}}">--}}
-                    {{--<div id="su_kien"  style="background-image: url({{URL::asset('images/uploads/dv3.jpg')}})">--}}
-                    {{--</div>--}}
-                    {{--<p>SỰ KIỆN</p>--}}
-                {{--</a>--}}
-            {{--</div>--}}
-            {{--<div class="col-md-3  p-0  dv-content">--}}
-                {{--<a href="{{URL::asset('/dich-vu/dich-vu.html')}}">--}}
-                    {{--<div id="tiec_ngoai_troi"  style="background-image: url({{URL::asset('images/uploads/dv4.jpg')}})">--}}
-                    {{--</div>--}}
-                    {{--<p>TIỆC NGOÀI TRỜI</p>--}}
-                {{--</a>--}}
-            {{--</div>--}}
         </div>
 
     </div>

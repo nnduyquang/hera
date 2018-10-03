@@ -65,6 +65,14 @@ img {
   z-index: 100;
 }
 
+.call-me-web {
+  cursor: pointer;
+}
+
+.call-me-web:focus {
+  outline: none;
+}
+
 .phone_animation {
   background-color: transparent;
   width: 200px;
@@ -1460,4 +1468,373 @@ This class is added to the container
 #ud_1 #noidung a {
   color: white;
   /*text-decoration: #f9bf80;*/
+}
+
+#footer {
+  background-color: black;
+}
+
+#footer #footer_content {
+  margin: auto;
+  text-align: center;
+}
+
+#footer #footer_content h5 {
+  color: white;
+  padding-top: 38px;
+  padding-bottom: 20px;
+  font-size: 21px;
+}
+
+#footer #footer_content h4 {
+  color: #dbbc85;
+  font-size: 22px;
+  padding-bottom: 6px;
+}
+
+#footer #footer_content h3 {
+  font-size: 20px;
+  color: #dbbc85;
+  padding-bottom: 6px;
+  line-height: 28px;
+}
+
+#footer #footer_content p {
+  color: white;
+  padding-bottom: 8px;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+#footer #footer_content p a {
+  color: white;
+}
+
+#footer #footer_content p:last-child {
+  padding-top: 68px;
+}
+
+#footer #sc_network a i {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  color: #2a2a2a;
+  line-height: 36px;
+  text-align: center;
+  font-size: 14px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-right: 10px;
+}
+
+#footer #sc_network a i.fa-facebook-f {
+  background-color: #0e5bc0;
+  color: white;
+}
+
+#footer #sc_network a i.fa-instagram {
+  /*background-color: #42aaf3;*/
+  background-size: 100% 100%;
+  background-position: center center;
+  color: white;
+}
+
+#footer #sc_network a i.fa-youtube {
+  background-color: #e71b06;
+  color: white;
+}
+
+#menu {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+  text-align: center;
+  /*box-shadow: 0px 0px 2px 0px #6c757d;*/
+}
+
+#menu #logo img {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 108px;
+  height: auto;
+}
+
+#menu #sc_network a i {
+  font-weight: normal;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-right: 10px;
+}
+
+#menu #sc_network a i.fa-facebook-f {
+  background-color: #0e5bc0;
+}
+
+#menu #sc_network a:hover i.fa-facebook-f {
+  background-color: #0e5bc0;
+}
+
+#menu #sc_network a:hover i.fa-instagram {
+  background-color: #42aaf3;
+}
+
+#menu #sc_network a i.fa-instagram {
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+#menu #sc_network a:hover i.fa-youtube {
+  background-color: #e71b06;
+}
+
+#menu #sc_network a i.fa-youtube {
+  background-color: #e71b06;
+}
+
+#menu #menu_content ul#main {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu #menu_content ul#main li {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0px 18px;
+  z-index: 12;
+}
+
+#menu #menu_content ul#main li a {
+  font-weight: 600;
+  font-size: 15px;
+  color: #444647;
+  padding: 38px 0px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#menu #menu_content ul#main li a:hover {
+  color: #007bff;
+  /*background-color: #0e5bc0;*/
+  /*padding:20px;*/
+}
+
+#menu #menu_content ul#main li:nth-last-child(2) {
+  padding: 0px 3px !important;
+}
+
+#menu #menu_content ul#main li:nth-last-child(2) a {
+  font-weight: 500;
+  color: #fff;
+  background-color: #036ecf;
+  padding: 12px 12px 10px 12px;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#menu #menu_content ul#main li:nth-last-child(2) a:hover {
+  background-color: #007bff;
+}
+
+#menu #menu_content ul#main li a.active {
+  color: #007bff;
+}
+
+#menu #menu_content ul#main li .dv_overlay {
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+#menu #menu_content ul#main li .dv_overlay:hover ul.dv-content {
+  position: absolute;
+  opacity: 1;
+  top: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+#menu #menu_content ul#main li .dv_overlay:hover ul.dv-content li {
+  display: block;
+}
+
+#menu #menu_content ul#main li .dv_overlay ul.dv-content {
+  padding-left: 6px;
+  padding-right: 6px;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background-color: #fff;
+  width: 238px;
+  height: 0;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: .3s;
+  z-index: -1;
+}
+
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li {
+  position: relative;
+  z-index: -1;
+  display: none;
+  padding: 10px 10px;
+  border-bottom: 1px solid #dbbc85;
+}
+
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:last-child {
+  border-bottom: none !important;
+  margin-bottom: 6px;
+}
+
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li a.sub-menu {
+  padding: 6px 10px !important;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:nth-last-child(2) {
+  padding: 10px 10px !important;
+}
+
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:nth-last-child(2) a.sub-menu {
+  font-weight: 600 !important;
+  background-color: transparent;
+  color: #2a2a2a;
+}
+
+#menu #menu_content ul#main li .dv_overlay ul.dv-content li:nth-last-child(2) a:hover {
+  color: #007bff;
+}
+
+#hera_mobile_menu {
+  display: none;
+}
+
+#hera_mobile_menu #logo img {
+  width: 100px;
+  height: auto;
+}
+
+#hera_mobile_menu_content {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: absolute;
+  -webkit-box-shadow: 0px 0px 2px 0px #2a2a2a;
+          box-shadow: 0px 0px 2px 0px #2a2a2a;
+  transition: .3s;
+  top: 80%;
+  opacity: 0;
+  z-index: -30;
+}
+
+#hera_mobile_menu_content ul {
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#hera_mobile_menu_content ul li {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+#hera_mobile_menu_content ul li:nth-last-child(3) a {
+  padding: 10px 20px;
+  background-color: #0f74a8;
+  color: white;
+  border-radius: 5px;
+}
+
+#hera_mobile_menu_content ul li a {
+  color: #2a2a2a;
+  font-size: 18px;
+}
+
+#hera_mobile_menu_content ul li a i {
+  height: 38px;
+  width: 38px;
+  color: white;
+  border-radius: 50%;
+  line-height: 38px;
+}
+
+#hera_mobile_menu_content ul li a i.fa-facebook-f {
+  background-color: #0e5bc0;
+}
+
+#hera_mobile_menu_content ul li a i.fa-instagram {
+  background-size: 100% 100%;
+  background-position: center center;
+  color: white;
+}
+
+#hera_mobile_menu_content ul li a i.fa-youtube {
+  background-color: #e71b06;
+}
+
+#hera_mobile_menu_content ul li a.active {
+  color: #dbbc85;
+}
+
+#hera_mobile_menu_content ul li p {
+  font-size: 20px;
+  color: #0f74a8;
+}
+
+#hera_mobile_menu_content ul li p span {
+  color: #2a2a2a;
+}
+
+#hera_mobile_menu_content ul li p i {
+  height: 38px;
+  width: 38px;
+  background-color: #0f74a8;
+  color: white;
+  border-radius: 50%;
+  line-height: 38px;
+}
+
+#demo, #demo2, #demo3 {
+  height: 0;
+  padding-left: 38px;
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#demo a, #demo2 a, #demo3 a {
+  display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  color: #2a2a2a;
+}
+
+@media only screen and (max-width: 1300px) {
+  #hera_mobile_menu {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
 }

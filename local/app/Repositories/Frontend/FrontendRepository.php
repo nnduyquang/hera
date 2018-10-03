@@ -90,10 +90,10 @@ class FrontendRepository implements FrontendRepositoryInterface
         foreach ($categoryChildren as $key=>$item){
             $item['posts']=$item->posts()->get();
         }
-//        dd($categoryChildren);
-//        $post = $categoryItem->whereId(9)->first()->posts()->get();
         return $categoryChildren;
     }
+
+
     public function getUuDaiDetail($path){
         $categoryItem = new CategoryItem();
         $data = [];
@@ -104,6 +104,17 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data['other'] = $other;
         $data['category'] = $category;
         return $data;
+    }
+
+    public function getAllUuDai()
+    {
+        $categoryItem = new CategoryItem();
+        $post = $categoryItem->whereId(9)->first()->posts()->take(3)->get();
+        foreach ($post as $key=>$item){
+            $item->description=cat_chuoi_dai_thanh_ngan(loai_bo_html_tag( $item->description),90);
+        }
+        return $post;
+
     }
 
 

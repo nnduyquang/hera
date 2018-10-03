@@ -1,9 +1,10 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
+//Route::get('/', function () {
+//    return view('frontend.home.index');
+//});
+Route::get('/', 'FrontendController@getFrontend');
 
 Route::get('/dich-vu/', 'FrontendController@getPageDichVu');
 
@@ -28,9 +29,6 @@ Route::get('/thu-vien/', 'FrontendController@getThuVien');
 Route::get('/tin-tuc/', 'FrontendController@getTinTuc');
 Route::get('/tin-tuc/{path}', 'FrontendController@getTinTucDetail');
 
-//Route::get('/dich-vu/dich-vu.html', function () {
-//    return view('frontend.service-details.index');
-//});
 Route::get('/dich-vu/{path}', 'FrontendController@getDichVuDetail')->name('dichvu.detail');
 
 Route::post('/tim-kiem', 'FrontendController@getSearch')->name('search');

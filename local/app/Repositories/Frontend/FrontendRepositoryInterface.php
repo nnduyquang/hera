@@ -24,4 +24,6 @@ interface FrontendRepositoryInterface
 
     public function getUuDaiDetail($path);
 
+    public function getAllUuDai();
+
 }
