@@ -13,6 +13,12 @@
       font-size: 18px;
       padding: 10px 0 ;
       text-align: center;
+      min-height: 73px;
+      max-height: 73px;
+      overflow-y: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
     p{
       color: white;
@@ -46,9 +52,10 @@
     .img-tin-tuc{
       width: 100%;
       min-height: 238px;
-      -webkit-background-size: cover;
+      -webkit-background-size: 100%;
       background-size: cover;
       background-position: center center;
+      background-repeat: no-repeat;
     }
 
 

@@ -821,6 +821,12 @@ This class is added to the container
   font-size: 18px;
   padding: 10px 0;
   text-align: center;
+  min-height: 73px;
+  max-height: 73px;
+  overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 #h_3 .tin-tuc p {
@@ -865,6 +871,7 @@ This class is added to the container
   min-height: 238px;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 800px) {
