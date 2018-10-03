@@ -42,9 +42,6 @@
             <li class="nav-item">
                 <a href="#slider-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Slider</a>
             </li>
-            <li class="nav-item">
-                <a href="#favor-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Ưu Đãi</a>
-            </li>
         </ul>
         {!! Form::open(array('route' => 'config.store','method'=>'POST')) !!}
         <div class="tab-content">
@@ -53,7 +50,6 @@
             @include('backend.admin.config.script')
             @include('backend.admin.config.email')
             @include('backend.admin.config.slider')
-            @include('backend.admin.config.favor')
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button id="btnDanhMuc" type="submit" class="btn btn-primary">Lưu Cấu Hình</button>

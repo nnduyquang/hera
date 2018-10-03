@@ -4,10 +4,8 @@ namespace App\Repositories\Frontend;
 
 
 use App\CategoryItem;
-use App\Config;
 use App\Menu;
 use App\Post;
-
 
 class FrontendRepository implements FrontendRepositoryInterface
 {
@@ -34,7 +32,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $categoryItem = new CategoryItem();
         $data = [];
         $post = $categoryItem->whereId(6)->first()->posts()->wherePath($path)->first();
-        $other = $categoryItem->whereId(6)->first()->posts()->where('id', '!=', $post->id)->get();
+        $other = $categoryItem->whereId(6)->first()->posts()->where('id', '!=' , $post->id)->get();
         $category = $categoryItem->where('id', 6)->first();
         $data['post'] = $post;
         $data['other'] = $other;
@@ -77,7 +75,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $categoryItem = new CategoryItem();
         $data = [];
         $post = $categoryItem->whereId(10)->first()->posts()->wherePath($path)->first();
-        $other = $categoryItem->whereId(10)->first()->posts()->where('id', '!=', $post->id)->get();
+        $other = $categoryItem->whereId(10)->first()->posts()->where('id', '!=' , $post->id)->get();
         $category = $categoryItem->where('id', 10)->first();
         $data['post'] = $post;
         $data['other'] = $other;
@@ -88,20 +86,19 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getUuDai()
     {
         $categoryItem = new CategoryItem();
-        $categoryChildren = $categoryItem->whereId(9)->first()->children()->get();
-        foreach ($categoryChildren as $key => $item) {
-            $item['posts'] = $item->posts()->get();
+        $categoryChildren=$categoryItem->whereId(9)->first()->children()->get();
+        foreach ($categoryChildren as $key=>$item){
+            $item['posts']=$item->posts()->get();
         }
         return $categoryChildren;
     }
 
 
-    public function getUuDaiDetail($path)
-    {
+    public function getUuDaiDetail($path){
         $categoryItem = new CategoryItem();
         $data = [];
         $post = $categoryItem->whereId(9)->first()->posts()->wherePath($path)->first();
-        $other = $categoryItem->whereId(9)->first()->posts()->where('id', '!=', $post->id)->get();
+        $other = $categoryItem->whereId(9)->first()->posts()->where('id', '!=' , $post->id)->get();
         $category = $categoryItem->where('id', 9)->first();
         $data['post'] = $post;
         $data['other'] = $other;
@@ -113,29 +110,11 @@ class FrontendRepository implements FrontendRepositoryInterface
     {
         $categoryItem = new CategoryItem();
         $post = $categoryItem->whereId(9)->first()->posts()->take(3)->get();
-        foreach ($post as $key => $item) {
-            $item->description = cat_chuoi_dai_thanh_ngan(loai_bo_html_tag($item->description), 90);
+        foreach ($post as $key=>$item){
+            $item->description=cat_chuoi_dai_thanh_ngan(loai_bo_html_tag( $item->description),90);
         }
         return $post;
 
-    }
-
-    public function getConfigByName($name)
-    {
-        $config = new Config();
-        return $config->getConfigByName($name);
-    }
-
-    public function getFrontEndInfo()
-    {
-        $data=[];
-        $hotline=self::getConfigByName('config-phone');
-        $email=self::getConfigByName('config-email');
-        $contact=self::getConfigByName('config-contact');
-        $data['hotline']=$hotline;
-        $data['email']=$email;
-        $data['contact']=$contact;
-        return $data;
     }
 
 

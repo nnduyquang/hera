@@ -87,9 +87,9 @@
         <div class="pop-center">
             {{--<img src="{{URL::asset('http://heracenter.com/wp-content/uploads/2018/09/Popup-Mua-Dong-Yeu-Thuong.png')}}" alt="">--}}
             <p class="mb-3">NHẬP SỐ ĐIỆN THOẠI BẠN, CHÚNG TÔI SẼ GỌI LẠI NGAY!</p>
-            <input name="phone" type="text" placeholder="099-99999-9999">
+            <input type="text" placeholder="099-99999-9999">
             <br>
-            <button id="btnSendPhone" class="btn-send">Gửi đi</button>
+            <button class="btn-send">Gửi đi</button>
             <p class="mt-3">BẠN CẦN TƯ VẤN CHO BỮA TIỆC CỦA MÍNH</p>
             <p>HÃY ĐỂ LẠI THÔNG TIN</p>
             <p>CHÚNG TÔI SẼ GỌI CHO BẠN</p>

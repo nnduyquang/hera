@@ -17,8 +17,8 @@ class ConfigRepository extends EloquentRepository implements ConfigRepositoryInt
 
     public function updateAllConfig($request)
     {
-        $parameters = $this->_model->prepareParameters($request);
-        foreach ($parameters->all() as $key=>$val)
+//        dd($request->all());
+        foreach ($request->all() as $key=>$val)
         {
             $this->_model->updateConfig($key,$val);
         }

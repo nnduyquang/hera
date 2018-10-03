@@ -78,10 +78,7 @@ class FrontendController extends Controller
         $services = $data['services'];
         $service = $data['service'];
         $uudai= $this->frontendRepository->getAllUuDai();
-        $sliders=$this->frontendRepository->getConfigByName('slider-config');
-        $popupImage=$this->frontendRepository->getConfigByName('favor-image-config');
-        $popupLink=$this->frontendRepository->getConfigByName('favor-link-config');
-        return view('frontend.home.index', compact('services', 'service','uudai','sliders','popupImage','popupLink'));
+        return view('frontend.home.index', compact('services', 'service','uudai'));
     }
 
 }
