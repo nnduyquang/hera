@@ -57,7 +57,7 @@
                     {{--0984 377 727 (Hội nghị)</p>--}}
 
                 <p class="pb-3"><span><i class="fas fa-phone-volume"></i></span>
-                    0166 399 7777 (Hotline)</p></li>
+                    {{$listFrontEndInfo['hotline']}} (Hotline)</p></li>
 
         </ul>
     </div>
