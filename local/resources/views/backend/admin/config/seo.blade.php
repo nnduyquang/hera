@@ -10,18 +10,18 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <strong>Từ khóa cần SEO</strong>
-                    {!! Form::text('seo_keywords',$cauhinhs['config-seo-keywords'], array('placeholder' => 'keywords cách nhau dấu phẩy','class' => 'form-control')) !!}
+                    {!! Form::text('config-seo-keywords',$cauhinhs['config-seo-keywords'], array('placeholder' => 'keywords cách nhau dấu phẩy','class' => 'form-control')) !!}
                     <ul class="error-notice">
                     </ul>
                 </div>
             </div>
             <div class="col-md-12 form-group">
                 <strong>Tiêu Đề (title):</strong>
-                {!! Form::text('seo_title',$cauhinhs['config-seo-title'], array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                {!! Form::text('config-seo-title',$cauhinhs['config-seo-title'], array('placeholder' => 'Tên','class' => 'form-control')) !!}
             </div>
             <div class="col-md-12 form-group">
                 <strong>Mô Tả (description):</strong>
-                {!! Form::textarea('seo_description', $cauhinhs['config-seo-description'],array('placeholder' => '','id'=>'seo-description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                {!! Form::textarea('config-seo-description', $cauhinhs['config-seo-description'],array('placeholder' => '','id'=>'seo-description-post','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
             </div>
         </div>
         <h3>Mạng Xã Hội</h3>
@@ -30,9 +30,9 @@
                 <div class="form-group">
                     <strong>Chọn hình đại diện hiển thị MXH: </strong>
                     @if($cauhinhs['config-seo-image']!='')
-                        {!! Form::text('seo-image', url('/').'/'.$cauhinhs['config-seo-image'], array('class' => 'form-control','id'=>'pathImageMXH')) !!}
+                        {!! Form::text('config-seo-image', url('/').'/'.$cauhinhs['config-seo-image'], array('class' => 'form-control','id'=>'pathImageMXH')) !!}
                     @else
-                        {!! Form::text('seo-image', '', array('class' => 'form-control','id'=>'pathImageMXH')) !!}
+                        {!! Form::text('config-seo-image', '', array('class' => 'form-control','id'=>'pathImageMXH')) !!}
                     @endif
                     <br>
                     {!! Form::button('Tìm', array('id' => 'btnBrowseImageMXH','class'=>'btn btn-primary')) !!}
