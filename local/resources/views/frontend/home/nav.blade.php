@@ -27,7 +27,7 @@
     }
 </style>
 
-<div id="nav">
+<div id="nav" class="d-none d-md-block">
     <ul>
         <li><a class="nav-r active" id="h_top_nav" href=".slider"><i class="fab fa-gg-circle"></i></a></li>
         <li><a class="nav-r" id="h_1_nav" href="#h_1"><i class="fab fa-gg-circle"></i></a></li>
