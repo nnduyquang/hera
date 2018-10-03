@@ -20,10 +20,9 @@
 
 @stop
 @section('slider')
-
+    {{--@include('frontend.home.popup-callme')--}}
 @stop
 @section('container')
     @include('frontend.service-details.banner-title')
         @include('frontend.service-details.sd_1')
-
 @stop

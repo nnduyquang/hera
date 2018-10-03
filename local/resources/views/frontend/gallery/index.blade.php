@@ -20,7 +20,7 @@
 
 @stop
 @section('slider')
-
+    {{--@include('frontend.home.popup-callme')--}}
 @stop
 @section('container')
 
@@ -30,4 +30,5 @@
 @stop
 @section('jv-scripts')
     {{ Html::script('js/fe_g_index.js') }}
+    {{ Html::script('js/fe_h_index.js') }}
 @stop

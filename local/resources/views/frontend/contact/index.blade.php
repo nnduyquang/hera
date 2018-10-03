@@ -20,10 +20,12 @@
 
 @stop
 @section('slider')
-
+    {{--@include('frontend.home.popup-callme')--}}
 @stop
 @section('container')
     @include('frontend.contact.banner-title')
     @include('frontend.contact.c_1')
-
+@stop
+@section('jv-scripts')
+    {{ Html::script('js/fe_h_index.js') }}
 @stop

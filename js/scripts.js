@@ -56,3 +56,17 @@ $(document).ready(function () {
         runSd_1_sdBottom();
     }
 });
+
+$('.btn-close-callme').click(function () {
+    $('#popup-callme').css('display', 'none')
+})
+
+$('.call-me-web').click(function () {
+    if($('#popup-callme').css('display')=='none')
+    {
+        $('#popup-callme').css('display', 'block')
+        // alert (123);
+    }else{
+        $('#popup-callme').css('display', 'none')
+    }
+})

@@ -24,5 +24,8 @@
 @stop
 @section('container')
     @include('frontend.tintuc.banner-title')
-        @include('frontend.tintuc.tt_1')
+    @include('frontend.tintuc.tt_1')
+@stop
+@section('jv-scripts')
+    {{ Html::script('js/fe_h_index.js') }}
 @stop
