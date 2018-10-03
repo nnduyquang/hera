@@ -29,21 +29,14 @@
     <div id="owl_slider" class="owl-carousel owl-theme">
         {{--@for ($i = 0; $i < 6; $i++)--}}
         {{--@endfor--}}
-        <div class="owl-items" style="background-image:url({{URL::asset('images/slider/home-1.png')}});">
+        @php
+            $listImage=explode(';',$sliders);
+        @endphp
+        @foreach($listImage as $key=>$item)
+        <div class="owl-items" style="background-image:url({{URL::asset($item)}});">
 
         </div>
-        <div class="owl-items" style="background-image:url({{URL::asset('images/slider/home-2.png')}});">
-
-        </div>
-        <div class="owl-items" style="background-image:url({{URL::asset('images/slider/home-3.png')}});">
-
-        </div>
-        <div class="owl-items" style="background-image:url({{URL::asset('images/slider/home-4.png')}});">
-
-        </div>
-        <div class="owl-items" style="background-image:url({{URL::asset('images/slider/home-5.png')}});">
-
-        </div>
+        @endforeach
 
     </div>
 </div>

@@ -1,75 +1,3 @@
-<style>
-    /*#hera_mobile_menu #logo img{*/
-    /*width: 100px;*/
-    /*height: auto;*/
-
-    /*}*/
-
-    /*#hera_mobile_menu_content {*/
-    /*width: 100%;*/
-    /*height: auto;*/
-    /*background-color: #fff;*/
-    /*transition: .3s;*/
-    /*position: absolute;*/
-    /*box-shadow: 0px 0px 2px 0px #2a2a2a;*/
-    /*transition: .3s;*/
-    /*top:80%;*/
-    /*opacity: 0;*/
-    /*}*/
-
-    /*#hera_mobile_menu_content ul{*/
-    /*list-style-type: none;*/
-    /*padding-left: 10px;*/
-    /*padding-right: 10px;*/
-    /*}*/
-    /*#hera_mobile_menu_content ul li{*/
-    /*width: 100%;*/
-    /*padding: 10px 20px;*/
-    /*}*/
-    /*#hera_mobile_menu_content ul li a{*/
-    /*color: #2a2a2a;*/
-    /*font-size: 20px;*/
-    /*}*/
-
-    /*#hera_mobile_menu_content ul li a i{*/
-    /*height: 38px;*/
-    /*width: 38px;*/
-    /*background-color: #6c757d;*/
-    /*color: white;*/
-    /*border-radius: 50%;*/
-    /*line-height: 38px;*/
-    /*}*/
-
-    /*#hera_mobile_menu_content ul li a.active{*/
-    /*color: #f9bf80;*/
-    /*}*/
-
-    /*#hera_mobile_menu_content ul li p{*/
-    /*font-size: 20px;*/
-    /*color: #0f74a8;*/
-    /*}*/
-
-    /*#hera_mobile_menu_content ul li p i{*/
-    /*height: 38px;*/
-    /*width: 38px;*/
-    /*background-color: #0f74a8;*/
-    /*color: white;*/
-    /*border-radius: 50%;*/
-    /*line-height: 38px;*/
-    /*}*/
-
-    /*#hera_mobile_menu_content ul li:nth-last-child(4) a{*/
-
-    /*padding: 10px 20px;*/
-    /*background-color: #0f74a8;*/
-    /*color: white;*/
-    /*border-radius: 5px;*/
-
-    /*}*/
-    /*#hera_mobile_menu_content ul li p span{*/
-    /*color: #2a2a2a;*/
-    /*}*/
-</style>
 
 <div class="container-fluid p-0 position-relative" id="hera_mobile_menu">
     <div class="container">
@@ -149,7 +77,7 @@
                     {{--0984 377 727 (Hội nghị)</p>--}}
 
                 <p class="pb-3"><span><i class="fas fa-phone-volume"></i></span>
-                    0166 399 7777 (Hotline)</p></li>
+                    {{$listFrontEndInfo['hotline']}} (Hotline)</p></li>
 
         </ul>
     </div>
