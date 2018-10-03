@@ -32,6 +32,8 @@ Route::get('/tin-tuc/{path}', 'FrontendController@getTinTucDetail');
 Route::get('/dich-vu/{path}', 'FrontendController@getDichVuDetail')->name('dichvu.detail');
 
 Route::post('/tim-kiem', 'FrontendController@getSearch')->name('search');
+Route::post('/sendphone/send', ['as' => 'mail.sendphone', 'uses' => 'MailController@sendPhone']);
+Route::post('/sendmail/send', ['as' => 'mail.sendmail', 'uses' => 'MailController@sendMail']);
 
 
 Route::get('/admin/sml_login', 'AuthController@checklogin');
