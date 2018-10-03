@@ -23,7 +23,7 @@
     {{ Html::style('css/core.common.css') }}
     {{ Html::style('css/core.frontend.css') }}
     {{ Html::style('css/frontend.css') }}
-    {{ Html::style('css/frontend/common/menu/index.css') }}
+    {{--{{ Html::style('css/frontend/common/menu/index.css') }}--}}
     @yield('styles')
 </head>
 <body>
@@ -33,6 +33,7 @@
 
 <div id="blurrMe">
     {{--@include('frontend.common.menu.m-menu')--}}
+    @include('frontend.home.popup-callme')
     @include('frontend.common.menu.hera-mobile-menu')
     @include('frontend.common.menu.menu')
     @yield('popup')
@@ -60,6 +61,12 @@
 
 </script>
 <script>
+
+    $(document).ready(function () {
+
+
+    });
+
 
     $('#mobile_menu_click').click(function () {
         if ($('#hera_mobile_menu_content').css('opacity') == 0) {
@@ -102,31 +109,26 @@
         }
     })
 </script>
-@yield('jv-scripts')
-{{ Html::script('js/scripts.js') }}
+
+
 <div class="callback d-lg-none d-md-none">
     <div class="phone_animation">
         <div class="phone_animation_circle"></div>
         <div class="phone_animation_circle_fill"></div>
-        <a href="tel:01663997777" class="phone_animation_circle_fill_img"><i class="fas fa-phone"
-                                                                             aria-hidden="true"></i></a>
+        <a href="tel:0363997777" class="phone_animation_circle_fill_img"><i class="fas fa-phone"
+                                                                            aria-hidden="true"></i></a>
     </div>
 </div>
 <div class="callback d-none d-md-block" style="right: 0px;bottom: -30px;left:inherit">
     <div class="phone_animation">
         <div class="phone_animation_circle"></div>
         <div class="phone_animation_circle_fill"></div>
-        <a href="tel:01663997777" class="phone_animation_circle_fill_img"><i class="fas fa-phone"
-                                                                             aria-hidden="true"></i></a>
+        <a href="javascript:void(0)" class="phone_animation_circle_fill_img call-me-web"><i
+                    class="fas fa-phone"></i></a>
     </div>
 </div>
-{{--<div class="mess_desk_bot d-none d-md-block" style="position: fixed;bottom:40px;right: 0px;">--}}
-    {{--<a href="tel:01663997777"--}}
-       {{--style="display: block;width: 260px;height: 56px;background: url({{URL::to('images/nenhot.png')}}) no-repeat;text-align: center;padding-top: 10px;color:#fff;font-size: 20px;font-family: 'roboto-bold'">--}}
-    {{--</a>--}}
-{{--</div>--}}
-
-
+@yield('jv-scripts')
+{{ Html::script('js/scripts.js') }}
 </body>
 
 </Html>

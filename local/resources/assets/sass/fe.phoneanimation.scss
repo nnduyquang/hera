@@ -5,6 +5,14 @@
   z-index: 100;
 }
 
+.call-me-web{
+  cursor: pointer;
+}
+
+.call-me-web:focus{
+  outline: none;
+}
+
 .phone_animation {
   background-color: transparent;
   width: 200px;
