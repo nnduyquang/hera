@@ -83,7 +83,7 @@
                             <input name="number" type="text" placeholder="SỐ KHÁCH DỰ KIẾN">
                         </div>
 
-                        <textarea name="content" class="m-3 p-3" placeholder="NỘI DUNG" name="" id="" cols="30"
+                        <textarea name="contentmail" class="m-3 p-3" placeholder="NỘI DUNG" name="" id="" cols="30"
                                   rows="10"></textarea>
 
                         <div class="col-12 mt-3">

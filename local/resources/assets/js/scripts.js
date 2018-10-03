@@ -103,7 +103,7 @@ $(document).ready(function () {
         data.append('type', $("input[name='type']").val());
         data.append('date', $("input[name='date']").val());
         data.append('number', $("input[name='number']").val());
-        data.append('contentmail', $("textarea[name='content']").val());
+        data.append('contentmail', $("textarea[name='contentmail']").val());
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
