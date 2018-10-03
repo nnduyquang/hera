@@ -28,4 +28,6 @@ interface FrontendRepositoryInterface
 
     public function getConfigByName($name);
 
+    public function getFrontEndInfo();
+
 }

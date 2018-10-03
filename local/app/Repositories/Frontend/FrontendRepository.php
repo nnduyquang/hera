@@ -126,5 +126,15 @@ class FrontendRepository implements FrontendRepositoryInterface
         return $config->getConfigByName($name);
     }
 
+    public function getFrontEndInfo()
+    {
+        $data=[];
+        $hotline=self::getConfigByName('config-phone');
+        $email=self::getConfigByName('config-email');
+        $data['hotline']=$hotline;
+        $data['email']=$email;
+        return $data;
+    }
+
 
 }
