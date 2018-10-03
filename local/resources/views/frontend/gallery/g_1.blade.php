@@ -23,9 +23,12 @@
                                     @endphp
                                     @foreach($listImage as $key2=>$item2)
                                         <div class="col-md-3">
-                                            <div class=" one-images"
+                                            <a class="fancybox" data-caption=""
+                                               data-fancybox="gallery-cus"
+                                               href="{{URL::asset($item2)}}"><div class=" one-images"
                                                  style="background-image:url({{URL::asset($item2)}});">
                                             </div>
+                                            </a>
                                         </div>
                                     @endforeach
                                 @else

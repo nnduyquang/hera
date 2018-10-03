@@ -32,7 +32,8 @@
                                     <div class="row align-items-center mb-4">
                                         <div class="col-md-6 order-md-1 order-0">
                                             <div class="img-content"
-                                                 style="background-image:url({{URL::asset($item2->image)}});">
+                                                 style="">
+                                                <img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;">
 
                                             </div>
                                         </div>

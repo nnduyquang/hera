@@ -1,7 +1,5 @@
 <div id="sd_1">
 
-
-
     <div class="container-fluid pb-5" id="noidung">
         <div class="container">
             <div class="row">
