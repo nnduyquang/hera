@@ -70,7 +70,7 @@
 
     <div class="popup-content animated bounceIn delay-1s">
         <div class="pop-center">
-            <img src="{{URL::asset('http://heracenter.com/wp-content/uploads/2018/09/Popup-Mua-Dong-Yeu-Thuong.png')}}" alt="">
+            <a href="{{URL::to('uu-dai/'.$popupLink)}}"><img src="{{URL::asset($popupImage)}}" alt=""></a>
             <button class="btn-close animated fadeInDown delay-1s text-center"><i class="fas fa-times"></i></button>
         </div>
     </div>
