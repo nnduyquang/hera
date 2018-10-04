@@ -48,7 +48,9 @@ class FrontendController extends Controller
     public function getThuVien()
     {
         $data = $this->frontendRepository->getThuVien();
-        return view('frontend.gallery.index', compact('data'));
+        $service=$data['service'];
+        $post=$data['post'];
+        return view('frontend.gallery.index', compact('service','post'));
     }
 
     public function getTinTuc()

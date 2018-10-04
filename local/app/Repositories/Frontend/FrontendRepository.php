@@ -67,9 +67,13 @@ class FrontendRepository implements FrontendRepositoryInterface
 
     public function getThuVien()
     {
+        $data = [];
         $categoryItem = new CategoryItem();
         $post = $categoryItem->whereId(7)->first()->posts()->get();
-        return $post;
+        $service = $categoryItem->whereId(7)->first();
+        $data['service'] = $service;
+        $data['post'] = $post;
+        return $data;
     }
 
     public function getTinTuc()

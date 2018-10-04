@@ -6,7 +6,7 @@
 
 
                     <div class="tab">
-                        @foreach($data as $key=>$item)
+                        @foreach($post as $key=>$item)
                             <button class="tablinks" onclick="openCity(event, {{$item->id}})"  @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen" @elseif(request()->is('thu-vien')) id="defaultOpen"  @endif>{{$item->title}}
                             </button>
                         @endforeach
@@ -15,7 +15,7 @@
                         {{--<button class="tablinks" onclick="openCity(event, 'Tokyo')">TIỆC CƯỚI</button>--}}
                         {{--<button class="tablinks" onclick="openCity(event, 'Outdoor')">VIDEO CLIP</button>--}}
                     </div>
-                    @foreach($data as $key=>$item)
+                    @foreach($post as $key=>$item)
                         <div id="{{$item->id}}" class="tabcontent">
                             <div class="row">
                                 @if(!is_null($item->sub_image))
