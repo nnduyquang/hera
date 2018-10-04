@@ -96,7 +96,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12 p-4 pb-3 content_des">
-                            {!! $data->description !!}
+                            {!! $thucdon->description !!}
                             <div class="d-flex justify-content-between pt-3" style="width: 100%">
                                 <a class="thuc-don" href="{{URL::asset('/file/SETMENU2018.pdf')}}">XEM THỰC ĐƠN</a>
                                 <a class="thuc-don" href="{{URL::asset('/file/SETMENU2018.pdf')}}" download>DOWNLOAD
@@ -105,9 +105,9 @@
                             </div>
                         </div>
                         @php
-                            $listImage=explode(';',$data->sub_image);
+                            $listImage=explode(';',$thucdon->sub_image);
                         @endphp
-                        @if(!is_null($data->sub_image))
+                        @if(!is_null($thucdon->sub_image))
                             <div class="col-md-12 mt-3 p-0">
                                 <div id="owl_doitac" class="owl-carousel owl-theme">
                                     @foreach($listImage as $key=>$item)
@@ -126,9 +126,9 @@
                 </div>
                 <div class="col-md-6 pl-lg-3 pl-md-3 p-0 mt-lg-0 mt-3 position-relative">
                     @php
-                        $listImage=explode(';',$data->sub_image);
+                        $listImage=explode(';',$thucdon->sub_image);
                     @endphp
-                    @if(!is_null($data->sub_image))
+                    @if(!is_null($thucdon->sub_image))
                         <div id="owl_doitac2" class="owl-carousel owl-theme">
                             @foreach($listImage as $key=>$item)
                                 <div class="owl-items">
@@ -147,7 +147,7 @@
                     @endif
                 </div>
                 <div class="col-md-12 mt-5">
-                    {!! $data->content !!}
+                    {!! $thucdon->content !!}
                 </div>
             </div>
         </div>
