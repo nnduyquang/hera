@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 03, 2018 lúc 12:14 PM
+-- Thời gian đã tạo: Th10 04, 2018 lúc 11:48 AM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.0.29
 
@@ -196,10 +196,10 @@ INSERT INTO `menus` (`id`, `title`, `url`, `target`, `icon_class`, `color`, `par
 (5, 'Sự Kiện', '', '_self', NULL, '#000000', 2, 3, '2018-09-26 02:44:30', '2018-10-02 16:12:03', 'dichvu.detail', '{\r\n\"path\":\"su-kien\"\r\n}'),
 (6, 'Tiệc Ngoài Trời', '', '_self', NULL, '#000000', 2, 4, '2018-09-26 02:44:46', '2018-10-02 16:12:29', 'dichvu.detail', '{\r\n\"path\":\"tiec-ngoai-troi\"\r\n}'),
 (7, 'Thư Viện', 'thu-vien', '_self', NULL, '#000000', NULL, 3, '2018-09-26 02:44:57', '2018-10-02 02:36:05', NULL, ''),
-(8, 'Sảnh', 'hinh-anh', '_self', NULL, '#000000', 7, 1, '2018-09-26 02:45:20', '2018-09-26 02:57:43', NULL, ''),
-(9, 'Trang Trí', 'hinh-anh', '_self', NULL, '#000000', 7, 2, '2018-09-26 02:45:29', '2018-09-26 02:57:47', NULL, ''),
-(10, 'Tiệc Cưới', 'hinh-anh', '_self', NULL, '#000000', 7, 3, '2018-09-26 02:45:52', '2018-09-26 02:57:53', NULL, ''),
-(11, 'Video Clip', 'hinh-anh', '_self', NULL, '#000000', 7, 4, '2018-09-26 02:46:07', '2018-09-26 02:57:58', NULL, ''),
+(8, 'Sảnh', '', '_self', NULL, '#000000', 7, 1, '2018-09-26 02:45:20', '2018-10-04 01:28:37', 'thuvien.detail', '{\r\n\"path\":\"sanh\"\r\n}'),
+(9, 'Trang Trí', '', '_self', NULL, '#000000', 7, 2, '2018-09-26 02:45:29', '2018-10-04 01:28:59', 'thuvien.detail', '{\r\n\"path\":\"trang-tri\"\r\n}'),
+(10, 'Tiệc Cưới', '', '_self', NULL, '#000000', 7, 3, '2018-09-26 02:45:52', '2018-10-04 01:30:20', 'thuvien.detail', '{\r\n\"path\":\"sanh-tiec-cuoi\"\r\n}'),
+(11, 'Video Clip', 'thu-vien', '_self', NULL, '#000000', 7, 4, '2018-09-26 02:46:07', '2018-10-04 01:26:05', NULL, ''),
 (12, 'Thực Đơn', 'thuc-don', '_self', NULL, '#000000', NULL, 4, '2018-09-26 02:46:18', '2018-09-26 02:58:12', NULL, ''),
 (13, 'Set Menu', '', '_self', NULL, '#000000', 12, 1, '2018-09-26 02:46:34', '2018-10-01 07:17:55', 'thucdon.detail', '{\r\n\"path\":\"set-menu\"\r\n}'),
 (14, 'Thực Đơn Chọn Món', 'thuc-don', '_self', NULL, '#000000', 12, 2, '2018-09-26 02:46:58', '2018-09-26 02:58:30', NULL, ''),
