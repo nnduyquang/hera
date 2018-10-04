@@ -66,6 +66,20 @@
         </div>
         <div class="col-md-12 p-0">
             <div class="wrap-create-edit">
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" name="radio-uudai" value="1"
+                               @if(!is_null($data['post']->sub_image))checked @endif>Thêm Hình Thư Viện
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="radio-uudai" value="2"
+                               @if(!is_null($data['post']->videos))checked @endif>Thêm Video Clip
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 p-0 import-image" @if(is_null($data['post']->sub_image)) style="display: none" @endif>
+            <div class="wrap-create-edit">
                 <strong class="text-title-left">Thêm Hình Thư Viện</strong>
                 <div class="form-group">
                     {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
@@ -84,6 +98,36 @@
                             </div>
                         @endforeach
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 p-0 import-video" @if(is_null($data['post']->videos)) style="display: none" @endif>
+            <div class="wrap-create-edit">
+                <strong class="text-title-left">Thêm Video Clip</strong>
+                <div class="group-input">
+                    @php
+                        $listVideo=explode(';',$data['post']->videos);
+                        $i=0;
+                    @endphp
+                    @foreach($listVideo as $key=>$item)
+                        <div class="form-group row">
+                            <div class="col-md-11">
+                                {!! Form::text('video-choose[]',$item, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                            </div>
+                            @if($i==1)
+                                <div class="col-md-1 delete-input">
+                                    <span>x</span>
+                                </div>
+                            @endif
+                            @php
+                                $i++;
+                            @endphp
+                        </div>
+                    @endforeach
+
+                </div>
+                <div class="form-group">
+                    {!! Form::button('Thêm', array('id' => 'btnVideoMore','class'=>'btn btn-primary')) !!}
                 </div>
             </div>
         </div>

@@ -67,6 +67,7 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
 
     public function createNewPostWithSeoId($request, $type)
     {
+
         $data = [];
         $seo = Seo::create($request->all());
         if (!$request->has('isActive'))
