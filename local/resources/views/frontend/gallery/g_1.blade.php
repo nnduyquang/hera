@@ -10,6 +10,7 @@
                             <button class="tablinks" onclick="openCity(event, {{$item->id}})"  @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen" @elseif(request()->is('thu-vien')) id="defaultOpen"  @endif>{{$item->title}}
                             </button>
                         @endforeach
+
                         {{--<button class="tablinks" onclick="openCity(event, 'Paris')">TRANG TRÍ</button>--}}
                         {{--<button class="tablinks" onclick="openCity(event, 'Tokyo')">TIỆC CƯỚI</button>--}}
                         {{--<button class="tablinks" onclick="openCity(event, 'Outdoor')">VIDEO CLIP</button>--}}

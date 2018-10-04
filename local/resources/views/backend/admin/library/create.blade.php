@@ -67,6 +67,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-12 p-0">
+            <div class="wrap-create-edit">
+                <strong class="text-title-left">Thêm Video Clip</strong>
+                <div class="group-input">
+                    <div class="form-group">
+                        {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                </div>
+            </div>
+        </div>
         <hr>
         <div id="seo-part" class="col-md-12 p-0">
             <h3>SEO</h3>
