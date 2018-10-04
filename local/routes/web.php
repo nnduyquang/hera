@@ -24,6 +24,7 @@ Route::get('/lien-he/', function () {
 
 
 Route::get('/thu-vien/', 'FrontendController@getThuVien');
+Route::get('/thu-vien/{path}', 'FrontendController@getThuVien')->name('thuvien.detail');
 
 
 Route::get('/tin-tuc/', 'FrontendController@getTinTuc');

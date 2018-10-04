@@ -7,7 +7,7 @@
 
                     <div class="tab">
                         @foreach($data as $key=>$item)
-                            <button class="tablinks" onclick="openCity(event, {{$item->id}})" id="defaultOpen">{{$item->title}}
+                            <button class="tablinks" onclick="openCity(event, {{$item->id}})"  @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen" @elseif(request()->is('thu-vien')) id="defaultOpen"  @endif>{{$item->title}}
                             </button>
                         @endforeach
                         {{--<button class="tablinks" onclick="openCity(event, 'Paris')">TRANG TRÍ</button>--}}
