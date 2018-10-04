@@ -55,6 +55,7 @@ class Menu extends Model
 
     public function prepareParameters($parameters)
     {
+
         switch (array_get($parameters, 'type')) {
             case 'route':
                 $parameters['url'] = '';
@@ -74,6 +75,11 @@ class Menu extends Model
         if (isset($parameters['type'])) {
             unset($parameters['type']);
         }
+        if(isset($parameters['parameters'])){
+            $parameters['parameters']=str_replace("\r\n",'',$parameters['parameters']);
+
+        }
+
 
         return $parameters;
     }
