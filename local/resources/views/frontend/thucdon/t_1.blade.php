@@ -112,7 +112,7 @@
                                 <div id="owl_doitac" class="owl-carousel owl-theme">
                                     @foreach($listImage as $key=>$item)
                                         <div class="owl-items">
-                                            <a href="">
+                                            <a href="{{URL::asset($item)}}" class="fancybox" data-fancybox="gallery-cus">
                                                 <div class="owl-img"
                                                      style="background-image: url({{URL::asset($item)}});">
                                                 </div>
@@ -132,7 +132,7 @@
                         <div id="owl_doitac2" class="owl-carousel owl-theme">
                             @foreach($listImage as $key=>$item)
                                 <div class="owl-items">
-                                    <a href="">
+                                    <a href="{{URL::asset($item)}}" class="fancybox" data-fancybox="gallery-cus">
                                         <div class="owl-img2"
                                              style="background-image:url({{URL::asset($item)}});">
                                         </div>
