@@ -139,12 +139,18 @@ class FrontendRepository implements FrontendRepositoryInterface
 
     }
 
+    public function getConfigByName($name)
+    {
+        $config = new Config();
+        return $config->getConfigByName($name);
+    }
+
 
     public function getFrontEndInfo()
     {
         $data=[];
         $config = new Config();
-        $dataConfig = $config->getConfigByListName(['config-phone', 'config-email', 'config-contact', 'logo-config']);
+        $dataConfig = $config->getConfigByListName(['config-phone', 'config-email', 'config-contact', 'logo-config','script-js-header','script-js-body']);
         foreach ($dataConfig as $key => $item) {
             if ($item->name == 'config-phone')
                 $data['hotline'] = $item->content;
@@ -154,6 +160,10 @@ class FrontendRepository implements FrontendRepositoryInterface
                 $data['contact'] = $item->content;
             if ($item->name == 'logo-config')
                 $data['logo'] = $item->content;
+            if ($item->name == 'script-js-header')
+                $data['script-js-header'] = $item->content;
+            if ($item->name == 'script-js-body')
+                $data['script-js-body'] = $item->content;
         }
         return $data;
     }

@@ -25,6 +25,7 @@
     {{ Html::style('css/frontend.css') }}
     {{--{{ Html::style('css/frontend/common/menu/index.css') }}--}}
     @yield('styles')
+    {!! $listFrontEndInfo['script-js-header'] !!}
 </head>
 <body>
 <header id="header">
@@ -129,6 +130,7 @@
 </div>
 @yield('jv-scripts')
 {{ Html::script('js/scripts.js') }}
+{!! $listFrontEndInfo['script-js-body'] !!}
 </body>
 
 </Html>
