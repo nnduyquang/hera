@@ -10,15 +10,8 @@
 
 
                     <div class="tab">
-<<<<<<< HEAD
-                        @foreach($data as $key=>$item)
-                            <button class="tablinks" onclick="openCity(event, {{$item->id}})"
-                                    @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen"
-                                    @elseif(request()->is('thu-vien')) id="defaultOpen" @endif>{{$item->title}}
-=======
                         @foreach($post as $key=>$item)
                             <button class="tablinks" onclick="openCity(event, {{$item->id}})"  @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen" @elseif(request()->is('thu-vien')) id="defaultOpen"  @endif>{{$item->title}}
->>>>>>> 72d38c5425dbaa29adb21f6246bfa3ae3cc3494d
                             </button>
                         @endforeach
 

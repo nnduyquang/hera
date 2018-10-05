@@ -255,11 +255,40 @@ $('#btnBrowseMore').click(function () {
     //     'kcfinder_multiple', 'status=0, toolbar=0, location=0, menubar=0, ' +
     //     'directories=0, resizable=1, scrollbars=0, width=800, height=600'
     // );
-    window.open('http://localhost:8080/hera/js/kcfinder/browse.php?type=images',
+    window.open('http://tieccuoihera.com/js/kcfinder/browse.php?type=images',
         'kcfinder_multiple', 'status=0, toolbar=0, location=0, menubar=0, ' +
         'directories=0, resizable=1, scrollbars=0, width=800, height=600'
     );
 })
+$('#btnVideoMore').click(function () {
+    var inputVideo = '<div class="form-group row">'
+        + '<div class="col-md-11">'
+        + '<input placeholder="Tên" class="form-control" name="video-choose[]" type="text">'
+        + '</div>'
+        + '<div class="col-md-1 delete-input">'
+        + '<span>x</span>'
+        + '</div>'
+        + '</div>'
+    $('.group-input').append(inputVideo);
+    $('.delete-input span').click(function(){
+        $(this).parent().parent().remove();
+        // alert('delete');
+    });
+});
+$('.delete-input span').click(function(){
+    $(this).parent().parent().remove();
+    // alert('delete');
+});
+$('input[type=radio]').change( function() {
+    var type=$(this).val();
+    if(type==1){
+        $('.import-image').css('display','block');
+        $('.import-video').css('display','none');
+    }else{
+        $('.import-image').css('display','none');
+        $('.import-video').css('display','block');
+    }
+});
 
 $(document).ready(function()
 {
