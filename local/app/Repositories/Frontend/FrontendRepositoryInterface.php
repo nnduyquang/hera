@@ -26,7 +26,6 @@ interface FrontendRepositoryInterface
 
     public function getAllUuDai();
 
-    public function getConfigByName($name);
 
     public function getFrontEndInfo();
 

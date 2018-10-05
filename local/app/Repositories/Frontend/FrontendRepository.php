@@ -139,21 +139,22 @@ class FrontendRepository implements FrontendRepositoryInterface
 
     }
 
-    public function getConfigByName($name)
-    {
-        $config = new Config();
-        return $config->getConfigByName($name);
-    }
 
     public function getFrontEndInfo()
     {
         $data=[];
-        $hotline=self::getConfigByName('config-phone');
-        $email=self::getConfigByName('config-email');
-        $contact=self::getConfigByName('config-contact');
-        $data['hotline']=$hotline;
-        $data['email']=$email;
-        $data['contact']=$contact;
+        $config = new Config();
+        $dataConfig = $config->getConfigByListName(['config-phone', 'config-email', 'config-contact', 'logo-config']);
+        foreach ($dataConfig as $key => $item) {
+            if ($item->name == 'config-phone')
+                $data['hotline'] = $item->content;
+            if ($item->name == 'config-email')
+                $data['email'] = $item->content;
+            if ($item->name == 'config-contact')
+                $data['contact'] = $item->content;
+            if ($item->name == 'logo-config')
+                $data['logo'] = $item->content;
+        }
         return $data;
     }
 

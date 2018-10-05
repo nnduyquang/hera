@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Cấu Hình Thử Giao Diện</h2>
+                    <h2>Cấu Hình Hệ Thống</h2>
                 </div>
             </div>
         </div>
@@ -45,6 +45,10 @@
             <li class="nav-item">
                 <a href="#favor-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Ưu Đãi</a>
             </li>
+            <li class="nav-item">
+                <a href="#logo-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Logo</a>
+            </li>
+
         </ul>
         {!! Form::open(array('route' => 'config.store','method'=>'POST')) !!}
         <div class="tab-content">
@@ -54,6 +58,7 @@
             @include('backend.admin.config.email')
             @include('backend.admin.config.slider')
             @include('backend.admin.config.favor')
+            @include('backend.admin.config.logo')
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button id="btnDanhMuc" type="submit" class="btn btn-primary">Lưu Cấu Hình</button>

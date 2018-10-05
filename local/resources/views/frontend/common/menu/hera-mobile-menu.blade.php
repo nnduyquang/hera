@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12 d-flex justify-content-between align-items-center">
                 <div id="logo" class="pt-2 pb-2">
-                    <img src="{{URL::asset('images/logo/logo-hera-center.png')}}" alt="" style="">
+                    <img src="{{URL::asset($listFrontEndInfo['logo'])}}" alt="" style="">
                 </div>
                 <div><i id="mobile_menu_click" class="fas fa-bars font-weight-bold fa-2x"></i></div>
             </div>

@@ -7,6 +7,12 @@ if ($('#btnBrowseImagePost').length) {
         selectFileWithKCFinder('pathImagePost','showHinhPost');
     }
 };
+if ($('#btnBrowseImageLogo').length) {
+    var button1 = document.getElementById('btnBrowseImageLogo');
+    button1.onclick = function () {
+        selectFileWithKCFinder('pathImageLogo','showHinhLogo');
+    }
+};
 if ($('#btnBrowseImageMXH').length) {
     var button1 = document.getElementById('btnBrowseImageMXH');
     button1.onclick = function () {
@@ -40,7 +46,7 @@ $('#btnBrowseMore').click(function () {
     //     'kcfinder_multiple', 'status=0, toolbar=0, location=0, menubar=0, ' +
     //     'directories=0, resizable=1, scrollbars=0, width=800, height=600'
     // );
-    window.open('http://tieccuoihera.com/js/kcfinder/browse.php?type=images',
+    window.open('http://localhost:8080/hera/js/kcfinder/browse.php?type=images',
         'kcfinder_multiple', 'status=0, toolbar=0, location=0, menubar=0, ' +
         'directories=0, resizable=1, scrollbars=0, width=800, height=600'
     );

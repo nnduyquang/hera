@@ -22,7 +22,7 @@
                 <div class="col-md-6 text-center">
                     <div class=" mb-3 d-flex align-items-center justify-content-center"
                          style="width: 128px;height: 128px;border-radius: 50%;margin: auto;background-color:#fff;padding: 3px">
-                        <img class="" src="{{URL::asset('images/logo/logo-hera-center.png')}}" alt=""
+                        <img class="" src="{{URL::asset($listFrontEndInfo['logo'])}}" alt=""
                              style="width: 86px;height: auto;">
                         <br>
                     </div>

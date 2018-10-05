@@ -5,7 +5,7 @@
             <div class="col-md-12 d-flex justify-content-center align-items-center">
 
                 <div id="logo" class="pt-2 pb-2 pl-4 pr-5">
-                    <a href="{{URL::asset('/')}}"><img src="{{URL::asset('images/logo/logo-hera-center.png')}}" alt=""></a>
+                    <a href="{{URL::asset('/')}}"><img src="{{URL::asset($listFrontEndInfo['logo'])}}" alt=""></a>
                 </div>
 
                 <div id="menu_content">
