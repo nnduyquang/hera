@@ -48,28 +48,43 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data = [];
         $categoryItem = new CategoryItem();
         $thucdon = $categoryItem->whereId(8)->first();
-        return $thucdon;
+        $service = $categoryItem->whereId(8)->first();
+        $data['service'] = $service;
+        $data['thucdon'] = $thucdon;
+        return $data;
     }
 
     public function getThucDonDetail($path)
     {
+        $data = [];
         $categoryItem = new CategoryItem();
+        $service = $categoryItem->whereId(8)->first();
         $post = $categoryItem->whereId(8)->first()->posts()->wherePath($path)->first();
-        return $post;
+        $data['service'] = $service;
+        $data['post'] = $post;
+        return $data;
     }
 
     public function getThuVien()
     {
+        $data = [];
         $categoryItem = new CategoryItem();
         $post = $categoryItem->whereId(7)->first()->posts()->get();
-        return $post;
+        $service = $categoryItem->whereId(7)->first();
+        $data['service'] = $service;
+        $data['post'] = $post;
+        return $data;
     }
 
     public function getTinTuc()
     {
+        $data = [];
         $categoryItem = new CategoryItem();
+        $service = $categoryItem->whereId(10)->first();
         $post = $categoryItem->whereId(10)->first()->posts()->get();
-        return $post;
+        $data['post']=$post;
+        $data['service']=$service;
+        return $data;
     }
 
     public function getTinTucDetail($path)
@@ -87,12 +102,16 @@ class FrontendRepository implements FrontendRepositoryInterface
 
     public function getUuDai()
     {
+        $data = [];
         $categoryItem = new CategoryItem();
         $categoryChildren = $categoryItem->whereId(9)->first()->children()->get();
         foreach ($categoryChildren as $key => $item) {
             $item['posts'] = $item->posts()->get();
         }
-        return $categoryChildren;
+        $service = $categoryItem->whereId(9)->first();
+        $data['service']=$service;
+        $data['categoryChildren']=$categoryChildren;
+        return $data;
     }
 
 

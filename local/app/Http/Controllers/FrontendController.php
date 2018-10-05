@@ -32,25 +32,33 @@ class FrontendController extends Controller
     public function getThucDon()
     {
         $data = $this->frontendRepository->getThucDon();
-        return view('frontend.thucdon.index', compact('data'));
+        $service=$data['service'];
+        $thucdon=$data['thucdon'];
+        return view('frontend.thucdon.index', compact('service','thucdon'));
     }
 
     public function getThucDonDetail($path)
     {
         $data = $this->frontendRepository->getThucDonDetail($path);
-        return view('frontend.thucdon.index', compact('data'));
+        $service=$data['service'];
+        $thucdon=$data['post'];
+        return view('frontend.thucdon.index', compact('service','thucdon'));
     }
 
     public function getThuVien()
     {
         $data = $this->frontendRepository->getThuVien();
-        return view('frontend.gallery.index', compact('data'));
+        $service=$data['service'];
+        $post=$data['post'];
+        return view('frontend.gallery.index', compact('service','post'));
     }
 
     public function getTinTuc()
     {
         $data = $this->frontendRepository->getTinTuc();
-        return view('frontend.tintuc.index', compact('data'));
+        $post=$data['post'];
+        $service=$data['service'];
+        return view('frontend.tintuc.index', compact('post','service'));
     }
 
     public function getTinTucDetail($path)
@@ -63,7 +71,9 @@ class FrontendController extends Controller
     }
     public function getUuDai(){
         $data = $this->frontendRepository->getUuDai();
-        return view('frontend.uudai.index', compact('data'));
+        $service=$data['service'];
+        $categoryChildren=$data['categoryChildren'];
+        return view('frontend.uudai.index', compact('service','categoryChildren'));
     }
     public function getUuDaiDetail($path)
     {

@@ -10,10 +10,15 @@
 
 
                     <div class="tab">
+<<<<<<< HEAD
                         @foreach($data as $key=>$item)
                             <button class="tablinks" onclick="openCity(event, {{$item->id}})"
                                     @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen"
                                     @elseif(request()->is('thu-vien')) id="defaultOpen" @endif>{{$item->title}}
+=======
+                        @foreach($post as $key=>$item)
+                            <button class="tablinks" onclick="openCity(event, {{$item->id}})"  @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen" @elseif(request()->is('thu-vien')) id="defaultOpen"  @endif>{{$item->title}}
+>>>>>>> 72d38c5425dbaa29adb21f6246bfa3ae3cc3494d
                             </button>
                         @endforeach
 
@@ -21,7 +26,7 @@
                         {{--<button class="tablinks" onclick="openCity(event, 'Tokyo')">TIỆC CƯỚI</button>--}}
                         <button class="tablinks" onclick="openCity(event, 'Outdoor')">VIDEO CLIP</button>
                     </div>
-                    @foreach($data as $key=>$item)
+                    @foreach($post as $key=>$item)
                         <div id="{{$item->id}}" class="tabcontent">
                             <div class="row">
                                 @if(!is_null($item->sub_image))
@@ -30,7 +35,7 @@
                                     @endphp
                                     @foreach($listImage as $key2=>$item2)
                                         <div class="col-md-3">
-                                            <a class="fancybox" data-caption=""
+                                            <a class="fancybox" data-caption="{{lay_ten_hinh_tu_path($item2)}}"
                                                data-fancybox="gallery-cus"
                                                href="{{URL::asset($item2)}}">
                                                 <div class=" one-images"

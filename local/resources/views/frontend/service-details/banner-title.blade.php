@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <p class="">DỊCH VỤ</p>
+                <p class="">{{$category->name}}</p>
                 {{--<span><a href="{{URL::asset('/')}}">TRANG CHỦ</a> > DỊCH VỤ</span>--}}
             </div>
         </div>

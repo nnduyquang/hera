@@ -9,7 +9,7 @@
                         {{--<button class="tablinks" onclick="openCity(event, 'Paris')">ƯU ĐÃI HỘI NGHỊ</button>--}}
                     </div>
                     <div id="London" class="tabcontent">
-                        @foreach($data as $key=>$item)
+                        @foreach($post as $key=>$item)
                                 <div class="row align-items-center mb-4">
                                     <div class="col-md-6">
                                         <div class="img-content" style="background-image:url({{URL::asset($item->image)}});">

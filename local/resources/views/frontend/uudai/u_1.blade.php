@@ -9,7 +9,7 @@
                         @php
                             $count=0
                         @endphp
-                        @foreach($data as $key=>$item)
+                        @foreach($categoryChildren as $key=>$item)
                             <button class="tablinks" onclick="openCity(event, '{{$item->id}}')"
                                     @if($count==0)id="defaultOpen" @endif>{{$item->name}}
                         </button>
@@ -23,7 +23,7 @@
                     @php
                         $i=0
                     @endphp
-                    @foreach($data as $key=>$item)
+                    @foreach($categoryChildren as $key=>$item)
                         <div id="{{$item->id}}" class="tabcontent">
                             @foreach($item['posts'] as $key2=>$item2)
 

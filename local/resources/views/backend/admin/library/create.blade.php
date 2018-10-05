@@ -56,6 +56,18 @@
         </div>
         <div class="col-md-12 p-0">
             <div class="wrap-create-edit">
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" name="radio-uudai" value="1" checked>Thêm Hình Thư Viện
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="radio-uudai" value="2">Thêm Video Clip
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 p-0 import-image">
+            <div class="wrap-create-edit">
                 <strong class="text-title-left">Thêm Hình Thư Viện</strong>
                 <div class="form-group">
                     {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
@@ -67,16 +79,22 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12 p-0">
+        <div class="col-md-12 p-0 import-video" style="display: none">
             <div class="wrap-create-edit">
                 <strong class="text-title-left">Thêm Video Clip</strong>
                 <div class="group-input">
-                    <div class="form-group">
-                        {!! Form::text('title',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                    <div class="form-group row">
+                        <div class="col-md-11">
+                            {!! Form::text('video-choose[]',null, array('placeholder' => 'Tên','class' => 'form-control')) !!}
+                        </div>
+                        {{--<div class="col-md-1 delete-input">--}}
+                        {{--<span>x</span>--}}
+                        {{--</div>--}}
                     </div>
+
                 </div>
                 <div class="form-group">
-                    {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                    {!! Form::button('Thêm', array('id' => 'btnVideoMore','class'=>'btn btn-primary')) !!}
                 </div>
             </div>
         </div>
