@@ -114,7 +114,7 @@
                             <div class="col-md-11">
                                 {!! Form::text('video-choose[]',$item, array('placeholder' => 'Tên','class' => 'form-control')) !!}
                             </div>
-                            @if($i==1)
+                            @if($i>=1)
                                 <div class="col-md-1 delete-input">
                                     <span>x</span>
                                 </div>
