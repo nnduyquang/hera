@@ -14,7 +14,7 @@
         <ul>
 
             @foreach($listMenu as $key=>$item)
-                <li class="li-overlay"><a class="{{ request()->is($item->url) ? 'active' : '/' }}"
+                <li class="li-overlay"><a class="{{ request()->is($item->link()) ? 'active' : '/' }}"
                                           href="javascript:void(0)">{{$item->title}}</a>
                     @if(!$item->children->isEmpty())
                         @include('frontend.common.menu.list-menu-mobile-item', ['subMenu' => $item->children])

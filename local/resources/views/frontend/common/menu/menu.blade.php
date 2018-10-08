@@ -13,8 +13,8 @@
                         @foreach($listMenu as $key=>$item)
                             <li>
                                 <div class="dv_overlay pb-4">
-                                    <a class="{{ request()->is($item->url) ? 'active' : '/' }}"
-                                       href="{{URL::to($item->url)}}">{{$item->title}}</a>
+                                    <a class="{{ request()->is($item->link()) ? 'active' : '/' }}"
+                                       href="{{URL::to($item->link())}}">{{$item->title}}</a>
                                     @if(!$item->children->isEmpty())
                                         @include('frontend.common.menu.list-menu-item', ['subMenu' => $item->children])
                                     @endif
