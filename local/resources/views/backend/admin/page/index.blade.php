@@ -52,7 +52,6 @@
                 <th>TT</th>
                 <th>Tên Trang</th>
                 <th>Path</th>
-                <th>Trạng Thái</th>
                 <th>Người Đăng</th>
                 <th>Ngày Đăng</th>
                 <th>Ngày Cập Nhật</th>
@@ -63,11 +62,10 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $data->title }}</td>
                 <td>{{ $data->path }}</td>
-                <td>{{ $data->isActive }}</td>
                 <td>{{ $data->users->name }}</td>
                 <td>{{ $data->created_at }}</td>
                 <td>{{ $data->updated_at }}</td>
-                <td>{{$data->isActive}}</td>
+                <td>{{$data->is_active}}</td>
                 <td>
                     @permission(('page-edit'))
                     <a class="btn btn-primary" href="{{ route('page.edit',$data->id) }}">Cập Nhật</a>
