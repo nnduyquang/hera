@@ -16,16 +16,14 @@
 @stop
 @section('styles')
     {{ Html::style('css/themes/default/default.css') }}
-    {{--{{ Html::style('css/frontend/uudai-details/index.css') }}--}}
+    {{--{{ Html::style('css/frontend/services-details/index.css') }}--}}
 
 @stop
 @section('slider')
-
+    {{--@include('frontend.home.popup-callme')--}}
 @stop
 @section('container')
-
-    @include('frontend.uudai-details.banner-title')
-    @include('frontend.uudai-details.ud_1')
+    @include('frontend.gioithieu.banner-title')
+    @include('frontend.gioithieu.sd_1')
     @include('frontend.common.comment-facebook')
-
 @stop

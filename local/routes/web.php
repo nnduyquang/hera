@@ -15,6 +15,12 @@ Route::get('/uu-dai/{path}', 'FrontendController@getUuDaiDetail');
 Route::get('/dat-tiec/', function () {
     return view('frontend.contact.index');
 });
+
+Route::get('/gioi-thieu.html', function () {
+    return view('frontend.gioithieu.index');
+});
+
+
 Route::get('/thuc-don/', 'FrontendController@getThucDon');
 Route::get('/thuc-don/{path}', 'FrontendController@getThucDonDetail')->name('thucdon.detail');
 
