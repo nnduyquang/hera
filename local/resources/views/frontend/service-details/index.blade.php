@@ -24,5 +24,6 @@
 @stop
 @section('container')
     @include('frontend.service-details.banner-title')
-        @include('frontend.service-details.sd_1')
+    @include('frontend.service-details.sd_1')
+    @include('frontend.common.comment-facebook')
 @stop

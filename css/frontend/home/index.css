@@ -146,6 +146,7 @@
   font-size: 68px !important;
   font-weight: 600;
   padding: 118px 0;
+  text-transform: uppercase;
 }
 
 #h_2 .dv-content {
@@ -203,6 +204,7 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-shadow: 0px 0px 1px white;
+  text-transform: uppercase;
 }
 
 #h_3 h5 {
