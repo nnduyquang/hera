@@ -1084,6 +1084,7 @@ This class is added to the container
   transition: 0.3s;
   font-size: 17px;
   color: white;
+  text-transform: uppercase;
 }
 
 .tab button:hover {
@@ -1366,6 +1367,7 @@ This class is added to the container
   transition: 0.3s;
   font-size: 17px;
   color: white;
+  text-transform: uppercase;
 }
 
 .tab button:hover {

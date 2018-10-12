@@ -31,10 +31,19 @@
                                 @if ($i%2>0)
                                     <div class="row align-items-center mb-5">
                                         {{--order-md-1 order-0 gắn vào class để đẩy vị trí trái phải của col trong bootrap--}}
-                                        <div class="col-md-6 mb-lg-0 mb-4" style="vertical-align: middle">
+                                        {{--<div class="col-md-6 mb-lg-0 mb-4" style="vertical-align: middle">--}}
 
                                                 {{--style="background-image:url({{URL::asset($item2->image)}});"--}}
-                                                <img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">
+                                                {{--<img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">--}}
+
+                                        {{--</div>--}}
+                                        <div class="col-md-6 mb-lg-0 mb-4" style="vertical-align: middle">
+                                            <a href="{{URL::to('uu-dai/'.$item2->path)}}">
+                                                <div class="img-content"
+                                                     style="background-image:url({{URL::asset($item2->image)}});">
+                                                </div>
+                                            </a>
+                                            {{--<img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">--}}
 
                                         </div>
                                         {{--order-md-0 order-1 gắn vào class để đẩy vị trí trái phải của col trong bootrap--}}
@@ -50,10 +59,12 @@
                                 @if($i%2==0)
                                     <div class="row align-items-center mb-5">
                                         <div class="col-md-6 mb-lg-0 mb-4" style="vertical-align: middle">
-                                            {{--<div class="img-content"--}}
-                                                 {{--style="">--}}
-                                            {{--</div>--}}
-                                                <img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">
+                                            <a href="{{URL::to('uu-dai/'.$item2->path)}}">
+                                            <div class="img-content"
+                                                 style="background-image:url({{URL::asset($item2->image)}});">
+                                            </div>
+                                            </a>
+                                                {{--<img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">--}}
 
                                         </div>
                                         <div class="col-md-6 text-center">

@@ -3,7 +3,7 @@
     TIỆC CƯỚI HERA
 @stop
 @section('description')
-    Nội Thất
+  
 @stop
 @section('keyword')
 

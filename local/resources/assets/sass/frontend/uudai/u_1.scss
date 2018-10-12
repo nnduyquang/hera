@@ -70,6 +70,7 @@ $main-color:#dbbc85;
     transition: 0.3s;
     font-size: 17px;
     color: white;
+    text-transform: uppercase;
     &:hover {
       color: $main-color;
     }
