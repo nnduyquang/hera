@@ -51,6 +51,13 @@ $main-color:#dbbc85;
     }
 
   }
+  ul.pagination{
+    justify-content: center;
+    li{
+      border: 1px solid #dbbc85;
+      padding: 10px;
+    }
+  }
 }
 
 /* Style the tab */

@@ -84,7 +84,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data = [];
         $categoryItem = new CategoryItem();
         $service = $categoryItem->whereId(10)->first();
-        $post = $categoryItem->whereId(10)->first()->posts()->get();
+        $post = $categoryItem->whereId(10)->first()->posts()->paginate(5);
         $data['post']=$post;
         $data['service']=$service;
         return $data;

@@ -50,6 +50,17 @@
           text-decoration: #dbbc85;
 }
 
+#u_1 ul.pagination {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#u_1 ul.pagination li {
+  border: 1px solid #dbbc85;
+  padding: 10px;
+}
+
 /* Style the tab */
 .tab {
   overflow: hidden;
