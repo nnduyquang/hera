@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    TIỆC CƯỚI HERA
+{{$post->title}}
 @stop
 @section('description')
-  
+{{--{!! $post->description !!}--}}
 @stop
 @section('keyword')
 
@@ -12,7 +12,7 @@
 
 @stop
 @section('image-og')
-
+{{URL::to($post->image)}}
 @stop
 @section('styles')
     {{ Html::style('css/themes/default/default.css') }}
