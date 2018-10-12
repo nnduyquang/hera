@@ -23,6 +23,7 @@
                                     </div>
                                 </div>
                         @endforeach
+                            {{ $post->links() }}
                     </div>
 
                     <script>
