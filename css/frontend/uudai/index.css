@@ -23,18 +23,18 @@
 
 #u_1 #noidung h5 {
   font-size: 22px;
-  padding-bottom: 38px;
+  padding-bottom: 28px;
 }
 
 #u_1 #noidung p {
   color: white;
   line-height: 24px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 #u_1 #noidung h6 {
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-size: 20px;
   font-weight: lighter;
   color: #dbbc85;
@@ -48,6 +48,17 @@
   color: #dbbc85;
   -webkit-text-decoration: #dbbc85;
           text-decoration: #dbbc85;
+}
+
+#u_1 ul.pagination {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#u_1 ul.pagination li {
+  border: 1px solid #dbbc85;
+  padding: 10px;
 }
 
 /* Style the tab */
@@ -70,6 +81,7 @@
   transition: 0.3s;
   font-size: 17px;
   color: white;
+  text-transform: uppercase;
 }
 
 .tab button:hover {

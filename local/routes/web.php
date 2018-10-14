@@ -15,6 +15,12 @@ Route::get('/uu-dai/{path}', 'FrontendController@getUuDaiDetail');
 Route::get('/dat-tiec/', function () {
     return view('frontend.contact.index');
 });
+
+Route::get('/gioi-thieu.html', function () {
+    return view('frontend.gioithieu.index');
+});
+
+
 Route::get('/thuc-don/', 'FrontendController@getThucDon');
 Route::get('/thuc-don/{path}', 'FrontendController@getThucDonDetail')->name('thucdon.detail');
 
@@ -56,7 +62,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('sml_admin/roles/{id}', ['as' => 'roles.show', 'uses' => 'RoleController@show']);
 
     //PAGE
-    Route::get('sml_admin/page', ['as' => 'page.index', 'uses' => 'PageController@index', 'middleware' => ['permission:page-list|page-create|page-edit|page-delete']]);
+    Route::get('sml_admin/page', ['as' => 'page.index', 'uses' => 'PageController@index', 'middleware' => ['permission:page-list|page-create|page-edit|page-delete']])->defaults('type', 'page');
     Route::post('sml_admin/page/create', ['as' => 'page.store', 'uses' => 'PageController@store', 'middleware' => ['permission:page-create']]);
     Route::post('sml_admin/page', ['as' => 'page.search', 'uses' => 'PageController@search']);
     Route::get('sml_admin/page/create', ['as' => 'page.create', 'uses' => 'PageController@create', 'middleware' => ['permission:page-create']]);

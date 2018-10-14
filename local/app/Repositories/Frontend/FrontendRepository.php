@@ -22,10 +22,13 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getPageDichVu()
     {
         $data = [];
+        $post=new Post();
+        $gioithieu=$post->getPostByPathAndType('gioi-thieu',IS_PAGE);
         $categoryItem = new CategoryItem();
         $service = $categoryItem->whereId(6)->first();
         $data['service'] = $service;
         $data['services'] = $service->posts()->get();
+        $data['gioithieu']=$gioithieu;
         return $data;
     }
 
@@ -81,7 +84,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data = [];
         $categoryItem = new CategoryItem();
         $service = $categoryItem->whereId(10)->first();
-        $post = $categoryItem->whereId(10)->first()->posts()->get();
+        $post = $categoryItem->whereId(10)->first()->posts()->paginate(5);
         $data['post']=$post;
         $data['service']=$service;
         return $data;

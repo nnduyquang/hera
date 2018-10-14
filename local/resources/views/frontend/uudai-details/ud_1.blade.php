@@ -10,6 +10,12 @@
                             <h1>{{$post->title}}</h1>
                             <span><i class="far fa-calendar-alt"></i> {{$post->created_at}}</span>
                         </div>
+                        <div class="col-12 text-left mt-1 mb-3">
+                            <div class="fb-like"
+                                 data-href="{{Request::url()}}"
+                                 data-layout="button_count" data-action="like" data-size="small" data-show-faces="true"
+                                 data-share="true"></div>
+                        </div>
 
                         <div class="col-12">
                             {!! $post->content !!}
@@ -29,17 +35,6 @@
                                 </div>
                             @endforeach
 
-                            {{--<div>--}}
-                                {{--<span> <i class="far fa-calendar-alt"></i> 28-07-2018</span>--}}
-                                {{--<h2><a href="">“KHÔNG GIAN ÁNH SÁNG” CỦA SỰ KIỆN RA MẮT MỸ PHẨM"</a></h2>--}}
-                            {{--</div>--}}
-
-                            {{--<div>--}}
-                                {{--<span> <i class="far fa-calendar-alt"></i> 28-07-2018</span>--}}
-                                {{--<h2><a href="">“KHÔNG GIAN ÁNH SÁNG” CỦA SỰ KIỆN RA MẮT MỸ PHẨM"</a></h2>--}}
-                            {{--</div>--}}
-
-                            {{--<img class="wow zoomIn" src="https://capellagallery.com/wp-content/uploads/2018/06/Uu-viet-cong-nghe-so_Banner-700-x-1780.jpg" alt="">--}}
                         </div>
                     </div>
                 </div>

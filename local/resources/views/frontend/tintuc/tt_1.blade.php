@@ -12,8 +12,10 @@
                         @foreach($post as $key=>$item)
                                 <div class="row align-items-center mb-4">
                                     <div class="col-md-6">
+                                        <a href="{{URL::to('tin-tuc/'.$item->path)}}">
                                         <div class="img-content" style="background-image:url({{URL::asset($item->image)}});">
                                         </div>
+                                        </a>
                                     </div>
                                     <div class="col-md-6 text-center">
                                         <span><i class="far fa-calendar-alt"></i> {{$item->created_at}}    </span>
@@ -23,6 +25,7 @@
                                     </div>
                                 </div>
                         @endforeach
+                            {{ $post->links() }}
                     </div>
 
                     <script>

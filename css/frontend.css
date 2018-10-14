@@ -576,6 +576,7 @@ This class is added to the container
   font-size: 56px;
   font-weight: 600;
   padding: 38px 0 16px 0;
+  text-transform: uppercase;
 }
 
 #bg_dichvu span {
@@ -746,6 +747,7 @@ This class is added to the container
   font-size: 68px !important;
   font-weight: 600;
   padding: 118px 0;
+  text-transform: uppercase;
 }
 
 #h_2 .dv-content {
@@ -803,6 +805,7 @@ This class is added to the container
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-shadow: 0px 0px 1px white;
+  text-transform: uppercase;
 }
 
 #h_3 h5 {
@@ -1081,6 +1084,7 @@ This class is added to the container
   transition: 0.3s;
   font-size: 17px;
   color: white;
+  text-transform: uppercase;
 }
 
 .tab button:hover {
@@ -1316,18 +1320,18 @@ This class is added to the container
 
 #u_1 #noidung h5 {
   font-size: 22px;
-  padding-bottom: 38px;
+  padding-bottom: 28px;
 }
 
 #u_1 #noidung p {
   color: white;
   line-height: 24px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 #u_1 #noidung h6 {
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-size: 20px;
   font-weight: lighter;
   color: #dbbc85;
@@ -1341,6 +1345,17 @@ This class is added to the container
   color: #dbbc85;
   -webkit-text-decoration: #dbbc85;
           text-decoration: #dbbc85;
+}
+
+#u_1 ul.pagination {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#u_1 ul.pagination li {
+  border: 1px solid #dbbc85;
+  padding: 10px;
 }
 
 /* Style the tab */
@@ -1363,6 +1378,7 @@ This class is added to the container
   transition: 0.3s;
   font-size: 17px;
   color: white;
+  text-transform: uppercase;
 }
 
 .tab button:hover {
@@ -1626,6 +1642,7 @@ This class is added to the container
   padding: 38px 0px;
   -webkit-transition: .3s;
   transition: .3s;
+  text-transform: uppercase;
 }
 
 #menu #menu_content ul#main li a:hover {

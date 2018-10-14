@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="keywords" content="@yield('keyword')">
     <meta name="description" content="@yield('description')">
+    <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="@yield('title')"/>
     {{--<meta property="og:type" content="article" />--}}
@@ -26,8 +27,11 @@
     {{--{{ Html::style('css/frontend/common/menu/index.css') }}--}}
     @yield('styles')
     {!! $listFrontEndInfo['script-js-header'] !!}
+
 </head>
 <body>
+{{--facebook messenger--}}
+@include('frontend.common.facebook-msg')
 <header id="header">
 
 </header>
@@ -120,7 +124,7 @@
                                                                             aria-hidden="true"></i></a>
     </div>
 </div>
-<div class="callback d-none d-md-block" style="right: 0px;bottom: -30px;left:inherit">
+<div class="callback d-none d-md-block" style="right: -38px;bottom: 30px;left:inherit">
     <div class="phone_animation">
         <div class="phone_animation_circle"></div>
         <div class="phone_animation_circle_fill"></div>

@@ -10,6 +10,7 @@
 
 
                     <div class="tab">
+
                         @foreach($post as $key=>$item)
                             <button class="tablinks" onclick="openCity(event, {{$item->id}})"
                                     @if(request()->segment(count(request()->segments()))==$item->path) id="defaultOpen"
@@ -17,9 +18,6 @@
                             </button>
                         @endforeach
 
-                        {{--<button class="tablinks" onclick="openCity(event, 'Paris')">TRANG TRÍ</button>--}}
-                        {{--<button class="tablinks" onclick="openCity(event, 'Tokyo')">TIỆC CƯỚI</button>--}}
-                        {{--<button class="tablinks" onclick="openCity(event, 'Outdoor')">VIDEO CLIP</button>--}}
                     </div>
                     @foreach($post as $key=>$item)
                         <div id="{{$item->id}}" class="tabcontent">
@@ -70,39 +68,6 @@
                         </div>
                     @endforeach
 
-
-                    {{--<div id="Outdoor" class="tabcontent">--}}
-                        {{--<div class="row">--}}
-                            {{--@for ($i = 0; $i < 5; $i++)--}}
-
-                                {{--<div class="col-md-3 text-center mb-3">--}}
-                                    {{--<div class="youtube-cover">--}}
-                                        {{--<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 1"--}}
-                                                {{--src="https://www.youtube.com/embed/Rgi5b_VZ7Gc" frameborder="0"--}}
-                                                {{--allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
-                                        {{--<p>thông tin tiệc cưới hera</p>--}}
-                                    {{--</div>--}}
-                                    {{--<div onclick="revealVideo('video','youtube','https://www.youtube.com/embed/Rgi5b_VZ7Gc')"--}}
-                                         {{--class="cover"--}}
-                                         {{--style="position: absolute;z-index: 11;width: 100%;height: 100%;top: 0;left: 0;cursor: pointer"></div>--}}
-                                {{--</div>--}}
-
-                                {{--<div class="col-md-3 text-center mb-3">--}}
-                                    {{--<div class="youtube-cover">--}}
-                                        {{--<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 1"--}}
-                                                {{--src="https://www.youtube.com/embed/gTn2SeP9IAU" frameborder="0"--}}
-                                                {{--allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
-                                        {{--<p>thông tin tiệc cưới hera</p>--}}
-                                    {{--</div>--}}
-                                    {{--<div onclick="revealVideo('video','youtube','https://www.youtube.com/embed/gTn2SeP9IAU')"--}}
-                                         {{--class="cover"--}}
-                                         {{--style="position: absolute;z-index: 11;width: 100%;height: 100%;top: 0;left: 0;cursor: pointer"></div>--}}
-                                {{--</div>--}}
-                            {{--@endfor--}}
-
-                        {{--</div>--}}
-
-                    {{--</div>--}}
 
 
                 </div>
