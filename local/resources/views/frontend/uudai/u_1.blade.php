@@ -39,11 +39,12 @@
                                         {{--</div>--}}
                                         <div class="col-md-6 mb-lg-0 mb-4" style="vertical-align: middle">
                                             <a href="{{URL::to('uu-dai/'.$item2->path)}}">
-                                                <div class="img-content"
-                                                     style="background-image:url({{URL::asset($item2->image)}});">
-                                                </div>
+                                                {{--<div class="img-content"--}}
+                                                     {{--style="background-image:url({{URL::asset($item2->image)}});">--}}
+                                                {{--</div>--}}
+                                                <img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">
                                             </a>
-                                            {{--<img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">--}}
+
 
                                         </div>
                                         {{--order-md-0 order-1 gắn vào class để đẩy vị trí trái phải của col trong bootrap--}}
@@ -60,9 +61,10 @@
                                     <div class="row align-items-center mb-5">
                                         <div class="col-md-6 mb-lg-0 mb-4" style="vertical-align: middle">
                                             <a href="{{URL::to('uu-dai/'.$item2->path)}}">
-                                            <div class="img-content"
-                                                 style="background-image:url({{URL::asset($item2->image)}});">
-                                            </div>
+                                            {{--<div class="img-content"--}}
+                                                 {{--style="background-image:url({{URL::asset($item2->image)}});">--}}
+                                            {{--</div>--}}
+                                                <img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">
                                             </a>
                                                 {{--<img src="{{URL::asset($item2->image)}}" alt="" style="width: 100%;height: auto">--}}
 

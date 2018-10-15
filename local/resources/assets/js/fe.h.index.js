@@ -53,7 +53,7 @@ $(document).ready(function () {
         animateIn: 'fadeIn slow',
         loop: true,
         margin: 10,
-        nav: false,
+        nav: true,
         dots: false,
         autoplay: true,
         autoplayTimeout: 5000,

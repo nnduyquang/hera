@@ -4,7 +4,6 @@
     "/ss/frontend/home/index.css": "/ss/frontend/home/index.css",
     "/ss/frontend/services/index.css": "/ss/frontend/services/index.css",
     "/ss/frontend/services-details/index.css": "/ss/frontend/services-details/index.css",
-    "/ss/frontend/gallery/index.css": "/ss/frontend/gallery/index.css",
     "/ss/frontend/uudai/index.css": "/ss/frontend/uudai/index.css",
     "/ss/frontend/uudai-details/index.css": "/ss/frontend/uudai-details/index.css",
     "/ss/frontend/contact/index.css": "/ss/frontend/contact/index.css",
@@ -21,5 +20,6 @@
     "/s/ulti.js": "/s/ulti.js",
     "/s/fe_h_index.js": "/s/fe_h_index.js",
     "/s/fe_g_index.js": "/s/fe_g_index.js",
-    "/s/backend.js": "/s/backend.js"
+    "/s/backend.js": "/s/backend.js",
+    "/ss/frontend/gallery/index.css": "/ss/frontend/gallery/index.css"
 }

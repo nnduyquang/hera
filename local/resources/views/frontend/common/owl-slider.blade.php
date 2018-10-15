@@ -2,6 +2,7 @@
     #owl_slider {
         width: 100%;
         height: 100vh;
+        position: relative;
     }
 
     #owl_slider .owl-items {
@@ -11,6 +12,42 @@
         background-repeat: no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
+    }
+
+    .owl-theme .owl-nav {
+    }
+    .owl-theme .owl-nav button{
+        font-size: 50px!important;
+        cursor: pointer;
+        color: white!important;
+        opacity: 0.7;
+        transition: 0.6s;
+    }
+
+    .owl-theme .owl-nav button:hover{
+        background-color: transparent!important;
+        color: white!important;
+        opacity: 1;
+    }
+
+    .owl-theme .owl-nav button:focus{
+        outline: none;
+    }
+
+    .owl-theme .owl-nav .owl-next {
+        position: absolute;
+        right: 38px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+    .owl-theme .owl-nav .owl-prev {
+        position: absolute;
+        left: 48px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
     }
 
     @media only screen and (max-width: 750px) {
@@ -33,9 +70,9 @@
             $listImage=explode(';',$sliders);
         @endphp
         @foreach($listImage as $key=>$item)
-        <div class="owl-items" style="background-image:url({{URL::asset($item)}});">
+            <div class="owl-items" style="background-image:url({{URL::asset($item)}});">
 
-        </div>
+            </div>
         @endforeach
 
     </div>

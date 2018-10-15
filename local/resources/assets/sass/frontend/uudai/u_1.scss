@@ -1,4 +1,4 @@
-$main-color:#dbbc85;
+$main-color:#007bff;
 #u_1 {
   #bg_dichvu {
     -webkit-background-size: cover;
@@ -54,7 +54,7 @@ $main-color:#dbbc85;
   ul.pagination{
     justify-content: center;
     li{
-      border: 1px solid #dbbc85;
+      border: 1px solid $main-color;
       padding: 10px;
     }
   }

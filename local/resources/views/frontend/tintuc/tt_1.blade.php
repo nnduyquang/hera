@@ -10,22 +10,25 @@
                     </div>
                     <div id="London" class="tabcontent">
                         @foreach($post as $key=>$item)
-                                <div class="row align-items-center mb-4">
-                                    <div class="col-md-6">
-                                        <a href="{{URL::to('tin-tuc/'.$item->path)}}">
-                                        <div class="img-content" style="background-image:url({{URL::asset($item->image)}});">
-                                        </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6 text-center">
-                                        <span><i class="far fa-calendar-alt"></i> {{$item->created_at}}    </span>
-                                        <h6><a href="{{URL::to('tin-tuc/'.$item->path)}}">{{$item->title}}</a></h6>
-                                        <p>{!! $item->description !!}</p>
-                                        <a href="{{URL::to('tin-tuc/'.$item->path)}}">ĐỌC THÊM</a>
-                                    </div>
+                            <div class="row align-items-center mb-4">
+                                <div class="col-md-6" style="vertical-align: middle">
+                                    <a href="{{URL::to('tin-tuc/'.$item->path)}}">
+                                        {{--<div class="img-content"--}}
+                                             {{--style="background-image:url({{URL::asset($item->image)}});">--}}
+                                        {{--</div>--}}
+                                        <img src="{{URL::asset($item->image)}}" alt=""
+                                             style="width: 100%;height: auto">
+                                    </a>
                                 </div>
+                                <div class="col-md-6 text-center">
+                                    <span><i class="far fa-calendar-alt"></i> {{$item->created_at}}    </span>
+                                    <h6><a href="{{URL::to('tin-tuc/'.$item->path)}}">{{$item->title}}</a></h6>
+                                    <p>{!! $item->description !!}</p>
+                                    <a href="{{URL::to('tin-tuc/'.$item->path)}}">ĐỌC THÊM</a>
+                                </div>
+                            </div>
                         @endforeach
-                            {{ $post->links() }}
+                        {{ $post->links() }}
                     </div>
 
                     <script>
@@ -42,6 +45,7 @@
                             document.getElementById(cityName).style.display = "block";
                             evt.currentTarget.className += " active";
                         }
+
                         // Get the element with id="defaultOpen" and click on it
                         document.getElementById("defaultOpen").click();
                     </script>
