@@ -1382,12 +1382,12 @@ This class is added to the container
 }
 
 .tab button:hover {
-  color: #21b6ff;
+  color: #21b6ff !important;
 }
 
 .tab button.active {
   /*background-color: #ccc;*/
-  color: #21b6ff;
+  color: #21b6ff !important;
 }
 
 /* Style the tab content */
@@ -1444,7 +1444,7 @@ This class is added to the container
   padding-bottom: 20px;
   font-size: 20px;
   font-weight: lighter;
-  color: #007bff;
+  color: #21b6ff;
 }
 
 #ud_1 #noidung h2 {
@@ -1466,7 +1466,7 @@ This class is added to the container
   padding-bottom: 20px;
   font-size: 20px;
   font-weight: lighter;
-  color: #007bff;
+  color: #21b6ff;
 }
 
 #ud_1 #noidung p {
@@ -1812,6 +1812,7 @@ This class is added to the container
 #hera_mobile_menu_content ul li a {
   color: #2a2a2a;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 #hera_mobile_menu_content ul li a i {

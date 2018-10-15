@@ -85,12 +85,12 @@
 }
 
 .tab button:hover {
-  color: #21b6ff;
+  color: #21b6ff !important;
 }
 
 .tab button.active {
   /*background-color: #ccc;*/
-  color: #21b6ff;
+  color: #21b6ff !important;
 }
 
 /* Style the tab content */

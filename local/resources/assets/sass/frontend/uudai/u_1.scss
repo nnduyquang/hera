@@ -1,4 +1,5 @@
 $main-color:#21b6ff;
+//
 #u_1 {
   #bg_dichvu {
     -webkit-background-size: cover;
@@ -79,11 +80,11 @@ $main-color:#21b6ff;
     color: white;
     text-transform: uppercase;
     &:hover {
-      color: $main-color;
+      color: $main-color!important;
     }
     &.active {
       /*background-color: #ccc;*/
-      color: $main-color;
+      color: $main-color!important;
     }
   }
 }
