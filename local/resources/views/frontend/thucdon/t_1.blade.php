@@ -124,7 +124,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-6 pl-lg-3 pl-md-3 p-0 mt-lg-0 mt-3 position-relative">
+                <div class="col-md-6 pl-lg-3 pl-md-3 p-0 mt-lg-0 mt-3 mb-3 position-relative">
                     @php
                         $listImage=explode(';',$thucdon->sub_image);
                     @endphp
@@ -146,7 +146,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="col-md-12 mt-5">
+                <div class="col-md-12 p-0">
                     {!! $thucdon->content !!}
                 </div>
             </div>

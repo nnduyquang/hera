@@ -31,7 +31,7 @@
   }
 }
 
-.active-menu{
+.active-menu {
   background-color: #007bff;
 }
 
@@ -83,20 +83,23 @@
     }
   }
 }
-.text-title-left{
+
+.text-title-left {
   color: #37474f;
   padding: 20px 30px 20px 15px;
   font-size: 18px;
   display: block;
 }
-.text-title-right{
+
+.text-title-right {
   padding: 20px 30px 20px 15px;
   background-color: #F2A654;
   width: 100%;
   display: block;
   color: white;
 }
-.cke_reset{
+
+.cke_reset {
   border: none !important;
 }
 
@@ -171,7 +174,7 @@
     cursor: pointer;
     font-size: 22px;
     user-select: none;
-    font-weight: inherit!important;
+    font-weight: inherit !important;
   }
 
   .check-container input {
@@ -220,8 +223,15 @@
   }
 
 }
-.table-thucdon{
-  td{
-    width: 80%;
+
+.table-thucdon {
+  tr {
+    td:not(:last-child) {
+      width: 70%;
+    }
+    td:last-child {
+      width: 30%;
+      text-align: right;
+    }
   }
 }

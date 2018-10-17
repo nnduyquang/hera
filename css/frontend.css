@@ -588,9 +588,22 @@ This class is added to the container
   color: white;
 }
 
-.table-thucdon td {
-  width: 80%;
-  line-height: 1.5;
+.table-thucdon {
+  width: 98% !important;
+  margin: auto !important;
+}
+
+.table-thucdon tr td {
+  line-height: 1.7;
+}
+
+.table-thucdon tr td:not(:last-child) {
+  width: 60%;
+}
+
+.table-thucdon tr td:last-child {
+  width: 40%;
+  text-align: right;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -1815,6 +1828,10 @@ This class is added to the container
   text-transform: uppercase;
 }
 
+#hera_mobile_menu_content ul li a:hover {
+  color: #21b6ff;
+}
+
 #hera_mobile_menu_content ul li a i {
   height: 38px;
   width: 38px;
@@ -1838,7 +1855,7 @@ This class is added to the container
 }
 
 #hera_mobile_menu_content ul li a.active {
-  color: #dbbc85;
+  color: #21b6ff;
 }
 
 #hera_mobile_menu_content ul li p {

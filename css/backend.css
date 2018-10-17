@@ -291,8 +291,13 @@ img {
   transform: rotate(45deg);
 }
 
-.table-thucdon td {
-  width: 80%;
+.table-thucdon tr td:not(:last-child) {
+  width: 70%;
+}
+
+.table-thucdon tr td:last-child {
+  width: 30%;
+  text-align: right;
 }
 
 /********** NESTABLE CSS **********/

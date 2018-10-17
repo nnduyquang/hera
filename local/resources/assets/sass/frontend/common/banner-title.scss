@@ -22,15 +22,33 @@
     }
   }
 }
-.table-thucdon{
-  td{
-    width: 80%;
-    line-height: 1.5;
+
+//.table-thucdon{
+//  td{
+//    width: 80%;
+//    line-height: 1.5;
+//  }
+//}
+
+.table-thucdon {
+  width: 98%!important;
+  margin: auto!important;
+  tr {
+    td {
+      line-height: 1.7;
+    }
+    td:not(:last-child) {
+      width: 60%;
+    }
+    td:last-child {
+      width: 40%;
+      text-align: right;
+    }
   }
 }
 
 @media only screen and (max-width: 1300px) {
-  #bg_dichvu{
+  #bg_dichvu {
     margin-top: 0px;
   }
 }
