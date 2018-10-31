@@ -13,9 +13,9 @@
                 <p>Quyền</p></a></li>
         @endif
         </li>
-        <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/danh-muc-bai-viet') }}" href="{{ route('categorypost.index') }}"><i class="fa fa-link"></i>
-                <p>Chuyên Mục Bài Viết</p></a>
-        </li>
+        {{--<li class="nav-item"><a class="nav-link {{ set_active('sml_admin/danh-muc-bai-viet') }}" href="{{ route('categorypost.index') }}"><i class="fa fa-link"></i>--}}
+                {{--<p>Chuyên Mục Bài Viết</p></a>--}}
+        {{--</li>--}}
         <li class="nav-item"><a class="nav-link {{ set_active('sml_admin/page') }}" href="{{ route('page.index') }}"><i class="fa fa-link"></i>
                 <p>Trang</p></a>
         </li>
