@@ -27,28 +27,38 @@
     <div id="config-text" class="d-flex flex-row mt-2">
         <ul class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="navigation">
             <li class="nav-item">
-                <a href="#info-company" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Thông Tin
+                <a href="#info-company" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Thông
+                    Tin
                     Công Ty</a>
             </li>
             <li class="nav-item">
-                <a href="#seo-homepage" class="nav-link" data-toggle="tab" role="tab" aria-controls="ipsum">Seo Trang Chủ</a>
+                <a href="#seo-homepage" class="nav-link" data-toggle="tab" role="tab" aria-controls="ipsum">Seo Trang
+                    Chủ</a>
             </li>
             <li class="nav-item">
-                <a href="#import-script" class="nav-link" data-toggle="tab" role="tab" aria-controls="dolor">Import Script</a>
+                <a href="#import-script" class="nav-link" data-toggle="tab" role="tab" aria-controls="dolor">Import
+                    Script</a>
             </li>
             <li class="nav-item">
                 <a href="#email-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Email</a>
             </li>
             <li class="nav-item">
-                <a href="#slider-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Slider</a>
+                <a href="#slider-config" class="nav-link" data-toggle="tab" role="tab"
+                   aria-controls="sit-amet">Slider</a>
             </li>
             <li class="nav-item">
-                <a href="#favor-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Ưu Đãi</a>
+                <a href="#favor-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Ưu
+                    Đãi</a>
             </li>
             <li class="nav-item">
                 <a href="#logo-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Logo</a>
             </li>
-
+            @if(Auth::user()->hasRole('admin'))
+                <li class="nav-item">
+                    <a href="#website-update" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Bảo
+                        Trì</a>
+                </li>
+            @endif
         </ul>
         {!! Form::open(array('route' => 'config.store','method'=>'POST')) !!}
         <div class="tab-content">
@@ -59,6 +69,9 @@
             @include('backend.admin.config.slider')
             @include('backend.admin.config.favor')
             @include('backend.admin.config.logo')
+            @if(Auth::user()->hasRole('admin'))
+                @include('backend.admin.config.update')
+            @endif
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button id="btnDanhMuc" type="submit" class="btn btn-primary">Lưu Cấu Hình</button>

@@ -4,49 +4,53 @@
 //Route::get('/', function () {
 //    return view('frontend.home.index');
 //});
-Route::get('/', 'FrontendController@getFrontend');
+Route::group(['middleware' => 'websiteupdate'], function () {
+    Route::get('/', 'FrontendController@getFrontend');
 
-Route::get('/dich-vu/', 'FrontendController@getPageDichVu');
+    Route::get('/dich-vu/', 'FrontendController@getPageDichVu');
 
 
-Route::get('/uu-dai/', 'FrontendController@getUuDai');
-Route::get('/uu-dai/{path}', 'FrontendController@getUuDaiDetail');
+    Route::get('/uu-dai/', 'FrontendController@getUuDai');
+    Route::get('/uu-dai/{path}', 'FrontendController@getUuDaiDetail');
 
-Route::get('/dat-tiec/', function () {
-    return view('frontend.contact.index');
+    Route::get('/dat-tiec/', function () {
+        return view('frontend.contact.index');
+    });
+
+    Route::get('/gioi-thieu.html', function () {
+        return view('frontend.gioithieu.index');
+    });
+
+
+    Route::get('/thuc-don/', 'FrontendController@getThucDon');
+    Route::get('/thuc-don/{path}', 'FrontendController@getThucDonDetail')->name('thucdon.detail');
+
+    Route::get('/lien-he/', function () {
+        return view('frontend.lienhe.index');
+    });
+
+
+    Route::get('/thu-vien/', 'FrontendController@getThuVien');
+    Route::get('/thu-vien/{path}', 'FrontendController@getThuVien')->name('thuvien.detail');
+
+
+    Route::get('/tin-tuc/', 'FrontendController@getTinTuc');
+    Route::get('/tin-tuc/{path}', 'FrontendController@getTinTucDetail');
+
+    Route::get('/dich-vu/{path}', 'FrontendController@getDichVuDetail')->name('dichvu.detail');
+
+    Route::post('/tim-kiem', 'FrontendController@getSearch')->name('search');
+    Route::post('/sendphone/send', ['as' => 'mail.sendphone', 'uses' => 'MailController@sendPhone']);
+    Route::post('/sendmail/send', ['as' => 'mail.sendmail', 'uses' => 'MailController@sendMail']);
+
+
+    Route::get('/admin/sml_login', 'AuthController@checklogin');
+    Route::post('sml_login', 'AuthController@login')->name('login');
+    Route::get('/admin/sml_logout', 'AuthController@logout')->name('logout');
 });
-
-Route::get('/gioi-thieu.html', function () {
-    return view('frontend.gioithieu.index');
-});
-
-
-Route::get('/thuc-don/', 'FrontendController@getThucDon');
-Route::get('/thuc-don/{path}', 'FrontendController@getThucDonDetail')->name('thucdon.detail');
-
-Route::get('/lien-he/', function () {
-    return view('frontend.lienhe.index');
-});
-
-
-Route::get('/thu-vien/', 'FrontendController@getThuVien');
-Route::get('/thu-vien/{path}', 'FrontendController@getThuVien')->name('thuvien.detail');
-
-
-Route::get('/tin-tuc/', 'FrontendController@getTinTuc');
-Route::get('/tin-tuc/{path}', 'FrontendController@getTinTucDetail');
-
-Route::get('/dich-vu/{path}', 'FrontendController@getDichVuDetail')->name('dichvu.detail');
-
-Route::post('/tim-kiem', 'FrontendController@getSearch')->name('search');
-Route::post('/sendphone/send', ['as' => 'mail.sendphone', 'uses' => 'MailController@sendPhone']);
-Route::post('/sendmail/send', ['as' => 'mail.sendmail', 'uses' => 'MailController@sendMail']);
-
-
-Route::get('/admin/sml_login', 'AuthController@checklogin');
-Route::post('sml_login', 'AuthController@login')->name('login');
-Route::get('/admin/sml_logout', 'AuthController@logout')->name('logout');
-
+Route::get('/bao-tri/', function () {
+    return view('frontend.baotri.index');
+})->name('frontend.baotri');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('sml_admin/dashboard', function () {
         return view('backend.admin.dashboard.index');

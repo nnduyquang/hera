@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 11, 2018 lúc 05:41 AM
+-- Thời gian đã tạo: Th10 08, 2018 lúc 03:35 AM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.0.29
 
@@ -183,7 +183,8 @@ INSERT INTO `configs` (`id`, `name`, `content`, `user_id`, `created_at`, `update
 (19, 'slider-config', 'images/uploads/images/slider/home-1.png;images/uploads/images/slider/home-2.png;images/uploads/images/slider/home-3.png;images/uploads/images/slider/home-4.png;images/uploads/images/slider/home-5.png', 1, NULL, '2018-10-03 03:24:06'),
 (20, 'favor-image-config', 'images/uploads/images/uudai/muadongyeuthuong/Popup-Mua-Dong-Yeu-Thuong.png', 1, NULL, '2018-10-04 09:41:33'),
 (21, 'favor-link-config', 'http://tieccuoihera.com/uu-dai/mua-dong-yeu-thuong', 1, NULL, '2018-10-03 04:04:19'),
-(22, 'logo-config', 'images/uploads/images/logo/logo-hera-center.png', 1, NULL, '2018-10-05 07:33:22');
+(22, 'logo-config', 'images/uploads/images/logo/logo-hera-center.png', 1, NULL, '2018-10-05 07:33:22'),
+(24, 'website-update', '0', 1, NULL, '2018-11-08 02:18:29');
 
 -- --------------------------------------------------------
 
@@ -716,7 +717,7 @@ ALTER TABLE `category_permissions`
 -- AUTO_INCREMENT cho bảng `configs`
 --
 ALTER TABLE `configs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT cho bảng `menus`
