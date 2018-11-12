@@ -237,6 +237,13 @@ if ($('#btnBrowseImageContact').length) {
     }
 }
 ;
+if ($('#btnBrowseImageOrder').length) {
+    var button1 = document.getElementById('btnBrowseImageOrder');
+    button1.onclick = function () {
+        selectFileWithKCFinder('pathImageOrder', 'showHinhOrder');
+    }
+}
+;
 if ($('#btnBrowseImageMXH').length) {
     var button1 = document.getElementById('btnBrowseImageMXH');
     button1.onclick = function () {

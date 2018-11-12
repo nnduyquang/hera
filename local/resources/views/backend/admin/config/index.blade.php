@@ -56,6 +56,9 @@
             <li class="nav-item">
                 <a href="#contact-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Trang Liên Hệ</a>
             </li>
+            <li class="nav-item">
+                <a href="#order-config" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Trang Đặt Tiệc</a>
+            </li>
             @if(Auth::user()->hasRole('admin'))
                 <li class="nav-item">
                     <a href="#website-update" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Bảo
@@ -73,6 +76,7 @@
             @include('backend.admin.config.favor')
             @include('backend.admin.config.logo')
             @include('backend.admin.config.contact')
+            @include('backend.admin.config.order')
             @if(Auth::user()->hasRole('admin'))
                 @include('backend.admin.config.update')
             @endif
