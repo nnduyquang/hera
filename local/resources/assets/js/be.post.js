@@ -15,6 +15,13 @@ if ($('#btnBrowseImageLogo').length) {
     }
 }
 ;
+if ($('#btnBrowseImageContact').length) {
+    var button1 = document.getElementById('btnBrowseImageContact');
+    button1.onclick = function () {
+        selectFileWithKCFinder('pathImageContact', 'showHinhContact');
+    }
+}
+;
 if ($('#btnBrowseImageMXH').length) {
     var button1 = document.getElementById('btnBrowseImageMXH');
     button1.onclick = function () {

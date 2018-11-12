@@ -135,6 +135,17 @@
 @yield('jv-scripts')
 {{ Html::script('js/scripts.js') }}
 {!! $listFrontEndInfo['script-js-body'] !!}
+
+<!-- Global site tag (gtag.js) - Google Ads: 845267389 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-845267389"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-845267389');
+</script>
+
 </body>
 
 </Html>

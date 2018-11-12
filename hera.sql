@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 08, 2018 lúc 03:35 AM
+-- Thời gian đã tạo: Th10 12, 2018 lúc 10:21 AM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.0.29
 
@@ -184,7 +184,8 @@ INSERT INTO `configs` (`id`, `name`, `content`, `user_id`, `created_at`, `update
 (20, 'favor-image-config', 'images/uploads/images/uudai/muadongyeuthuong/Popup-Mua-Dong-Yeu-Thuong.png', 1, NULL, '2018-10-04 09:41:33'),
 (21, 'favor-link-config', 'http://tieccuoihera.com/uu-dai/mua-dong-yeu-thuong', 1, NULL, '2018-10-03 04:04:19'),
 (22, 'logo-config', 'images/uploads/images/logo/logo-hera-center.png', 1, NULL, '2018-10-05 07:33:22'),
-(24, 'website-update', '0', 1, NULL, '2018-11-08 02:18:29');
+(24, 'website-update', '0', 1, NULL, '2018-11-08 02:18:29'),
+(25, 'contact-image-config', 'images/uploads/images/gt_1.jpg', 1, NULL, '2018-11-12 09:08:47');
 
 -- --------------------------------------------------------
 
@@ -717,7 +718,7 @@ ALTER TABLE `category_permissions`
 -- AUTO_INCREMENT cho bảng `configs`
 --
 ALTER TABLE `configs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT cho bảng `menus`
