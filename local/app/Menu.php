@@ -15,7 +15,7 @@ class Menu extends Model
 
     public function children()
     {
-        return $this->hasMany('App\Menu', 'parent_id')
+        return $this->hasMany('App\Menu', 'parent_id')->orderBy('order')
             ->with('children');
     }
 

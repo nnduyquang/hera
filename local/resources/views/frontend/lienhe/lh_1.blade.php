@@ -107,10 +107,10 @@
             {{--</div>--}}
         {{--</div>--}}
     {{--</div>--}}
+{!! $listFrontEndInfo['map-config'] !!}
 
 
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.2125761296275!2d106.61804553882195!3d10.804693781140028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1svi!2s!4v1536139784124&z=20" width="100%  " height="560px" frameborder="0" style="border:0" allowfullscreen></iframe>
+    {{--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.2125761296275!2d106.61804553882195!3d10.804693781140028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1svi!2s!4v1536139784124&z=20" width="100%  " height="560px" frameborder="0" style="border:0" allowfullscreen></iframe>--}}
 
 
 </div>

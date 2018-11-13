@@ -312,6 +312,9 @@ $('input[type=radio]').change(function () {
         $('.import-video').css('display', 'block');
     }
 });
+$('textarea[name=map-config]').change(function(){
+    $('.show-map').html($(this).val());
+});
 
 $(document).ready(function()
 {
