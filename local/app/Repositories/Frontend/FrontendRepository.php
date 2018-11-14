@@ -71,11 +71,26 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getThuVien()
     {
         $data = [];
+
+        $newArray=array();
         $categoryItem = new CategoryItem();
+        $menu=new Menu();
         $post = $categoryItem->whereId(7)->first()->posts()->get();
+        $menuThuVien=$menu->getAllMenuByParentId(7);
+        foreach ($menuThuVien as $key=>$item){
+            foreach ($post as $key2=>$item2){
+                if(json_decode($item->parameters)->path==$item2->path){
+                    array_push($newArray,$item2);
+                }else{
+                    if(strpos(json_decode($item->parameters)->path,$item2->path))
+                        array_push($newArray,$item2);
+                }
+            }
+
+        }
         $service = $categoryItem->whereId(7)->first();
         $data['service'] = $service;
-        $data['post'] = $post;
+        $data['post'] = $newArray;
         return $data;
     }
 
@@ -83,6 +98,7 @@ class FrontendRepository implements FrontendRepositoryInterface
     {
         $data = [];
         $categoryItem = new CategoryItem();
+
         $service = $categoryItem->whereId(10)->first();
         $post = $categoryItem->whereId(10)->first()->posts()->paginate(5);
         $data['post']=$post;
