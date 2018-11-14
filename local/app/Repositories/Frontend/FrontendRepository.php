@@ -169,12 +169,14 @@ class FrontendRepository implements FrontendRepositoryInterface
     {
         $data=[];
         $config = new Config();
-        $dataConfig = $config->getConfigByListName(['config-phone', 'config-email', 'config-contact', 'logo-config','script-js-header','script-js-body','contact-image-config','order-image-config','map-config']);
+        $dataConfig = $config->getConfigByListName(['config-phone','config-address', 'config-email', 'config-contact', 'logo-config','script-js-header','script-js-body','contact-image-config','order-image-config','map-config']);
         foreach ($dataConfig as $key => $item) {
             if ($item->name == 'config-phone')
                 $data['hotline'] = $item->content;
             if ($item->name == 'config-email')
                 $data['email'] = $item->content;
+            if ($item->name == 'config-address')
+                $data['address'] = $item->content;
             if ($item->name == 'config-contact')
                 $data['contact'] = $item->content;
             if ($item->name == 'logo-config')

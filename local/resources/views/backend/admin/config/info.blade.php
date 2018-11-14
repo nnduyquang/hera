@@ -11,6 +11,12 @@
             {!! Form::text('config-phone', $cauhinhs['config-phone'], array('placeholder' => '','class' => 'form-control')) !!}
         </div>
     </div>
+    <div class=" col-md-12">
+        <div class="form-group">
+            <label style="font-weight: bold">Địa Chỉ:</label>
+            {!! Form::text('config-address', $cauhinhs['config-address'], array('placeholder' => '','class' => 'form-control')) !!}
+        </div>
+    </div>
 
     <div class=" col-md-12">
         <div class="form-group">
