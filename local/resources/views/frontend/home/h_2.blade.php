@@ -28,7 +28,7 @@
             @foreach($services as $key=>$item)
                 <div class="col-md-3 p-0 dv-content">
                     <a href="{{URL::to('/dich-vu/'.$item->path)}}">
-                        <div id="hoi_nghi"  style="background-image: url({{URL::asset($item->image)}})">
+                        <div id="hoi_nghi"  style="background-image: url({{URL::asset($item->image_small)}})">
                         </div>
                         <p>{{$item->title}}</p>
                     </a>
