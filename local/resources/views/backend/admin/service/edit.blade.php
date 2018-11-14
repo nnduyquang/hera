@@ -68,6 +68,25 @@
                         @endif
                     </div>
                 </div>
+                <div class="wrap-create-edit">
+                    <strong class="text-title-right">Hình Nhỏ</strong>
+                    <div class="form-group">
+                        @if($data['post']->image_small!='')
+                            {!! Form::text('image_small', url('/').'/'.$data['post']->image_small, array('class' => 'form-control','id'=>'pathImageSmall')) !!}
+                        @else
+                            {!! Form::text('image_small', '', array('class' => 'form-control','id'=>'pathImageSmall')) !!}
+                        @endif
+                        <br>
+                        {!! Form::button('Tìm', array('id' => 'btnBrowseImageSmall','class'=>'btn btn-primary float-right')) !!}
+                    </div>
+                    <div class="form-group">
+                        @if($data['post']->image_small!='')
+                            {{ Html::image($data['post']->image_small,'',array('id'=>'showHinhSmall','class'=>'show-image'))}}
+                        @else
+                            {{ Html::image('','',array('id'=>'showHinhSmall','class'=>'show-image'))}}
+                        @endif
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-12 p-0">

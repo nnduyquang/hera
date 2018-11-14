@@ -29,6 +29,13 @@ if ($('#btnBrowseImageOrder').length) {
     }
 }
 ;
+if ($('#btnBrowseImageSmall').length) {
+    var button1 = document.getElementById('btnBrowseImageSmall');
+    button1.onclick = function () {
+        selectFileWithKCFinder('pathImageSmall', 'showHinhSmall');
+    }
+}
+;
 if ($('#btnBrowseImageMXH').length) {
     var button1 = document.getElementById('btnBrowseImageMXH');
     button1.onclick = function () {

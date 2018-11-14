@@ -58,6 +58,17 @@
                         {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
                     </div>
                 </div>
+                <div class="wrap-create-edit">
+                    <strong class="text-title-right">Hình Nhỏ</strong>
+                    <div class="form-group">
+                        {!! Form::text('image_small', null, array('class' => 'form-control','id'=>'pathImageSmall')) !!}
+                        <br>
+                        {!! Form::button('Tìm', array('id' => 'btnBrowseImageSmall','class'=>'btn btn-primary float-right')) !!}
+                    </div>
+                    <div class="form-group">
+                        {{ Html::image('','',array('id'=>'showHinhSmall','class'=>'show-image'))}}
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-12 p-0">

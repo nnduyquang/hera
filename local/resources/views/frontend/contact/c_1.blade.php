@@ -35,12 +35,12 @@
                     </p>
                     <span>Hotline</span>
                     <p class="pt-3">
-                        036-399-7777
+                        {{$listFrontEndInfo['hotline']}}
                     </p>
                     {{--<p>0984 377 727 (Hội nghị)</p>--}}
 
                     <span>EMAIL</span>
-                    <p>info@heracenter.com</p>
+                    <p> {{$listFrontEndInfo['email']}}</p>
                 </div>
 
                 <div class="col-md-6 text-center">
