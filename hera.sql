@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 14, 2018 lúc 11:04 AM
+-- Thời gian đã tạo: Th10 21, 2018 lúc 08:34 AM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.0.29
 
@@ -187,7 +187,8 @@ INSERT INTO `configs` (`id`, `name`, `content`, `user_id`, `created_at`, `update
 (24, 'website-update', '0', 1, NULL, '2018-11-08 02:18:29'),
 (25, 'contact-image-config', 'images/uploads/images/gt_1.jpg', 1, NULL, '2018-11-12 09:08:47'),
 (26, 'order-image-config', 'images/uploads/images/uudai/muadongyeuthuong/Mua-Dong-Yeu-Thuong.png', 1, NULL, '2018-11-12 09:51:23'),
-(27, 'map-config', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.2125761296275!2d106.61804553882195!3d10.804693781140028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1svi!2s!4v1536139784124&z=20\" width=\"100%  \" height=\"560px\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 1, NULL, '2018-11-13 01:57:34');
+(27, 'map-config', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.2125761296275!2d106.61804553882195!3d10.804693781140028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4966fc0d06bb3c3b!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgSGVyYQ!5e0!3m2!1svi!2s!4v1536139784124&z=20\" width=\"100%  \" height=\"560px\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 1, NULL, '2018-11-13 01:57:34'),
+(28, 'config-address', '02 đường D2, Celadon City, Q.Tân Phú, TP.HCM1', 1, NULL, '2018-11-14 10:08:59');
 
 -- --------------------------------------------------------
 
@@ -721,7 +722,7 @@ ALTER TABLE `category_permissions`
 -- AUTO_INCREMENT cho bảng `configs`
 --
 ALTER TABLE `configs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT cho bảng `menus`

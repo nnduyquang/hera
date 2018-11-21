@@ -11,7 +11,6 @@
     <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="@yield('title')"/>
-    {{--<meta property="og:type" content="article" />--}}
     <meta property="og:url" content="@yield('url-og')"/>
     <meta property="og:image" content="@yield('image-og')"/>
     <meta property="og:description" content="@yield('description')"/>
