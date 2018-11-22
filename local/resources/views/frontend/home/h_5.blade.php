@@ -1,31 +1,3 @@
-<style>
-
-    /*#h_5 h5{*/
-        /*font-size: 30px;*/
-        /*font-weight: bold;*/
-        /*color: #f9bf80;*/
-    /*}*/
-
-    /*#h_5 #owl_doitac .owl-items{*/
-        /*margin-bottom: 20px;*/
-    /*}*/
-
-    /*#h_5 #owl_doitac .owl-items .owl-img{*/
-
-        /*width: 138px;*/
-        /*height: 138px;*/
-        /*!*border-radius: 50%;*!*/
-        /*margin: auto;*/
-        /*background-position: center center;*/
-        /*-webkit-background-size: cover;*/
-        /*background-size: cover;*/
-        /*background-repeat: no-repeat;*/
-
-    /*}*/
-
-
-</style>
-
 <div id="h_5">
     <div class="container-fluid pb-5">
         <div class="container">
@@ -37,13 +9,34 @@
                 </div>
                 <div class="col-md-12 mb-5">
                     <div id="owl_doitac" class="owl-carousel owl-theme">
-                        @for ($i = 0; $i < 6; $i++)
-                            <div class="owl-items">
-                                <div class="owl-img" style="background-image: url({{URL::asset('images/khtt/1049_joycebeauty_logo.png')}});">
-                                {{--<img src="{{URL::asset('images/khtt/co_be_tra_sua1_jpg0.jpg')}}" alt="">--}}
+
+                        <div class="owl-items">
+                            <a href="{{URL::asset('http://trandoan.com.vn')}}">
+                                <div class="owl-img"
+                                     style="background-image: url({{URL::asset('images/khtt/2af8c71067ab87f5deba.png')}});">
+                                    {{--<img src="{{URL::asset('images/khtt/2af8c71067ab87f5deba.png')}}" alt="">--}}
                                 </div>
-                            </div>
-                        @endfor
+                            </a>
+                        </div>
+
+                        <div class="owl-items">
+                            <a href="{{URL::asset('http://trandoan.com.vn')}}">
+                                <div class="owl-img"
+                                     style="background-image: url({{URL::asset('images/khtt/0d16ecfe4c45ac1bf554.png')}});">
+                                    {{--<img src="{{URL::asset('images/khtt/co_be_tra_sua1_jpg0.jpg')}}" alt="">--}}
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="owl-items">
+                            <a href="{{URL::asset('http://trandoan.com.vn')}}">
+                                <div class="owl-img"
+                                     style="background-image: url({{URL::asset('images/khtt/76cad123719891c6c889.png')}});">
+                                    {{--<img src="{{URL::asset('images/khtt/co_be_tra_sua1_jpg0.jpg')}}" alt="">--}}
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
