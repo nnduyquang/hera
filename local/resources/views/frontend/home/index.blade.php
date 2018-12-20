@@ -17,7 +17,6 @@
 @section('styles')
 
     {{ Html::style('css/themes/default/default.css') }}
-    {{--{{ Html::style('css/frontend/home/index.css') }}--}}
 
 @stop
 @section('slider')

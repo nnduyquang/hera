@@ -1,54 +1,3 @@
-<style>
-    /*#h_4 h5{*/
-        /*font-size: 30px;*/
-        /*font-weight: bold;*/
-        /*color: #f9bf80;*/
-    /*}*/
-
-    /*#h_4 #owl_ykkh .owl-items img{*/
-
-        /*width: 138px;*/
-        /*height: 138px;*/
-        /*border-radius: 50%;*/
-        /*margin: auto;*/
-
-    /*}*/
-
-    /*#h_4 #owl_ykkh .owl-items h5{*/
-        /*width: fit-content;*/
-        /*color: white;*/
-        /*font-size: 20px;*/
-        /*padding-bottom: 10px;*/
-        /*!*margin: auto;*!*/
-        /*margin-left: 20px;*/
-    /*}*/
-
-    /*#h_4 #owl_ykkh .owl-items p{*/
-        /*color: white;*/
-        /*line-height: 20px;*/
-        /*padding-bottom: 10px;*/
-        /*width: 90%;*/
-        /*margin: auto;*/
-        /*transition: .3s;*/
-    /*}*/
-
-    /*#h_4 #owl_ykkh .owl-items span{*/
-        /*color: white;*/
-        /*margin: auto;*/
-    /*}*/
-
-    /*@media only screen and (max-width: 800px) {*/
-        /*#h_4 #owl_ykkh .owl-items p{*/
-            /*width: 100%;*/
-        /*}*/
-
-        /*#h_4 #owl_ykkh .owl-items h5{*/
-            /*margin-top: 20px;*/
-            /*margin-left: 0;*/
-            /*margin: auto;*/
-        /*}*/
-    /*}*/
-</style>
 <div class="container-fluid mb-5" id="h_4">
     <div class="container">
         <div class="row">
@@ -59,15 +8,37 @@
 
             <div class="col-md-12">
                 <div id="owl_ykkh" class="owl-carousel owl-theme">
-                    @for ($i = 0; $i < 6; $i++)
-                    <div class="owl-items d-flex flex-md-row flex-column justify-content-lg-start justify-content-center">
-                        <img src="{{URL::asset('images/khtt/co_be_tra_sua1_jpg0.jpg')}}" alt="">
+                    {{--@for ($i = 0; $i < 6; $i++)--}}
+                    {{--@endfor--}}
+                    <div class="owl-items pt-2 d-flex flex-md-row flex-column justify-content-lg-start justify-content-center">
+                        <img src="{{URL::asset('images/khtt/6a2f7775cdce2d9074df.jpg')}}" alt="">
                         <div class="pl-3">
-                        <h5 class="text-left">Joyce chow</h5>
-                        <p>“Cám ơn vì đã phục vụ cho chúng tôi một buổi tối vui vẻ và rất tuyệt vời”&nbsp;</p>
+                            <h5 class="text-left">CÔ BA HÍ</h5>
+                            <p class="text-justify">“Tiệc anh chị mình vừa diễn ra. Mọi thứ thật lung linh quá tuyệt vời. Sảnh tiệc trang,
+                                cùng những bộ trang trí đơn giản mà đẹp ghê. Thay mặt anh/ chị cảm ơn nhà hàng đã tổ
+                                chức tiệc lung linh như thế này nhé!”&nbsp;</p>
                         </div>
                     </div>
-                    @endfor
+
+                    <div class="owl-items pt-3 d-flex flex-md-row flex-column justify-content-lg-start justify-content-center">
+                        <img src="{{URL::asset('images/khtt/52bd8fac3417d4498d06.jpg')}}" alt="">
+                        <div class="pl-3">
+                            <h5 class="text-left">THU TÂM LƯU</h5>
+                            <p class="text-justify">“Không gian đẹp, thức ăn ngon, phục vụ chu đáo. Nói chung là tuyệt.”&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <div class="owl-items d-flex flex-md-row flex-column justify-content-lg-start justify-content-center">
+                        <img src="{{URL::asset('images/khtt/89d0b1ba1401f45fad10.jpg')}}" alt="">
+                        <div class="pl-3">
+                            <h5 class="text-left">MAI TRANG</h5>
+                            <p class="text-justify">“Gửi lời cảm ơn đến hera center về buổi tiệc tối 18/8 nhé. Mọi thứ thành công tốt
+                                đẹp.khách mình đi ai cũng khen, sảnh đẹp, phục vụ tốt nói chung là yêu quá chừng quá
+                                đất. <br>
+                                Cảm ơn và chúc Hera ngày càng phát triển hơn nữa nhé!”&nbsp;</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
