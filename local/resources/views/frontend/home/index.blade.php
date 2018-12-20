@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    TIỆC CƯỚI HERA
+    {{$listFrontEndInfo['config-seo-title']}}
 @stop
 @section('description')
-    Nội Thất
+    {{$listFrontEndInfo['config-seo-description']}}
 @stop
 @section('keyword')
 
@@ -12,7 +12,7 @@
 
 @stop
 @section('image-og')
-
+{{URL::to($listFrontEndInfo['config-seo-image'])}}
 @stop
 @section('styles')
 
