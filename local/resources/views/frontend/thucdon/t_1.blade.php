@@ -1,4 +1,4 @@
-<style>
+﻿<style>
     #t_1 {
         color: white;
         padding-bottom: 100px;
@@ -89,26 +89,24 @@
             <div class="row">
                 <div class="col-md-12 text-center pb-4">
                     <h5>NƠI TRẢI NGHIỆM ẨM THỰC TINH TẾ</h5>
-                    <p class="descipt">Nhà hàng tiệc cưới HERA ra đời và phát triển như hôm nay, thì ẩm thực chính là
+                    <p class="descipt">Nhà hàng tiệc cưới TDG ra đời và phát triển như hôm nay, thì ẩm thực chính là
                         một
-                        yếu tố đóng góp quan trọng để tạo nên thành công cho thương hiệu HERA được lớn mạnh.</p>
+                        yếu tố đóng góp quan trọng để tạo nên thành công cho thương hiệu TDG được lớn mạnh.</p>
                 </div>
                 <div class="col-md-6">
-                    <div class="row">
+                    <div class="row" style="height: 100%">
                         <div class="col-md-12 p-4 pb-3 content_des">
                             {!! $thucdon->description !!}
                             <div class="d-flex justify-content-between pt-3" style="width: 100%">
-                                <a class="thuc-don" href="{{URL::asset('/file/SETMENU2018.pdf')}}">XEM THỰC ĐƠN</a>
-                                <a class="thuc-don" href="{{URL::asset('/file/SETMENU2018.pdf')}}" download>DOWNLOAD
-                                    THỰC
-                                    ĐƠN</a>
+
+
                             </div>
                         </div>
                         @php
                             $listImage=explode(';',$thucdon->sub_image);
                         @endphp
                         @if(!is_null($thucdon->sub_image))
-                            <div class="col-md-12 mt-3 p-0">
+                            <div class="col-md-12 p-0" style="align-self: flex-end">
                                 <div id="owl_doitac" class="owl-carousel owl-theme">
                                     @foreach($listImage as $key=>$item)
                                         <div class="owl-items">
@@ -124,7 +122,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-6 pl-lg-3 pl-md-3 p-0 mt-lg-0 mt-3 mb-3 position-relative">
+                <div class="col-md-6 pl-lg-3 pl-md-3 p-0 mt-lg-0 mt-3 position-relative">
                     @php
                         $listImage=explode(';',$thucdon->sub_image);
                     @endphp

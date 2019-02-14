@@ -1,4 +1,4 @@
-<div id="menu" class="container-fluid justify-content-center p-0">
+﻿<div id="menu" class="container-fluid justify-content-center p-0">
     <div class="container-fluid justify-content-center">
 
         <div class="row">
@@ -25,7 +25,7 @@
                                     href="{{URL::asset('/dat-tiec/')}}">ĐẶT TIỆC NGAY</a></li>
                         <li>
                             <div id="sc_network">
-                                <a href="https://www.facebook.com/TrungTamTiecCuoiHera"><i
+                                <a href="https://www.facebook.com/TrungTamHoiNghiTiecCuoiTDG"><i
                                             class="fab fa-facebook-f"></i></a>
                                 <a href="https://www.instagram.com/hera_center"><i class="fab fa-instagram"
                                                                                    style="background-image:url({{URL::asset('images/bg/bg-insta.jpg')}});"></i></a>

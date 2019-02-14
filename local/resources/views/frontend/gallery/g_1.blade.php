@@ -31,7 +31,7 @@
                                             <a class="fancybox" data-caption="{{lay_ten_hinh_tu_path($item2)}}"
                                                data-fancybox="gallery-cus"
                                                href="{{URL::asset($item2)}}">
-                                                <div class=" one-images"
+                                                <div class="one-images"
                                                      style="background-image:url({{URL::asset($item2)}});">
                                                 </div>
                                             </a>
