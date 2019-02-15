@@ -2,15 +2,28 @@
 <Html lang="en-US" class="lang-en_US" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <meta http-equiv="content-type" content="text/Html;charset=UTF-8"/>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131208119-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131208119-1');
+</script>
+
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>@yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="keywords" content="@yield('keyword')">
     <meta name="description" content="@yield('description')">
-    <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="@yield('title')"/>
+    {{--<meta property="og:type" content="article" />--}}
     <meta property="og:url" content="@yield('url-og')"/>
     <meta property="og:image" content="@yield('image-og')"/>
     <meta property="og:description" content="@yield('description')"/>
@@ -30,7 +43,7 @@
 </head>
 <body>
 {{--facebook messenger--}}
-@include('frontend.common.facebook-msg')
+
 <header id="header">
 
 </header>
@@ -66,10 +79,10 @@
 </script>
 <script>
 
-    // $(document).ready(function () {
-    //
-    //
-    // });
+    $(document).ready(function () {
+
+
+    });
 
 
     $('#mobile_menu_click').click(function () {
@@ -134,17 +147,7 @@
 @yield('jv-scripts')
 {{ Html::script('js/scripts.js') }}
 {!! $listFrontEndInfo['script-js-body'] !!}
-
-<!-- Global site tag (gtag.js) - Google Ads: 845267389 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-845267389"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-845267389');
-</script>
-
+@include('frontend.common.facebook-msg')
 </body>
 
 </Html>
