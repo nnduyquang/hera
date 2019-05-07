@@ -26,7 +26,8 @@ class FrontendController extends Controller
         $post = $data['post'];
         $other = $data['other'];
         $category = $data['category'];
-        return view('frontend.service-details.index', compact('post', 'other', 'category'));
+        $favor=$data['favor'];
+        return view('frontend.service-details.index', compact('post', 'other', 'category','favor'));
     }
 
     public function getThucDon()

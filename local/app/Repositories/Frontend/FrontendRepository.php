@@ -39,9 +39,11 @@ class FrontendRepository implements FrontendRepositoryInterface
         $post = $categoryItem->whereId(6)->first()->posts()->wherePath($path)->first();
         $other = $categoryItem->whereId(6)->first()->posts()->where('id', '!=', $post->id)->get();
         $category = $categoryItem->where('id', 6)->first();
+        $favor=$categoryItem->whereId(9)->first()->children()->where('name', 'like','%'.$post->title.'%' )->first()->posts()->orderBy('id','desc')->get();
         $data['post'] = $post;
         $data['other'] = $other;
         $data['category'] = $category;
+        $data['favor']=$favor;
         return $data;
     }
 
@@ -100,7 +102,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $categoryItem = new CategoryItem();
 
         $service = $categoryItem->whereId(10)->first();
-        $post = $categoryItem->whereId(10)->first()->posts()->paginate(5);
+        $post = $categoryItem->whereId(10)->first()->posts()->orderBy('id','desc')->paginate(5);
         $data['post']=$post;
         $data['service']=$service;
         return $data;
@@ -125,7 +127,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $categoryItem = new CategoryItem();
         $categoryChildren = $categoryItem->whereId(9)->first()->children()->get();
         foreach ($categoryChildren as $key => $item) {
-            $item['posts'] = $item->posts()->get();
+            $item['posts'] = $item->posts()->orderBy('id','desc')->get();;
         }
         $service = $categoryItem->whereId(9)->first();
         $data['service']=$service;
@@ -195,8 +197,11 @@ class FrontendRepository implements FrontendRepositoryInterface
                 $data['config-seo-title'] = $item->content;
             if ($item->name == 'config-seo-description')
                 $data['config-seo-description'] = $item->content;
-            if ($item->name == 'config-seo-image')
+            if ($item->name == 'config-seo-image'){
                 $data['config-seo-image'] = $item->content;
+//                dd($data['config-seo-image']);
+            }
+
         }
         return $data;
     }

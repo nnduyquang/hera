@@ -33,7 +33,7 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
                 $data['posts'] = CategoryItem::where('id', 9)->first()->posts()->get();
                 break;
             case'news':
-                $data['posts'] = CategoryItem::where('id', 10)->first()->posts()->get();
+                $data['posts'] = CategoryItem::where('id', 10)->first()->posts()->orderBy('id','desc')->get();
                 break;
             default:
                 break;

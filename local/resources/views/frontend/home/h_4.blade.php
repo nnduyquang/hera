@@ -32,7 +32,7 @@
                         <img src="{{URL::asset('images/khtt/89d0b1ba1401f45fad10.jpg')}}" alt="">
                         <div class="pl-3">
                             <h5 class="text-left">MAI TRANG</h5>
-                            <p class="text-justify">“Gửi lời cảm ơn đến hera center về buổi tiệc tối 18/8 nhé. Mọi thứ thành công tốt
+                            <p class="text-justify">“Gửi lời cảm ơn đến TDG Center về buổi tiệc tối 18/8 nhé. Mọi thứ thành công tốt
                                 đẹp.khách mình đi ai cũng khen, sảnh đẹp, phục vụ tốt nói chung là yêu quá chừng quá
                                 đất. <br>
                                 Cảm ơn và chúc Hera ngày càng phát triển hơn nữa nhé!”&nbsp;</p>

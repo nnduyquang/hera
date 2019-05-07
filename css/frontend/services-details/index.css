@@ -97,3 +97,23 @@
   width: 100%;
   height: auto;
 }
+
+#sd_1 #noidung .favor-include {
+  margin-top: 60px;
+  font-size: 30px;
+}
+
+#sd_1 #noidung .favor-include .title-header {
+  margin-bottom: 60px;
+}
+
+#sd_1 #noidung .favor-include .title-header p.title {
+  text-align: center;
+}
+
+#sd_1 #noidung .favor-include .title-header span {
+  text-align: center;
+  font-size: 36px;
+  color: #dbbc85;
+  display: block;
+}

@@ -44,6 +44,34 @@
                 </div>
 
             </div>
+            @if(count($favor)>0)
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="favor-include">
+                            <div class="title-header">
+                                <p class="title">Ưu Đãi {{$post->title}}</p>
+                                <span>Trung Tâm Hội Nghị Tiệc Cưới TDG</span>
+                            </div>
+                        </div>
+                        <div class="slider-cal">
+                            <div id="sd-bottom" class="">
+                                <div class="sd-bottom-carousel">
+                                    <div class="owl-carousel owl-theme sd-b-owl">
+                                        @foreach($favor as $key=>$item)
+                                            <a href="{{URL::to('uu-dai/'.$item->path)}}">
+                                                <img src="{{URL::asset($item->image)}}" alt=""
+                                                     style="width: 100%;height: auto">
+                                            </a>
+                                        @endforeach
+                                    </div>
+                                    <div class="nav-arrow">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
 
     </div>
