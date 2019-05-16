@@ -26,6 +26,7 @@
 
     @include('frontend.uudai-details.banner-title')
     @include('frontend.uudai-details.ud_1')
+    @include('frontend.common.services')
     @include('frontend.common.comment-facebook')
 
 @stop

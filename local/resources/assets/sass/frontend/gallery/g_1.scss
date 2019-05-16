@@ -1,5 +1,5 @@
 $main-color:#dbbc85;
-$sub-color2:#007bff;
+$sub-color2:red;
 #g_1 {
   #bg_dichvu {
     -webkit-background-size: cover;
@@ -66,12 +66,12 @@ $sub-color2:#007bff;
     color: white;
     text-transform: uppercase;
     &:hover {
-      color: $sub-color2!important;
+      color: red!important;
     }
   }
   button.active {
     /*background-color: #ccc;*/
-    color: $sub-color2!important;
+    color: red!important;
   }
 }
 

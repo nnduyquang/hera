@@ -31,7 +31,7 @@
                             @foreach($other as $key=>$item)
                                 <div>
                                     <span> <i class="far fa-calendar-alt"></i> {{$item->created_at}}</span>
-                                    @if(request()->is('tin-tuc'.'*')))
+                                    @if(request()->is('tin-tuc'.'*'))
                                         <h2><a href="{{URL::to('tin-tuc/'.$item->path)}}">{{$item->title}}</a></h2>
                                     @else
                                         <h2><a href="{{URL::to('uu-dai/'.$item->path)}}">{{$item->title}}</a></h2>

@@ -47,7 +47,8 @@ $main-color:#21b6ff;
       color: white;
     }
     a {
-      color: $main-color;
+      color: red;
+      font-weight: bold;
       text-decoration: $main-color;
     }
 
@@ -80,11 +81,11 @@ $main-color:#21b6ff;
     color: white;
     text-transform: uppercase;
     &:hover {
-      color: $main-color!important;
+      color: red!important;
     }
     &.active {
       /*background-color: #ccc;*/
-      color: $main-color!important;
+      color: red!important;
     }
   }
 }

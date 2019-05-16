@@ -109,11 +109,12 @@
 
 #sd_1 #noidung .favor-include .title-header p.title {
   text-align: center;
+  color: red;
 }
 
 #sd_1 #noidung .favor-include .title-header span {
   text-align: center;
   font-size: 36px;
-  color: #dbbc85;
+  color: red;
   display: block;
 }

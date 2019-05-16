@@ -25,4 +25,5 @@
 @section('container')
     @include('frontend.uudai.banner-title')
     @include('frontend.uudai.u_1')
+    @include('frontend.common.services')
 @stop

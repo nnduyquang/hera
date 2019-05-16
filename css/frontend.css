@@ -572,7 +572,7 @@ This class is added to the container
 }
 
 #bg_dichvu p {
-  color: white;
+  color: red;
   font-size: 56px;
   font-weight: 600;
   padding: 38px 0 16px 0;
@@ -612,6 +612,110 @@ This class is added to the container
   }
 }
 
+#common-service .one-item {
+  padding: 48px 15px 38px 15px;
+  border: double 4px #ddd;
+  margin-bottom: 40px;
+}
+
+#common-service .one-item .icon-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 48px;
+}
+
+#common-service .one-item .icon-top i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #d4b01e;
+  background-color: white;
+  width: 115px;
+  height: 115px;
+  color: #d4b01e;
+}
+
+#common-service .one-item .info {
+  text-align: center;
+  line-height: 1.5;
+  color: white;
+}
+
+#common-service .one-item .info h4 {
+  margin: 20px 0;
+  font-size: 36px;
+}
+
+#common-service .one-item .view-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#common-service .one-item .view-more a {
+  color: white;
+  font-size: 12px;
+  border: 1px solid #636363;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+#common-service .one-item .view-more a:after {
+  content: '';
+  position: absolute;
+  background-color: #636363;
+  height: 0;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 0;
+  z-index: -1;
+}
+
+#common-service .one-item:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: white;
+  border: double 4px #007bff;
+}
+
+#common-service .one-item:hover .icon-top i {
+  color: #007bff;
+}
+
+#common-service .one-item:hover .info {
+  color: #007bff;
+}
+
+#common-service .one-item:hover .view-more a {
+  color: #007bff;
+}
+
+#common-service .one-item:hover .view-more a:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: white;
+}
+
+#common-service .one-item:hover .view-more a:hover:after {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 80%;
+}
+
 #h_1 #gioi_thieu {
   border: 3px solid white;
   padding: 20px;
@@ -619,7 +723,7 @@ This class is added to the container
 }
 
 #h_1 #gioi_thieu a {
-  color: #007bff;
+  color: red;
 }
 
 #h_1 #gioi_thieu a h6 {
@@ -1010,7 +1114,7 @@ This class is added to the container
 }
 
 #c_1 #noidung span {
-  color: #dbbc85;
+  color: red;
 }
 
 #c_1 #noidung a {
@@ -1075,7 +1179,7 @@ This class is added to the container
   padding-top: 50px;
   padding-bottom: 20px;
   font-size: 22px;
-  color: #007bff;
+  color: red;
 }
 
 /* Style the tab */
@@ -1101,12 +1205,12 @@ This class is added to the container
 }
 
 .tab button:hover {
-  color: #007bff !important;
+  color: red !important;
 }
 
 .tab button.active {
   /*background-color: #ccc;*/
-  color: #007bff !important;
+  color: red !important;
 }
 
 /* Style the tab content */
@@ -1319,12 +1423,13 @@ This class is added to the container
 
 #sd_1 #noidung .favor-include .title-header p.title {
   text-align: center;
+  color: red;
 }
 
 #sd_1 #noidung .favor-include .title-header span {
   text-align: center;
   font-size: 36px;
-  color: #dbbc85;
+  color: red;
   display: block;
 }
 
@@ -1375,7 +1480,8 @@ This class is added to the container
 }
 
 #u_1 #noidung a {
-  color: #21b6ff;
+  color: red;
+  font-weight: bold;
   -webkit-text-decoration: #21b6ff;
           text-decoration: #21b6ff;
 }
@@ -1415,12 +1521,12 @@ This class is added to the container
 }
 
 .tab button:hover {
-  color: #21b6ff !important;
+  color: red !important;
 }
 
 .tab button.active {
   /*background-color: #ccc;*/
-  color: #21b6ff !important;
+  color: red !important;
 }
 
 /* Style the tab content */
@@ -1476,8 +1582,8 @@ This class is added to the container
   /*padding-top: 10px;*/
   padding-bottom: 20px;
   font-size: 20px;
-  font-weight: lighter;
-  color: #21b6ff;
+  color: red;
+  font-weight: bold;
 }
 
 #ud_1 #noidung h2 {

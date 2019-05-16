@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "^5.1.0",
+    "font-awesome": "^5.3.0",
     "jquery": "^3.3.1",
     "bootstrap": "^4.1.*",
     "nivo-slider": "*",

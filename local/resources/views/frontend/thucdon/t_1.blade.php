@@ -5,9 +5,8 @@
     }
     #t_1 h5 {
         font-size: 28px;
-        color: white;
         padding-bottom: 16px;
-        color: #21b6ff;
+        color: red;
         font-weight: bold;
     }
     #t_1 h6 {

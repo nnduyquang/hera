@@ -39,7 +39,9 @@ class FrontendRepository implements FrontendRepositoryInterface
         $post = $categoryItem->whereId(6)->first()->posts()->wherePath($path)->first();
         $other = $categoryItem->whereId(6)->first()->posts()->where('id', '!=', $post->id)->get();
         $category = $categoryItem->where('id', 6)->first();
+//        dd($categoryItem->whereId(9)->first()->children()->where('name', 'like','%'.$post->title.'%' )->first());
         $favor=$categoryItem->whereId(9)->first()->children()->where('name', 'like','%'.$post->title.'%' )->first()->posts()->orderBy('id','desc')->get();
+
         $data['post'] = $post;
         $data['other'] = $other;
         $data['category'] = $category;

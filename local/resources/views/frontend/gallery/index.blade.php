@@ -27,6 +27,7 @@
     @include('frontend.gallery.banner-title')
     @include('frontend.gallery.g_1')
     @include('frontend.gallery.video-lightbox')
+    @include('frontend.common.services')
 
 @stop
 @section('jv-scripts')

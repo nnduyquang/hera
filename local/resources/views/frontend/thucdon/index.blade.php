@@ -25,6 +25,7 @@
 @section('container')
     @include('frontend.thucdon.banner-title')
     @include('frontend.thucdon.t_1')
+    @include('frontend.common.services')
 @stop
 
 @section('jv-scripts')

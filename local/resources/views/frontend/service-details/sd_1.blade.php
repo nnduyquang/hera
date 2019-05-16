@@ -50,7 +50,7 @@
                         <div class="favor-include">
                             <div class="title-header">
                                 <p class="title">Ưu Đãi {{$post->title}}</p>
-                                <span>Trung Tâm Hội Nghị Tiệc Cưới TDG</span>
+                                <span>Trung Tâm Hội Nghị Tiệc Cưới TDG Center</span>
                             </div>
                         </div>
                         <div class="slider-cal">
