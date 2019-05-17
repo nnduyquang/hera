@@ -612,13 +612,13 @@ This class is added to the container
   }
 }
 
-#common-service .one-item {
+#common-service .one-item, #common-service-2 .one-item {
   padding: 48px 15px 38px 15px;
   border: double 4px #ddd;
   margin-bottom: 40px;
 }
 
-#common-service .one-item .icon-top {
+#common-service .one-item .icon-top, #common-service-2 .one-item .icon-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -628,7 +628,7 @@ This class is added to the container
   font-size: 48px;
 }
 
-#common-service .one-item .icon-top i {
+#common-service .one-item .icon-top i, #common-service-2 .one-item .icon-top i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,23 +646,23 @@ This class is added to the container
   color: #d4b01e;
 }
 
-#common-service .one-item .info {
+#common-service .one-item .info, #common-service-2 .one-item .info {
   text-align: center;
   line-height: 1.5;
   color: white;
 }
 
-#common-service .one-item .info h4 {
+#common-service .one-item .info h4, #common-service-2 .one-item .info h4 {
   margin: 20px 0;
   font-size: 36px;
 }
 
-#common-service .one-item .view-more {
+#common-service .one-item .view-more, #common-service-2 .one-item .view-more {
   text-align: center;
   margin-top: 40px;
 }
 
-#common-service .one-item .view-more a {
+#common-service .one-item .view-more a, #common-service-2 .one-item .view-more a {
   color: white;
   font-size: 12px;
   border: 1px solid #636363;
@@ -672,7 +672,7 @@ This class is added to the container
   z-index: 1;
 }
 
-#common-service .one-item .view-more a:after {
+#common-service .one-item .view-more a:after, #common-service-2 .one-item .view-more a:after {
   content: '';
   position: absolute;
   background-color: #636363;
@@ -685,32 +685,32 @@ This class is added to the container
   z-index: -1;
 }
 
-#common-service .one-item:hover {
+#common-service .one-item:hover, #common-service-2 .one-item:hover {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background-color: white;
   border: double 4px #007bff;
 }
 
-#common-service .one-item:hover .icon-top i {
+#common-service .one-item:hover .icon-top i, #common-service-2 .one-item:hover .icon-top i {
   color: #007bff;
 }
 
-#common-service .one-item:hover .info {
+#common-service .one-item:hover .info, #common-service-2 .one-item:hover .info {
   color: #007bff;
 }
 
-#common-service .one-item:hover .view-more a {
+#common-service .one-item:hover .view-more a, #common-service-2 .one-item:hover .view-more a {
   color: #007bff;
 }
 
-#common-service .one-item:hover .view-more a:hover {
+#common-service .one-item:hover .view-more a:hover, #common-service-2 .one-item:hover .view-more a:hover {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   color: white;
 }
 
-#common-service .one-item:hover .view-more a:hover:after {
+#common-service .one-item:hover .view-more a:hover:after, #common-service-2 .one-item:hover .view-more a:hover:after {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 80%;
@@ -1713,6 +1713,17 @@ This class is added to the container
   /*box-shadow: 0px 0px 2px 0px #6c757d;*/
 }
 
+#menu.stuck {
+  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: stuckMoveDown .6s;
+          animation: stuckMoveDown .6s;
+  z-index: 999;
+}
+
 #menu #logo img {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -1878,6 +1889,28 @@ This class is added to the container
 
 #menu #menu_content ul#main li .dv_overlay ul.dv-content li:nth-last-child(2) a:hover {
   color: #007bff;
+}
+
+@-webkit-keyframes stuckMoveDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes stuckMoveDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 #hera_mobile_menu {

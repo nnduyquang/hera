@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    TIỆC CƯỚI HERA
+    TIỆC CƯỚI TDG
 @stop
 @section('description')
-    Nội Thất
+    TIỆC CƯỚI TDG
 @stop
 @section('keyword')
 
@@ -27,7 +27,7 @@
     @include('frontend.gallery.banner-title')
     @include('frontend.gallery.g_1')
     @include('frontend.gallery.video-lightbox')
-    @include('frontend.common.services')
+    @include('frontend.common.services_2')
 
 @stop
 @section('jv-scripts')

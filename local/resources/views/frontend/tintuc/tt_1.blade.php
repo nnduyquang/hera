@@ -53,4 +53,5 @@
             </div>
         </div>
     </div>
+    @include('frontend.common.services')
 </div>

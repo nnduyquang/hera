@@ -3,7 +3,8 @@ var plugins = {
     slider: $('#slider'),
     sd_1_sdBottom:$('#sd_1 #sd-bottom .sd-bottom-carousel .sd-b-owl'),
     sendPhone:$('#btnSendPhone'),
-    sendMail:$('#btnSendMail')
+    sendMail:$('#btnSendMail'),
+    menu:$('#menu'),
 };
 $(document).ready(function () {
     function sidebar() {
@@ -20,7 +21,17 @@ $(document).ready(function () {
             }
         })
     }
+    function fixMenuOnScroll2() {
+        $(window).on("scroll", function (e) {
+            if ($(this).scrollTop() > 95) {
+                plugins.menu.addClass('stuck');
+            } else {
+                plugins.menu.removeClass('stuck');
+            }
+        });
+    }
     sidebar();
+    fixMenuOnScroll2();
     function runSlider() {
         plugins.slider.nivoSlider({
             effect: 'fade',

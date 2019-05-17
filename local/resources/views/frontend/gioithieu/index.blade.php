@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    TIỆC CƯỚI HERA
+    TIỆC CƯỚI TDG
 @stop
 @section('description')
-    TIỆC CƯỚI HERA
+    TIỆC CƯỚI TDG
 @stop
 @section('keyword')
 
